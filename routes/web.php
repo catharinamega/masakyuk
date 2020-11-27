@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/home', 'App\Http\Controllers\AwalController@home');
+
+//LOGIN-LOGOUT
+Route::get('/login', 'App\Http\Controllers\AwalController@login');
+
+//coba"
+Route::get('/authenticate','App\Http\Controllers\AwalController@authentication');
+
+//ini yg benar di bawah
+Route::post('/authenticate','App\Http\Controllers\AwalController@authentication');
+Route::get('/logout', 'App\Http\Controllers\AwalController@logout');
+
+//REGISTRATION
+Route::post('/register', 'App\Http\Controllers\AwalController@daftar_baru');
+Route::get('/register', 'App\Http\Controllers\AwalController@registration');
+
+//COBA"
