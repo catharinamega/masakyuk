@@ -33,3 +33,7 @@ Route::post('/register', 'App\Http\Controllers\AwalController@daftar_baru');
 Route::get('/register', 'App\Http\Controllers\AwalController@registration');
 
 //COBA"
+
+// KATALOG RESEP dan BAHAN
+Route::get('/katalogresep', 'App\Http\Controllers\KatalogController@katalog_resep');
+Route::get('/katalogbahan', 'App\Http\Controllers\KatalogController@katalog_bahan');
