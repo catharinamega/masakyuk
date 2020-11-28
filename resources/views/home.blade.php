@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <script src="assets/js/all.js"></script>
 
-
     <title>Home</title>
 </head>
 
@@ -26,9 +25,9 @@
       <form class="form-inline" action="/action_page.php">
         <!-- dropdown -->
         <select style='margin-right: 10px;' name='option_user' class='form-control'>
-          <option value=''>Semuanya</option>
-          <option value='resep'>Resep</option>
-          <option value='bahan'>Bahan</option>
+          <option value=''> <a href="">Semuanya</a></option>
+          <option value='resep'><a href="/katalogresep" name="katalog_resep">Resep</a></option>
+          <option value='bahan'><a href="/katalogbahan" name="katalog_bahan">Bahan</a></option>
         </select>
         <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
@@ -80,7 +79,7 @@
     </nav>
     <!-- Fluid Jumbotron -->
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style=" background-image: url('assets/img/julian-dik--czl8QNCVKY-unsplash.jpg');">
         <div class="container text-center" id="judul-tengah">
             <h2 class="judul" style="font-size: 50px;">MasakYuk</h2>
 
@@ -118,7 +117,6 @@
 
     <!-- Cara kerja -->
     <section id="portfolio" class="portfolio bg-light pb-4">
-
 
         <div class="container">
             <div class="row mb-4 pt-4">
@@ -278,7 +276,6 @@
             </div>
         </div>
 
-
         <!-- bagian resep pilihan -->
         <section id="resep_pilihan" class="portfolio bg-light pb-4">
             <div class="container">
@@ -304,7 +301,6 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-md-3" style="text-align: center;">
@@ -324,7 +320,6 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-md-3" style="text-align: center;">
@@ -343,15 +338,12 @@
                             </div>
                         </div>
 
-
                     </div>
-
 
                 </div>
 
             </div>
         </section>
-
 
         <!-- footer -->
         <footer class="bg-dark text-white" style="background: rgba(0, 64, 138, 0.8);">
@@ -409,3 +401,4 @@
 </body>
 
 </html>
+
