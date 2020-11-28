@@ -93,19 +93,23 @@
     
     <section id="portfolio" class="portfolio bg-light pb-4">
         
-            <div class="row" style="padding-left:80px;">
-                @foreach($resep as $rsp)
+            <div class="row" style="padding-left:50px; padding-right:50px;">
+                @foreach($bahan as $bhn)
                 
-                    <div class="col-md-4">
-                        <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="assets/img/resep/{{ $rsp->gambar_resep}}" alt="Card image cap">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/img/bahan/{{$bhn->gambar_bahan}}" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">{{$rsp->judul_resep}}</h5>
-                                <br>
-                                <h6 class="card-title">{{$rsp->durasi}} Menit</h6>
-                                <p class="card-text">{{Str::limit($rsp->penjelasan_resep,100)}}</p>
+                                <h5 class="card-title">{{$bhn->nama_bahan}}</h5>
+                                <h6 class="card-title">{{$bhn->jumlah}}</h6>
                                 
-
+                                <h5 class="card-title">Rp {{$bhn->harga}},-</h5>
+                                <div class="qty mt-4">
+                                    <span class="minus bg-dark">-</span>
+                                    <input type="number" class="count" name="qty" value="1">
+                                    <span class="plus bg-dark">+</span>
+                                </div>
+                                <a href="#" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</a>
                             </div>
                         </div>
                     </div>
