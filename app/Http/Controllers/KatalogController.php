@@ -23,4 +23,15 @@ class KatalogController extends Controller
         // dd($bahan);
         return view('katalogbahan',compact('bahan'));
     }
+
+    public static function search_bahan(Request $req){
+        $nyari_bahan = $req->input('search_bahan');
+        // $cari = new Katalog;
+
+        // $res = $cari->nyari($search_bahan);
+
+        // $search_bahan = Katalog::nyari_bahan($nyari_bahan);
+        dd($search_bahan);
+        // return view('katalogbahan',compact('res'));
+    }
 }

@@ -29,7 +29,7 @@
           <option value='resep'><a href="/katalogresep" name="katalog_resep">Resep</a></option>
           <option value='bahan'><a href="/katalogbahan" name="katalog_bahan">Bahan</a></option>
         </select>
-        <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search">
+        <input class="form-control mr-sm-2 col-md-5" type="text" name="search" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </span>

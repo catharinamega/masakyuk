@@ -30,4 +30,30 @@ class Katalog extends Model
 
 
     }
+
+    
+
+    public static function nyari_bahan($nyari_bahan){
+        $cmd = "SELECT nama_bahan, CONCAT(ukuran_basic, ' ', s.tipe_satuan) `ukuran`, CONCAT('Rp ', harga, ',-')
+        FROM bahan b, satuan s
+        WHERE s.id_satuan = b.id_satuan AND nama_bahan LIKE '%'".$nyari_bahan."'%';";
+
+        $res = DB::select($cmd);
+        return $res;
+
+
+    }
+
+    // public static function nyari($search_resep){
+    //     $cmd = "SELECT gambar_bahan, nama_bahan, CONCAT(ukuran_basic,' ', s.tipe_satuan) `jumlah` , harga 
+    //     FROM bahan b, satuan s
+    //     WHERE s.id_satuan = b.id_satuan AND status_jual = 1 AND status_ready = 1;";
+
+    //     $res = DB::select($cmd);
+    //     return $res;
+
+
+    // }
+   
+    
 }

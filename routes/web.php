@@ -37,3 +37,7 @@ Route::get('/register', 'App\Http\Controllers\AwalController@registration');
 // KATALOG RESEP dan BAHAN
 Route::get('/katalogresep', 'App\Http\Controllers\KatalogController@katalog_resep');
 Route::get('/katalogbahan', 'App\Http\Controllers\KatalogController@katalog_bahan');
+
+// SEARCH
+Route::post('/searchbahan', 'App\Http\Controllers\KatalogController@search_bahan');
+Route::post('/searchresep', 'App\Http\Controllers\KatalogController@search_resep');
