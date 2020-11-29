@@ -94,6 +94,7 @@
     <section id="portfolio" class="portfolio bg-light pb-4">
         
             <div class="row" style="padding-left:50px; padding-right:50px;">
+            <?php $index = 0; ?>
                 @foreach($bahan as $bhn)
                 
                     <div class="col-md-3">
@@ -106,13 +107,15 @@
                                 <h5 class="card-title">Rp {{$bhn->harga}},-</h5>
                                 <div class="qty mt-4">
                                     <span class="minus bg-dark">-</span>
-                                    <input type="number" class="count" name="qty" value="1">
+                                    <input type="number" class="count<?php $index; ?>" name="qty" value="1">
                                     <span class="plus bg-dark">+</span>
                                 </div>
                                 <a href="#" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</a>
                             </div>
                         </div>
                     </div>
+                    <?php $index++; ?>
+                   
                 @endforeach
             </div>
           

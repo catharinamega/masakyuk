@@ -15,15 +15,17 @@ $('.page-scroll').on('click', function(e){
     e.preventDefault();
 });
 
-$(document).ready(function(){
+$(document).ready(function($index){
     $('.count').prop('disabled', true);
-       $(document).on('click','.plus',function(){
+
+    $(document).on('click','.plus',function($index){
         $('.count').val(parseInt($('.count').val()) + 1 );
     });
-    $(document).on('click','.minus',function(){
+
+    $(document).on('click','.minus',function($index){
         $('.count').val(parseInt($('.count').val()) - 1 );
             if ($('.count').val() == 0) {
                 $('.count').val(1);
             }
-        });
+    });
  });
