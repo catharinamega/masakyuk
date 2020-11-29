@@ -24,7 +24,7 @@
       <!-- search form -->
       <form class="form-inline" action="/action_page.php">
         <!-- dropdown -->
-        
+        <select style='margin-right: 10px;' name='option_user' class='form-control'>
           <option value='resep'><a href="/katalogresep" name="katalog_resep">Resep</a></option>
           <option value='bahan'><a href="/katalogbahan" name="katalog_bahan">Bahan</a></option>
         </select>
