@@ -26,7 +26,7 @@
       @csrf
         <!-- dropdown -->
         <select style='margin-right: 10px;' name='option_user' class='form-control'>
-          <option value=''>Semuanya</option>
+          
           <option value='resep'>Resep</option>
           <option value='bahan'>Bahan</option>
         </select>
@@ -107,9 +107,9 @@
                                 
                                 <h5 class="card-title">{{$bhn->harga}}</h5>
                                 <div class="qty mt-4">
-                                    <span class="minus bg-dark">-</span>
-                                    <input type="number" class="count<?php $index; ?>" name="qty" value="1">
-                                    <span class="plus bg-dark">+</span>
+                                    <span class="minus{{$index}} minus bg-dark ">-</span>
+                                    <input type="number" class="count{{$index}} count" name="qty" value="1">
+                                    <span class="plus{{$index}} plus bg-dark ">+</span>
                                 </div>
                                 <a href="#" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</a>
                             </div>

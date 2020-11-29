@@ -26,7 +26,7 @@
       @csrf
         <!-- dropdown -->
         <select style='margin-right: 10px;' name='option_user' class='form-control'>
-          <option value=''>Semuanya</option>
+          
           <option value='resep'>Resep</option>
           <option value='bahan'>Bahan</option>
         </select>

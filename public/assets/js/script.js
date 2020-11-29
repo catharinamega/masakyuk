@@ -15,17 +15,24 @@ $('.page-scroll').on('click', function(e){
     e.preventDefault();
 });
 
-$(document).ready(function($index){
-    $('.count').prop('disabled', true);
+$(document).ready(function($index) {
+    var plus;
+    var minu;
+    for (var i = 0; i < 13; i++) {
+        plus = '.plus'.concat(i);
+        minu = '.minus'.concat(i);
+        $('.count'.concat(i)).prop('disabled', true);
 
-    $(document).on('click','.plus',function($index){
-        $('.count').val(parseInt($('.count').val()) + 1 );
-    });
 
-    $(document).on('click','.minus',function($index){
-        $('.count').val(parseInt($('.count').val()) - 1 );
-            if ($('.count').val() == 0) {
-                $('.count').val(1);
+        $(document).on('click', minu, function($index) {
+
+            $('.count'.concat(this.className[5])).val(parseInt($('.count'.concat(this.className[5])).val()) - 1);
+            if ($('.count'.concat(this.className[5])).val() == 0) {
+                $('.count'.concat(this.className[5])).val(1);
             }
-    });
- });
+        });
+        $(document).on('click', plus, function($index) {
+            $('.count'.concat(this.className[4])).val(parseInt($('.count'.concat(this.className[4])).val()) + 1);
+        });
+    }
+});
