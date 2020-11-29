@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <script src="assets/js/all.js"></script>
 
-    <title>Home</title>
+    <title> Daftar Resep</title>
 </head>
 
 <body>
@@ -22,14 +22,15 @@
         </div>
         <span class="col-md-6">
       <!-- search form -->
-      <form class="form-inline" action="/action_page.php">
+      <form class="form-inline" action="/searchresep" method="POST">
+      @csrf
         <!-- dropdown -->
         <select style='margin-right: 10px;' name='option_user' class='form-control'>
           <option value=''>Semuanya</option>
           <option value='resep'>Resep</option>
           <option value='bahan'>Bahan</option>
         </select>
-        <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search">
+        <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search" name="search_resep">
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </span>

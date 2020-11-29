@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <script src="assets/js/all.js"></script>
 
-    <title>Home</title>
+    <title>Daftar Bahan</title>
 </head>
 
 <body>
@@ -22,7 +22,8 @@
         </div>
         <span class="col-md-6">
       <!-- search form -->
-      <form class="form-inline" action="/searchbahan" >
+      <form class="form-inline" method="POST" action="/searchbahan" >
+      @csrf
         <!-- dropdown -->
         <select style='margin-right: 10px;' name='option_user' class='form-control'>
           <option value=''>Semuanya</option>
@@ -81,7 +82,7 @@
 
     <div class="jumbotron jumbotron-fluid" style=" background-image: url('assets/img/pisang.png');">
         <div class="container text-center" id="judul-tengah">
-            <h2 class="judul" style="font-size: 50px;">Daftar Resep</h2>
+            <h2 class="judul" style="font-size: 50px;">Daftar Bahan</h2>
 
            
         </div>
@@ -94,7 +95,6 @@
     <section id="portfolio" class="portfolio bg-light pb-4">
         
             <div class="row" style="padding-left:50px; padding-right:50px;">
-           
             <?php $index = 0; ?>
                 @foreach($bahan as $bhn)
                 
@@ -108,7 +108,7 @@
                                 <h5 class="card-title">{{$bhn->harga}}</h5>
                                 <div class="qty mt-4">
                                     <span class="minus bg-dark">-</span>
-                                    <input type="number" class="count {{$index}} " name="qty" value="1">
+                                    <input type="number" class="count<?php $index; ?>" name="qty" value="1">
                                     <span class="plus bg-dark">+</span>
                                 </div>
                                 <a href="#" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</a>
@@ -116,6 +116,7 @@
                         </div>
                     </div>
                     <?php $index++; ?>
+                   
                 @endforeach
             </div>
           
@@ -174,9 +175,6 @@
         <script src="assets/js/script.js"></script>
         <!-- EASING JQUERY -->
         <script src="assets/js/jquery.easing.1.3.js"></script>
-
-        
-
 </body>
 
 </html>

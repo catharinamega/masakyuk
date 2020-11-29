@@ -25,13 +25,26 @@ class KatalogController extends Controller
     }
 
     public static function search_bahan(Request $req){
-        $nyari_bahan = $req->input('search_bahan');
+        $input_bahan = $req->input('search_bahan');
         // $cari = new Katalog;
 
-        // $res = $cari->nyari($search_bahan);
+        // $res = $cari->nyari($input_bahan);
 
-        // $search_bahan = Katalog::nyari_bahan($nyari_bahan);
-        dd($search_bahan);
-        // return view('katalogbahan',compact('res'));
+        $search_bahan = Katalog::nyari_bahan($input_bahan);
+        $bahan = $search_bahan;
+        // dd($search_bahan);
+        return view('katalogbahan',compact('bahan'));
+    }
+
+    public static function search_resep(Request $req){
+        $input_resep = $req->input('search_resep');
+        // $cari = new Katalog;
+
+        // $res = $cari->nyari($input_bahan);
+
+        $search_resep = Katalog::nyari_resep($input_resep);
+        $resep = $search_resep;
+        // dd($search_bahan);
+        return view('katalogresep',compact('resep'));
     }
 }
