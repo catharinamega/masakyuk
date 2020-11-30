@@ -33,7 +33,7 @@
                                     <input type="number" class="count{{$index}} count" name="qty" value="1">
                                     <span class="plus{{$index}} plus bg-dark ">+</span>
                                 </div>
-                                <a href="#" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</a>
+                                <a href="#" class="btn btn-primary" style="margin-top: 15px;"onclick="tambahCounter()" id="addCart">Tambah ke Troli</a>
                             </div>
                         </div>
                     </div>
@@ -45,3 +45,12 @@
     </section>
 
 @endsection
+<script>
+    function tambahCounter(){
+            var currentCounter = document.getElementById('counterCart').innerHTML
+            currentCounter = parseInt(currentCounter)
+            currentCounter += 1
+            document.getElementById('counterCart').innerHTML = currentCounter
+            // alert(currentCounter);
+    }
+</script>
