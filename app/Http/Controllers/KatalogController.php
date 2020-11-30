@@ -41,7 +41,7 @@ class KatalogController extends Controller
         // $cari = new Katalog;
 
         // $res = $cari->nyari($input_bahan);
-
+        
         $search_resep = Katalog::nyari_resep($input_resep);
         $resep = $search_resep;
         // dd($search_bahan);

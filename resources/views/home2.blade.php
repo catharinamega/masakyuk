@@ -2,9 +2,7 @@
 
 @section('judul','Home')
 
-@section('background_jumbotron')
-    background-image: url('assets/img/julian-dik--czl8QNCVKY-unsplash.jpg');
-@endsection
+
 @section('judul_jumbotron','MasakYuk')
 @section('tagline')
     <h3 class="tagline">Pesan, Masak, Makan</h3>
@@ -268,3 +266,4 @@
         </section>
 
 @endsection
+

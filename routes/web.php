@@ -24,6 +24,12 @@ Route::get('/login', 'App\Http\Controllers\AwalController@login');
 //coba"
 Route::get('/authenticate','App\Http\Controllers\AwalController@authentication');
 
+
+// coba blade
+Route::get('/', function () {
+    return view('home2');
+});
+
 //ini yg benar di bawah
 Route::post('/authenticate','App\Http\Controllers\AwalController@authentication');
 Route::get('/logout', 'App\Http\Controllers\AwalController@logout');

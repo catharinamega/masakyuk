@@ -10,40 +10,42 @@
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <script src="assets/js/all.js"></script>
 
-
-    <title>@yield('judul) - MasakYuk</title>
+    <title> @yield('judul') MasakYuk</title>
 </head>
 
 <body>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <!-- Navbar content -->
         <div class="col-md-3">
-        
-            <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png" alt="ini logo loh">
+            <a href="/home"> 
+                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
+            </a>
         </div>
         <span class="col-md-6">
       <!-- search form -->
-      <form class="form-inline" action="/action_page.php">
+      <form class="form-inline" method="GET" action="@yield('searching')">
+        @csrf
         <!-- dropdown -->
-        <select style="margin-right: 10px;" name="option_user" class="form-control">
-            <option value="resep">Resep</option>
-            <option value="bahan">Bahan</option>
+        <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" disabled selected hidden>Resep</option>
+            <option value='/katalogresep'>Resep</option>
+            <option value='/katalogbahan'>Bahan</option>
         </select>
-        <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search">
+        <input class="form-control mr-sm-2 col-md-5" type="text" name="@yield('input_search')" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </span>
-        <div class="col-md-3 d-flex justify-content-end">
+        <div class='col-md-3 d-flex justify-content-end'>
             <!-- cart ini diambil dari dom fix -->
             <button class="btn btn-primary" id="cart">
         <i class="fas fa-shopping-cart"></i>
-        (<span id="counterCart">
+        (<span id='counterCart'>
           0
         </span>)
       </button>
             <!-- profile button -->
-            <button class="btn btn-lg" style="background-color:transparent;">
-        <div style="text-align:center; position: relative; margin-left: 6px; margin-right: 6px; float: left;">
+            <button class='btn btn-lg' style='background-color:transparent;'>
+        <div style='text-align:center; position: relative; margin-left: 6px; margin-right: 6px; float: left;'>
           <a href="login.html"><i class="fa fa-user-alt"></i></a></div>
       </button>
             <!-- hamburger menu -->
@@ -79,60 +81,60 @@
     </nav>
     <!-- Fluid Jumbotron -->
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style="@yield('background_jumbotron')">
         <div class="container text-center" id="judul-tengah">
-            @yield('judul_jumbotron')
+            
+            <h2 class="judul" style="font-size: 50px;">@yield('judul_jumbotron')</h2>
+            @yield('tagline')
         </div>
     </div>
 
-    <!-- Fluid Jumbotron -->
+            <!-- Fluid Jumbotron -->
+            @yield('isi_konten')
 
-    @yield('isi_konten')
+                    <!-- footer -->
+                    <footer class="bg-dark text-white" style="background: rgba(0, 64, 138, 0.8);">
+                    <div class="container">
+                        <div class="row pt-3">
 
+                            <div class="col text-left">
+                                <h4>Tentang Kami</h4>
+                                <p style="text-align: justify;">MasakYuk adalah situs web yang menyediakan resep dan layanan pesan bahan secara daring.</p>
+                            </div>
+                            <!-- DI SI -->
+                            <div class="col text-left" style="padding-left: 90px;">
+                                <h5>Informasi</h5>
+                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Info Pembayaran</a>
+                                <br>
+                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Info Pengiriman</a>
+                            </div>
 
-        <!-- footer -->
-        <footer class="bg-dark text-white" style="background: rgba(0, 64, 138, 0.8);">
-            <div class="container">
-                <div class="row pt-3">
+                            <div class="col text-left" style="padding-top: 5px;">
+                                <br>
+                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Masuk</a>
+                                <br>
+                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Pertanyaan Umum</a>
+                                <br>
+                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Syarat & Ketentuan</a>
+                            </div>
 
-                    <div class="col text-left">
-                        <h4>Tentang Kami</h4>
-                        <p style="text-align: justify;">MasakYuk adalah situs web yang menyediakan resep dan layanan pesan bahan secara daring.</p>
-                    </div>
-                    <!-- DI SI -->
-                    <div class="col text-left" style="padding-left: 90px;">
-                        <h5>Informasi</h5>
-                        <a href="" style="color: white; text-decoration: none;" class="text-left">> Info Pembayaran</a>
-                        <br>
-                        <a href="" style="color: white; text-decoration: none;" class="text-left">> Info Pengiriman</a>
-                    </div>
+                            <div class="col text-center">
+                                <h5>Ikuti Kami</h5>
+                                <div class="sosmed">
+                                    <i class="fab fa-instagram fa-3x" style="margin-right: 15px;"></i>
+                                    <i class="fab fa-facebook-square fa-3x"></i>
 
-                    <div class="col text-left" style="padding-top: 5px;">
-                        <br>
-                        <a href="" style="color: white; text-decoration: none;" class="text-left">> Masuk</a>
-                        <br>
-                        <a href="" style="color: white; text-decoration: none;" class="text-left">> Pertanyaan Umum</a>
-                        <br>
-                        <a href="" style="color: white; text-decoration: none;" class="text-left">> Syarat & Ketentuan</a>
-                    </div>
-
-                    <div class="col text-center">
-                        <h5>Ikuti Kami</h5>
-                        <div class="sosmed">
-                            <i class="fab fa-instagram fa-3x" style="margin-right: 15px;"></i>
-                            <i class="fab fa-facebook-square fa-3x"></i>
+                                </div>
+                            </div>
 
                         </div>
+                        <div class="row pt-3">
+                            <div class="col text-center">
+                                <p>&copy; MasakYuk 2020.</p>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-                <div class="row pt-3">
-                    <div class="col text-center">
-                        <p>&copy; MasakYuk 2020.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                </footer>
 
         <!-- BAWAAN BOOTSTRAP JQUERY -->
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -143,6 +145,22 @@
         <script src="assets/js/script.js"></script>
         <!-- EASING JQUERY -->
         <script src="assets/js/jquery.easing.1.3.js"></script>
-</body>
+
+        <!-- <script>
+            $( "#dropdown_katalog" ).on("change", function() {
+                // alert( "Handler for .change() called." );
+                var selected_value = $('#dropdown_katalog').val();
+                // alert(selected_value);
+                var url = "/katalogresep";    
+                if(selected_value == 'bahan'){
+                    url = "/katalogbahan";
+                }    
+                //  else {
+                //     // $(location).attr('href', url);
+                // }
+                $(location).attr('href', url);    
+            });
+        </script> -->
+    </body>
 
 </html>
