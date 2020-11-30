@@ -49,7 +49,7 @@
             <!-- profile button -->
             <button class='btn btn-lg' style='background-color:transparent;'>
         <div style='text-align:center; position: relative; margin-left: 6px; margin-right: 6px; float: left;'>
-          <a href="login.html"><i class="fa fa-user-alt"></i></a></div>
+          <a href="/login"><i class="fa fa-user-alt"></i></a></div>
       </button>
             <!-- hamburger menu -->
             <!-- Collapse button -->
