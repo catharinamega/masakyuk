@@ -17,16 +17,18 @@
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <!-- Navbar content -->
         <div class="col-md-3">
-        
-            <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png" alt="ini logo loh">
+            <a href="/home"> 
+                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
+            </a>
         </div>
         <span class="col-md-6">
       <!-- search form -->
       <form class="form-inline" action="/action_page.php">
         <!-- dropdown -->
-        
-          <option value='resep'><a href="/katalogresep" name="katalog_resep">Resep</a></option>
-          <option value='bahan'><a href="/katalogbahan" name="katalog_bahan">Bahan</a></option>
+        <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" disabled selected hidden>Resep</option>
+            <option value='/katalogresep'>Resep</option>
+            <option value='/katalogbahan'>Bahan</option>
         </select>
         <input class="form-control mr-sm-2 col-md-5" type="text" name="search" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
@@ -397,6 +399,22 @@
         <script src="assets/js/script.js"></script>
         <!-- EASING JQUERY -->
         <script src="assets/js/jquery.easing.1.3.js"></script>
+
+        <!-- <script>
+            $( "#dropdown_katalog" ).on("change", function() {
+                // alert( "Handler for .change() called." );
+                var selected_value = $('#dropdown_katalog').val();
+                // alert(selected_value);
+                var url = "/katalogresep";    
+                if(selected_value == 'bahan'){
+                    url = "/katalogbahan";
+                }    
+                //  else {
+                //     // $(location).attr('href', url);
+                // }
+                $(location).attr('href', url);    
+            });
+        </script> -->
 </body>
 
 </html>

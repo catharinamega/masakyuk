@@ -39,5 +39,5 @@ Route::get('/katalogresep', 'App\Http\Controllers\KatalogController@katalog_rese
 Route::get('/katalogbahan', 'App\Http\Controllers\KatalogController@katalog_bahan');
 
 // SEARCH
-Route::post('/searchbahan', 'App\Http\Controllers\KatalogController@search_bahan');
-Route::post('/searchresep', 'App\Http\Controllers\KatalogController@search_resep');
+Route::get('/searchbahan', 'App\Http\Controllers\KatalogController@search_bahan');
+Route::get('/searchresep', 'App\Http\Controllers\KatalogController@search_resep');

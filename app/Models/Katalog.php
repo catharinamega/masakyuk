@@ -38,7 +38,7 @@ class Katalog extends Model
         $cmd = "SELECT gambar_bahan, nama_bahan, CONCAT(ukuran_basic,' ', s.tipe_satuan) `jumlah`, IF(LENGTH(harga)=6, CONCAT('Rp ', SUBSTR(harga, -6, 3), '.', SUBSTR(harga, -3), ',-'), IF(LENGTH(harga)=5, CONCAT('Rp ', SUBSTR(harga, -5, 2), '.', SUBSTR(harga, -3), ',-'), IF(LENGTH(harga)=4, CONCAT('Rp ', SUBSTR(harga, -4, 1), '.', SUBSTR(harga, -3), ',-'), CONCAT('Rp ', harga, ',-')))) `harga`
 
         FROM bahan b, satuan s
-        WHERE s.id_satuan = b.id_satuan AND nama_bahan LIKE '%".$input_bahan."%';";
+        WHERE s.id_satuan = b.id_satuan AND nama_bahan LIKE '%".$input_bahan."%' AND status_jual = 1 AND status_ready = 1;";
 
         $res = DB::select($cmd);
         return $res;

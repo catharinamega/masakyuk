@@ -26,9 +26,8 @@
       <form class="form-inline" action="/action_page.php">
         <!-- dropdown -->
         <select style="margin-right: 10px;" name="option_user" class="form-control">
-          <option value="">Semuanya</option>
-          <option value="resep">Resep</option>
-          <option value="bahan">Bahan</option>
+            <option value="resep">Resep</option>
+            <option value="bahan">Bahan</option>
         </select>
         <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>

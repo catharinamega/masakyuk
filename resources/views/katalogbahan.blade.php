@@ -17,18 +17,19 @@
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <!-- Navbar content -->
         <div class="col-md-3">
-        
-            <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png" alt="ini logo loh">
+            <a href="/home"> 
+                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
+            </a>
         </div>
         <span class="col-md-6">
       <!-- search form -->
-      <form class="form-inline" method="POST" action="/searchbahan" >
+      <form class="form-inline" method="GET" action="/searchbahan" >
       @csrf
         <!-- dropdown -->
-        <select style='margin-right: 10px;' name='option_user' class='form-control'>
-          
-          <option value='resep'>Resep</option>
-          <option value='bahan'>Bahan</option>
+        <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" disabled selected hidden>Bahan</option>
+            <option value='/katalogresep'>Resep</option>
+            <option value='/katalogbahan' selected="selected">Bahan</option>
         </select>
         <input class="form-control mr-sm-2 col-md-5" type="text" placeholder="Search" name="search_bahan">
         <button class="btn btn-success" type="submit">Search</button>
@@ -175,6 +176,7 @@
         <script src="assets/js/script.js"></script>
         <!-- EASING JQUERY -->
         <script src="assets/js/jquery.easing.1.3.js"></script>
+        
 </body>
 
 </html>
