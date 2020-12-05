@@ -16,5 +16,7 @@ class ResepController extends Controller
         // echo $id;
         $rsp = new Resep();
         $detail_resep = $rsp->get_all($id);
+        // dd($detail_resep);
+        return view('resep',compact('detail_resep'));
     }
 }

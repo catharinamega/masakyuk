@@ -49,7 +49,7 @@ class Katalog extends Model
     }
 
     public static function nyari_resep($input_resep){
-        $cmd = "SELECT gambar_resep, judul_resep, durasi, penjelasan_resep
+        $cmd = "SELECT id_resep, gambar_resep, judul_resep, durasi, penjelasan_resep
         FROM resep r
         WHERE judul_resep LIKE '%".$input_resep."%' AND status_ready = 1;";
 
