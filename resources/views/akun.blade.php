@@ -8,9 +8,9 @@
     
 
 ?>
-    <h1 style="margin-bottom:20px;">Akun Saya</h1>
-    <h2><u>Profil Saya</u></h2>
-    <h5>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</h5>
+    <h1 style="margin-bottom:20px; margin-left:20px;" >Akun Saya</h1>
+    <h2 style="margin-left:20px;"><u>Profil Saya</u></h2>
+    <h5 style="margin-left:10px;">Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</h5>
     <form class="form" action="/updateakun" method="POST" ><br>
             <div class="form-group row">
                 <label for="username" class="col-sm-2 col-form-label" style="text-align: right">Username :</label>
@@ -49,7 +49,7 @@
                 </div>
             </div>
         <!-- <button type="button" class="btn btn-primary active">Atur Alamat</button> -->
-        <button type="button" class="btn btn-primary active" style="margin-bottom:20px;">
+        <button type="button" class="btn btn-primary active" style="margin-bottom:20px; margin-left:10px;">
             <a href="/" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
         <button type="button" class="btn btn-primary active" style="margin-bottom:20px;">
             <a href="/" style="color: white; text-decoration: none;">Atur Alamat</a></button>

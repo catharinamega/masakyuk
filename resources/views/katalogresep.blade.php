@@ -20,15 +20,13 @@
                 @foreach($resep as $rsp)
                 
                     <div class="col-md-4">
-                        <div class="card" style="width: 20rem;">
+                        <div class="card view zoom overlay z-depth-2 rounded" style="width: 20rem;">
                             <img class="card-img-top" src="assets/img/resep/{{ $rsp->gambar_resep}}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">{{$rsp->judul_resep}}</h5>
                                 <br>
                                 <h6 class="card-title">{{$rsp->durasi}} Menit</h6>
                                 <p class="card-text">{{Str::limit($rsp->penjelasan_resep,100)}}</p>
-                                
-
                             </div>
                         </div>
                     </div>
