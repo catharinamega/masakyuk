@@ -15,13 +15,13 @@
             <div class="form-group row">
                 <label for="username" class="col-sm-2 col-form-label" style="text-align: right">Username :</label>
                 <div class="col-sm-3">
-                    <input type="text" readonly class="form-control"  value="{{$akun->username}}">
+                    <p readonly style="text-align: left; padding:7px;">{{$akun->username}} </p>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="nama_pelanggan" class="col-sm-2 col-form-label" style="text-align: right">Nama :</label>
                 <div class="col-sm-4">
-                    <input type="text" readonly class="form-control"  value="{{$akun->nama_pelanggan}}">
+                    <input class="form-control"  value="{{$akun->nama_pelanggan}}">
                 </div>
             </div>
             <div class="form-group row">
@@ -45,7 +45,7 @@
             <div class="form-group row">
                 <label for="alamat_utama" class="col-sm-2 col-form-label" style="text-align: right">Alamat Utama : </label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control"  value="{{$akun->alamat}}">
+                    <p readonly style="padding:7px; text-align:left;">{{$akun->alamat}} </p>
                 </div>
             </div>
         <!-- <button type="button" class="btn btn-primary active">Atur Alamat</button> -->
