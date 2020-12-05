@@ -14,28 +14,35 @@
         <h1 style="margin-bottom:20px;">Akun Saya</h1>
         <h4><u>Profil Saya</u></h4>
         <h5>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</h5>
+        @if (Session::has('success'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button> 
+                <strong>{{ Session::get('success') }}</strong>
+            </div>
+        @endif
     </div>
 </div>
 <div class="container" style="text-align: left;">
 
 
     <form class="form" action="/updateakun" method="POST"><br>
+        @csrf
         <div class="form-group row">
             <label for="username" class="col-sm-2 col-form-label" style="text-align: right">Username :</label>
             <div class="col-sm-3">
-                <p readonly style="text-align: left; padding:7px;">{{$akun->username}} </p>
+                <input type="text" name="username" value="{{$akun->username}}" class="form-control" style="text-align: left; padding:7px; z-index:10000; font-color:black;" readonly >
             </div>
         </div>
         <div class="form-group row">
             <label for="nama_pelanggan" class="col-sm-2 col-form-label" style="text-align: right">Nama :</label>
             <div class="col-sm-4">
-                <input class="form-control" value="{{$akun->nama_pelanggan}}">
+                <input class="form-control" name="nama_pelanggan" value="{{$akun->nama_pelanggan}}">
             </div>
         </div>
         <div class="form-group row">
             <label for="email_pelanggan" class="col-sm-2 col-form-label" style="text-align: right">Email : </label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" value="{{$akun->email_pelanggan}}">
+                <input type="text" class="form-control" name="email_pelanggan" value="{{$akun->email_pelanggan}}">
             </div>
         </div>
         <div class="form-group row">
@@ -47,7 +54,7 @@
         <div class="form-group row">
             <label for="hp_pelanggan" class="col-sm-2 col-form-label" style="text-align: right">Nomor Telepon : </label>
             <div class="col-sm-3">
-                <input type="text" class="form-control" value="{{$akun->hp_pelanggan}}">
+                <input type="text" class="form-control" value="{{$akun->hp_pelanggan}}" name="hp_pelanggan">
             </div>
         </div>
         <div class="form-group row">
@@ -61,7 +68,7 @@
             <a href="/" style="color: white; text-decoration: none;">Atur Alamat</a></button>
         <button type="button" class="btn btn-primary active" style="margin-left:10px;">
             <a href="/" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
-        <button class="btn btn-primary" type="submit" style="margin-left:350px;">Simpan Perubahan</button>
+    <button class="btn btn-primary" type="submit" style="margin-left:350px;">Simpan Perubahan</button>
 
 </div>
     </form>

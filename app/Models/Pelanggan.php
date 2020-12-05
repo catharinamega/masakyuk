@@ -117,13 +117,14 @@ class Pelanggan extends Model
 	// }
 
 
-    public function update_akun($data_pelanggan,$username_profile){
+    public function update_akun($data_pelanggan){
         
-        // binding $username_login
+      
         // nunggu Eillen
-        $cmd="CALL update_akun(:nama_pelanggan, :email_pelanggan, :hp_pelanggan, :alamat_utama,:username);";
-        $data=['username'=> $username_profile];
-        $update_akun = DB::select($cmd,$data);
+        $cmd="CALL update_pelanggan(:nama_pelanggan, :email_pelanggan, :hp_pelanggan, :username);";
+       
+        $update_akun = DB::update($cmd,$data_pelanggan);
+        // dd($update_akun);
         return $update_akun;
     }
     

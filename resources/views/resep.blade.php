@@ -43,7 +43,7 @@
         <p>{{$detail_resep[0]->penjelasan_resep}}</p>
     </div>
 
-    <div class="container" style="margin-top:20px;">
+    <div class="container" style="margin-top:20px; margin-bottom:50px;">
         <div class="row">
             <div class="col-md-4" style="text-align: left;">
                 <h4>Bahan:</h4>
@@ -58,4 +58,25 @@
             </div>
         </div>
     </div>
+
+    <!-- bagian shopping catalog -->
+    <table class="table table-borderless">
+        <thead>
+
+            <tr>
+            <th scope="col">Bahan</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Jumlah</th>
+            <th scope="col"> </th>
+            </tr>
+        </thead>
+        <!-- <tbody>
+            <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            </tr> 
+        </tbody> -->
+    </table>
 @endsection

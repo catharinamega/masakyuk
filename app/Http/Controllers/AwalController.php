@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Models\Pelanggan;
 use Session;
+use Alert;
 
 class AwalController extends Controller
 {
@@ -161,17 +162,22 @@ class AwalController extends Controller
     }
     
     public function update_akun(Request $req){
+        // $username_login = Session::get('login');
+        $usr = new Pelanggan();
         $data_pelanggan = [
+            'username'      => $req->input('username'),
             'nama_pelanggan'  => $req->input('nama_pelanggan'),
             'email_pelanggan'     => $req->input('email_pelanggan'),
             'hp_pelanggan'    => $req->input('hp_pelanggan'),
-            'alamat_utama' => $req->input('alamat_utama'),
-            'username'  => $req->input('username')
             
         ];
-
-        $update_akun = Pelanggan::update_akun($data_pelanggan,$username_login);
+       
+        // dd($data_pelanggan);
+        // die;
+        $update_akun = $usr->update_akun($data_pelanggan);
+        Session::flash('success', 'Anda berhasil update!');
         
+        return redirect('/akun');
     }
     
 
