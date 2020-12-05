@@ -69,7 +69,7 @@
             @foreach($bahan_resep as $rsp)
                 <div class="col-md-2" style="text-align: left;">a</div>
                 <div class="col-md-3" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                <div class="col-md-3" style="text-align: left;">{{$rsp->harga}}</div>
+                <div class="col-md-3" style="text-align: left;">Rp. {{$rsp->harga}}</div>
                 <div class="col-md-2" style="text-align: left;">a</div>
                 <div class="col-md-2" style="text-align: left;">a</div>
             @endforeach
