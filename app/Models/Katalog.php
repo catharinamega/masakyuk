@@ -12,10 +12,13 @@ class Katalog extends Model
     //katalog resep
     public static function get_all(){
         $resep = DB::table('resep')->get(['gambar_resep','judul_resep','durasi','penjelasan_resep']);
+        $resep = DB::table('resep')->get(['id_resep','gambar_resep','judul_resep','durasi','penjelasan_resep']);
         return $resep;
+
         // $resep = Katalog::all(['gambar_resep','judul_resep','penjelesan_resep'])->toarray();
         // $reseps = [$resep];
-        // dd($reseps);
+
+        // dd($resep);
 
 
 

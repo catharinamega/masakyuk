@@ -20,6 +20,7 @@
                 @foreach($resep as $rsp)
                 
                     <div class="col-md-4">
+<<<<<<< Updated upstream
                         <div class="card view zoom overlay z-depth-2 rounded" style="width: 20rem;">
                             <img class="card-img-top" src="assets/img/resep/{{ $rsp->gambar_resep}}" alt="Card image cap">
                             <div class="card-body">

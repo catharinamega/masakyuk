@@ -49,6 +49,5 @@ Route::get('/searchbahan', 'App\Http\Controllers\KatalogController@search_bahan'
 Route::get('/searchresep', 'App\Http\Controllers\KatalogController@search_resep');
 
 // AKUN
-
 Route::get('/akun', 'App\Http\Controllers\AwalController@akun');
 Route::post('/updateakun', 'App\Http\Controllers\AwalController@update_akun');
