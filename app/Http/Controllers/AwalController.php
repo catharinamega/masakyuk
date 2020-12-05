@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\Models\Pelanggan;
 use Session;
@@ -23,11 +24,11 @@ class AwalController extends Controller
     //authentication
     public function authentication(Request $req){
         //1. Get INPUT
-        $email = $req->input('email_pelanggan');
+        $username = $req->input('username');
         $pass    = $req->input('password');
 
         $data = [
-            'email_pelanggan' => $email,
+            'username' => $username,
             'password' => $pass,
         ];
 
@@ -44,7 +45,13 @@ class AwalController extends Controller
         // die;
         if ($flag_exist){
             //2.a. Jika KETEMU, maka session LOGIN dibuat
-            Session::put('login', $email);
+            Session::put('login', $username);
+
+            // $username_login = $data['username'];
+            // $username_login->belongsToMany('App\Models\Pelanggan');
+
+           
+
             Session::flash('success', 'Anda berhasil Login!');
 
             return redirect('/home');
@@ -53,6 +60,15 @@ class AwalController extends Controller
             Session::flash('error', 'Email dan Password tidak sesuai!');
             return redirect('/login');
         }
+    }
+
+
+    public function logout(Request $req){
+        // Session::forget('nama');
+        // Session::forget('linknya');
+        Session::flush();
+        Session::flash('keluar', 'Anda telah logout');
+        return redirect('/login');
     }
 
     //halamannya registrasi
@@ -113,7 +129,7 @@ class AwalController extends Controller
             'username'  => $req->input('username'),
             'email_pelanggan'     => $req->input('email_pelanggan'),
             'hp_pelanggan'    => $req->input('hp_pelanggan'),
-            'password'     => $req->input('password'),
+            'password'     => $req->input('password')
             
         ];
 
@@ -125,5 +141,38 @@ class AwalController extends Controller
             return redirect('/login');
         }
     }
+
+    // Update Akun
+
+
+
+
+    public function akun(){
+        $username_login = Session::get('login');
+        // echo $username_login;
+        // die;
+        $usr = new Pelanggan();
+
+        // $akun = Pelanggan::get_all($username_login);
+        // pake auth
+        $akun = $usr->get_all($username_login);
+        // dd($akun);
+        return view('akun',compact('akun'));
+    }
+    
+    public function update_akun(Request $req){
+        $data_pelanggan = [
+            'nama_pelanggan'  => $req->input('nama_pelanggan'),
+            'email_pelanggan'     => $req->input('email_pelanggan'),
+            'hp_pelanggan'    => $req->input('hp_pelanggan'),
+            'alamat_utama' => $req->input('alamat_utama'),
+            'username'  => $req->input('username')
+            
+        ];
+
+        $update_akun = Pelanggan::update_akun($data_pelanggan,$username_login);
+        
+    }
+    
 
 }

@@ -85,17 +85,7 @@
         </div>
         <!-- Collapsible content -->
     </nav>
-    <!-- Fluid Jumbotron -->
 
-    <div class="jumbotron jumbotron-fluid" style="@yield('background_jumbotron')">
-        <div class="container text-center" id="judul-tengah">
-            
-            <h2 class="judul" style="font-size: 50px;">@yield('judul_jumbotron')</h2>
-            @yield('tagline')
-        </div>
-    </div>
-
-            <!-- Fluid Jumbotron -->
             @yield('isi_konten')
 
                     <!-- footer -->

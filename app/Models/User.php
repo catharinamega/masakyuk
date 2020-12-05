@@ -40,4 +40,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function akun() 
+    {
+         return $this->hasMany('app\Models\Pelanggan','username', 'password');
+    }
 }

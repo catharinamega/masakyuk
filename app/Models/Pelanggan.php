@@ -11,6 +11,10 @@ class Pelanggan extends Model
 {
     use HasFactory;
     private $tabel_terpilih = 'pelanggan';
+    private $tabel_alamat = 'alamat';
+    private $tabel_ap = 'alamat_pelanggan';
+
+
 
     public function get_data($data){
         $cmd = 'SELECT username, nama_pelanggan, email_pelanggan,hp_pelanggan'.
@@ -36,7 +40,7 @@ class Pelanggan extends Model
         // ini yg bener
         $cmd = "SELECT count(*) is_exist ".
                 "FROM ".$this->tabel_terpilih." ".
-                "WHERE email_pelanggan=:email_pelanggan AND password=sha1(:password);";
+                "WHERE username=:username AND password=sha1(:password);";
 
         // ini coba-coba
         // $cmd = 'SELECT username, nama_pelanggan, email_pelanggan,hp_pelanggan'.
@@ -82,5 +86,45 @@ class Pelanggan extends Model
         return $res;
     }
 
+
+    public function get_all($param_username){
+        // $akun = DB::table('pelanggan')->get(['nama_pelanggan', 'username', 'email_pelanggan', 'hp_pelanggan', 'password']);
+        // return $akun;
+        
+        $cmd = "SELECT nama_pelanggan, p.username, email_pelanggan, hp_pelanggan, a.alamat ".
+                "FROM ".$this->tabel_terpilih." p, ".$this->tabel_alamat." a, ".$this->tabel_ap." ap ". 
+                "WHERE p.username=:username AND id_alamat_pelanggan = p.alamat_utama AND ap.id_alamat = a.id_alamat;";
+        
+        //buat binding, array assosiatifnya bisa ditaruh di Model bisa ditaruh di COntroller 
+        $data=['username'=> $param_username];
+        // 
+        // supaya bisa dapatkan query log kita harus melakukan ini dulu
+        // DB::enableQueryLog();
+        $akun = DB::select($cmd,$data);
+        // $temp_sql = DB::getQueryLog();
+        // 
+        // print_r($akun);
+        // print_r($temp_sql);
+        // die;
+        return $akun[0];
+
+    }
+
+
+    // public function user()
+	// {
+	//       return $this->belongsTo('app\Models\User','username', 'password');
+	// }
+
+
+    public function update_akun($data_pelanggan,$username_profile){
+        
+        // binding $username_login
+        // nunggu Eillen
+        $cmd="CALL update_akun(:nama_pelanggan, :email_pelanggan, :hp_pelanggan, :alamat_utama,:username);";
+        $data=['username'=> $username_profile];
+        $update_akun = DB::select($cmd,$data);
+        return $update_akun;
+    }
     
 }

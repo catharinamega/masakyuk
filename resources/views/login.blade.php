@@ -50,7 +50,7 @@
                             @csrf
                                 <div class="form-inputLogin">
                                     <span><i class="far fa-envelope"></i></span>
-                                    <input type="email" name="email_pelanggan" id="email_pelanggan" placeholder="Alamat E-mail" 
+                                    <input type="text" name="username" id="username" placeholder="Username" 
                                     tabindex="10" required>
                                 </div>
                                 <div class="form-inputLogin">
