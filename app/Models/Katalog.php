@@ -11,7 +11,6 @@ class Katalog extends Model
     use HasFactory;
     //katalog resep
     public static function get_all(){
-        $resep = DB::table('resep')->get(['gambar_resep','judul_resep','durasi','penjelasan_resep']);
         $resep = DB::table('resep')->get(['id_resep','gambar_resep','judul_resep','durasi','penjelasan_resep']);
         return $resep;
 
