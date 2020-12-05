@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS, FONT DLL -->
-    <link href="assets/css/google_fonts.css?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <script src="assets/js/all.js"></script>
+    <link href="../assets/css/google_fonts.css?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <script src="../assets/js/all.js"></script>
 
     <title> @yield('judul') MasakYuk</title>
 </head>
@@ -18,7 +18,7 @@
         <!-- Navbar content -->
         <div class="col-md-3">
             <a href="/home"> 
-                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
+                <img class="navbar-brand" style="height: 60px;" src="../assets/img/masakyuk2.png"  alt="ini logo loh">
             </a>
         </div>
         <span class="col-md-6">
@@ -133,14 +133,14 @@
                 </footer>
 
         <!-- BAWAAN BOOTSTRAP JQUERY -->
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <script src="assets/js/jquery-3.5.1.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+        <script src="../assets/js/jquery-3.5.1.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
         <!-- JS -->
-        <script src="assets/js/script.js"></script>
+        <script src="../assets/js/script.js"></script>
         <!-- EASING JQUERY -->
-        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="../assets/js/jquery.easing.1.3.js"></script>
 
         <!-- <script>
             $( "#dropdown_katalog" ).on("change", function() {
