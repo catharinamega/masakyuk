@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
-.dropdown{
+.dropdown {
     margin-left: 2cm;
 }
 
+
 /* bagianhome */
-#about{
+
+#about {
     min-height: 350px;
 }
 
 
 /* ini punya kenapaharusmasakyuk */
-body{
-    background:#eee;
-    margin-top:20px;
+
+body {
+    background: #eee;
+    margin-top: 20px;
 }
+
 .hori-timeline .events {
     border-top: 3px solid #e9ecef;
 }
+
 .hori-timeline .events .event-list {
     display: block;
     position: relative;
@@ -25,6 +30,7 @@ body{
     padding-top: 70px;
     margin-right: 0;
 }
+
 .hori-timeline .events .event-list:before {
     content: "";
     position: absolute;
@@ -32,6 +38,7 @@ body{
     border-right: 2px dashed #dee2e6;
     top: 0;
 }
+
 .hori-timeline .events .event-list .event-date {
     position: absolute;
     top: 38px;
@@ -42,6 +49,7 @@ body{
     border-radius: 4px;
     padding: 2px 4px;
 }
+
 @media (min-width: 1140px) {
     .hori-timeline .events .event-list {
         display: inline-block;
@@ -52,29 +60,34 @@ body{
         top: -12px;
     }
 }
+
 .bg-soft-primary {
-    background-color: rgba(64,144,203,.3)!important;
+    background-color: rgba(64, 144, 203, .3)!important;
 }
+
 .bg-soft-success {
-    background-color: rgba(71,189,154,.3)!important;
+    background-color: rgba(71, 189, 154, .3)!important;
 }
+
 .bg-soft-danger {
-    background-color: rgba(231,76,94,.3)!important;
+    background-color: rgba(231, 76, 94, .3)!important;
 }
+
 .bg-soft-warning {
-    background-color: rgba(249,213,112,.3)!important;
+    background-color: rgba(249, 213, 112, .3)!important;
 }
+
 .card {
     border: none;
     margin-bottom: 24px;
-    -webkit-box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
-    box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
+    -webkit-box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
+    box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
 }
 
 
-
 /* Ini Punya Login.html */
-.login{
+
+.login {
     height: 100vh;
     background: #ACCFF9 !important;
     display: flex;
@@ -82,27 +95,33 @@ body{
     align-items: center;
     justify-content: center;
 }
-.card{
+
+.card {
     overflow: hidden;
     border: 0 !important;
     border-radius: 20px !important;
-    box-shadow: 0 0.5rem 1rem 0 rgb(0,0,0,0.1);
+    box-shadow: 0 0.5rem 1rem 0 rgb(0, 0, 0, 0.1);
 }
-.img-left{
+
+.img-left {
     width: 45%;
     /* background: url('/assets/img/tes.jpg'); */
     background-size: cover;
 }
-.card-body{
+
+.card-body {
     padding: 2rem;
 }
-.judul{
+
+.judul {
     margin-bottom: 2rem;
 }
-.form-inputLogin{
+
+.form-inputLogin {
     position: relative;
 }
-.form-inputLogin input{
+
+.form-inputLogin input {
     width: 100%;
     height: 45px;
     padding-left: 40px;
@@ -114,23 +133,29 @@ body{
     outline: none;
     background: transparent;
 }
-.form-inputLogin span{
+
+.form-inputLogin span {
     position: absolute;
     top: 10px;
     padding-left: 15px;
     color: #007bff;
 }
-.form-inputLogin input::placeholder{
+
+.form-inputLogin input::placeholder {
     color: black;
     padding-left: 0px;
 }
-.form-inputLogin input:focus, .form-inputLogin input:valid{
+
+.form-inputLogin input:focus,
+.form-inputLogin input:valid {
     border: 2px solid #007;
-} 
-.form-inputLogin input:focus::placeholder{
+}
+
+.form-inputLogin input:focus::placeholder {
     color: #454b69;
 }
-.form-box button[type="submit"]{
+
+.form-box button[type="submit"] {
     margin-top: 10px;
     border: none;
     cursor: pointer;
@@ -141,26 +166,34 @@ body{
     font-weight: bold;
     letter-spacing: .1rem;
     transition: 0.5s;
-    padding:12px;
-} 
-.form-box button[type="submit"]:hover{
+    padding: 12px;
+}
+
+.form-box button[type="submit"]:hover {
     background: #0069d9;
 }
-.forget-link{
+
+.forget-link {
     color: red;
     font-weight: bold;
 }
-.register-link{
+
+.register-link {
     color: #007bff;
     font-weight: bold;
 }
+
+
 /* Ini Akhir Login.html */
 
+
 /* Ini Punya Register.html*/
-.form-inputRegister{
+
+.form-inputRegister {
     position: relative;
 }
-.form-inputRegister input{
+
+.form-inputRegister input {
     width: 100%;
     height: 45px;
     padding-left: 40px;
@@ -172,88 +205,109 @@ body{
     outline: none;
     background: transparent;
 }
-.form-inputRegister span{
+
+.form-inputRegister span {
     position: absolute;
     top: 10px;
     padding-left: 15px;
     color: #007bff;
 }
-.form-inputRegister input::placeholder{
+
+.form-inputRegister input::placeholder {
     color: black;
     padding-left: 0px;
 }
-.form-inputRegister input:focus, .form-inputRegister input:valid{
+
+.form-inputRegister input:focus,
+.form-inputRegister input:valid {
     border: 2px solid #007;
-} 
-.form-inputRegister input:focus::placeholder{
+}
+
+.form-inputRegister input:focus::placeholder {
     color: #454b69;
 }
-.login-link{
+
+.login-link {
     color: #007bff;
     font-weight: bold;
 }
+
+
 /* Ini AKhir Register.html*/
+
 .fa-1x {
     font-size: 1.5rem;
-    }
-    .navbar-toggler.toggler-example {
+}
+
+.navbar-toggler.toggler-example {
     cursor: pointer;
     position: sticky;
-    }
-    .dark-blue-text {
-    color: #0A38F5;
-    }
-    .dark-pink-text {
-    color: #AC003A;
-    }
-    .dark-amber-text {
-    color: #ff6f00;
-    }
-    .dark-teal-text {
-    color: #004d40;
-    }
+}
 
-section{
+.dark-blue-text {
+    color: #0A38F5;
+}
+
+.dark-pink-text {
+    color: #AC003A;
+}
+
+.dark-amber-text {
+    color: #ff6f00;
+}
+
+.dark-teal-text {
+    color: #004d40;
+}
+
+section {
     min-height: 500px;
 }
-body{
+
+body {
     font-family: 'Comfortaa';
 }
-.judul{
+
+.judul {
     font-family: 'Josefin Sans', sans-serif;
 }
-.tagline{
+
+.tagline {
     font-family: 'Josefin Sans', sans-serif;
 }
-#judul-tengah{
+
+#judul-tengah {
     padding: 20px 0px 20px 0px;
     width: 400px;
     border-radius: 22px 22px 22px 22px;
     -moz-border-radius: 22px 22px 22px 22px;
     -webkit-border-radius: 22px 22px 22px 22px;
     border: 0px solid;
-    background-color:rgba(220, 249, 255, 0.85);
+    background-color: rgba(220, 249, 255, 0.85);
 }
-.navbar{
+
+.navbar {
     background-color: black;
 }
-    /* a:hover{
+
+
+/* a:hover{
         color: deeppink;
     } */
 
-.jumbotron-fluid{
+.jumbotron-fluid {
     /* background-image: url("../img/julian-dik--czl8QNCVKY-unsplash.jpg"); */
-    background-size:cover;
+    background-size: cover;
     height: 400px;
-   
 }
 
-img.card-img-top{
-    object-fit:cover; 
-    height:200px; 
+img.card-img-top {
+    object-fit: cover;
+    height: 200px;
     /* object-position: 100% 0%; */
 }
-#row-2{
+
+#row-2 {
     object-position: 50% 50%;
 }
 
@@ -264,10 +318,11 @@ img.card-img-top{
     font-size: 25px;
     font-weight: 700;
     line-height: 30px;
-    padding: 0 2px
-    ;min-width: 35px;
+    padding: 0 2px;
+    min-width: 35px;
     text-align: center;
 }
+
 .qty .plus {
     cursor: pointer;
     display: inline-block;
@@ -275,10 +330,11 @@ img.card-img-top{
     color: white;
     width: 30px;
     height: 30px;
-    font: 30px/1 Arial,sans-serif;
+    font: 30px/1 Arial, sans-serif;
     text-align: center;
     border-radius: 50%;
-    }
+}
+
 .qty .minus {
     cursor: pointer;
     display: inline-block;
@@ -286,40 +342,71 @@ img.card-img-top{
     color: white;
     width: 30px;
     height: 30px;
-    font: 30px/1 Arial,sans-serif;
+    font: 30px/1 Arial, sans-serif;
     text-align: center;
     border-radius: 50%;
     background-clip: padding-box;
 }
+
 div {
     text-align: center;
 }
-.minus:hover{
+
+.minus:hover {
     background-color: #717fe0 !important;
 }
-.plus:hover{
+
+.plus:hover {
     background-color: #717fe0 !important;
 }
+
+
 /*Prevent text selection*/
-span{
+
+span {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
-input{  
+
+input {
     border: 0;
     width: 2%;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-input:disabled{
-    background-color:white;
-} 
-         
 
-.footer{
-    background-image: radial-gradient( circle farthest-corner at -14.3% -17.5%,  rgba(245,168,168,1) 4%, rgba(164,168,248,1) 100.2% );
+input:disabled {
+    background-color: white;
+}
+
+.footer {
+    background-image: radial-gradient( circle farthest-corner at -14.3% -17.5%, rgba(245, 168, 168, 1) 4%, rgba(164, 168, 248, 1) 100.2%);
+}
+
+
+/*Pop up Card di katalogresep*/
+
+.pop-up:hover .image-box img {
+    transform: scale(1.15);
+}
+
+.pop-up .image-box img {
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    width: 100%;
+    height: 200px;
+}
+
+.pop-up .image-box {
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
 }

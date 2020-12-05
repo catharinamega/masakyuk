@@ -16,14 +16,16 @@
     
     <section id="portfolio" class="portfolio bg-light pb-4">
         
-            <div class="row" style="padding-left:80px;">
+            <div class="row" style="padding-left:80px; padding-top:30px">
                 @foreach($resep as $rsp)
                 
                     <div class="col-md-4">
-                        <div class="card" style="width: 20rem;">
-                            <a href="/resep/{{$rsp->id_resep}}">
-                                <img class="card-img-top" src="assets/img/resep/{{ $rsp->gambar_resep}}" alt="Card image cap">
-                            </a>
+                        <div class="card pop-up" style="width: 20rem;">
+                            <div class="image-box">
+                                <a href="/resep/{{$rsp->id_resep}}">
+                                    <img class="card-img-top" src="assets/img/resep/{{ $rsp->gambar_resep}}" alt="Card image cap">
+                                </a>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">{{$rsp->judul_resep}}</h5>
                                 <br>
