@@ -67,9 +67,23 @@ class AwalController extends Controller
     public function logout(Request $req){
         // Session::forget('nama');
         // Session::forget('linknya');
-        Session::flush();
-        Session::flash('keluar', 'Anda telah logout');
-        return redirect('/login');
+
+        // ini yg pertama
+        // Session::flush();
+        // Session::flash('keluar', 'Anda telah logout');
+        // return redirect('/login');\
+
+        // ini yg kedua
+       
+            //HATI-HATI: menghancurkan session dan set session flash
+            $hasLogin = $req->session()->has('login');
+            if(isset($hasLogin)){
+                Session::flush();
+                Session::flash('keluar', 'Anda telah logout');
+    
+                return redirect('/login');
+            }
+        
     }
 
     //halamannya registrasi
@@ -180,5 +194,15 @@ class AwalController extends Controller
         return redirect('/akun');
     }
     
+    public function atur_alamat(Request $req){
+        $usr = new Pelanggan();
+        // $username_login = [
+        //     'username'      => $req->input('username'),
+        // ];
+        $username_login = Session::get('login');
+        // dd($username_login);
+        $alamat_saya = $usr->tampil_alamat($username_login);
+        return view('alamat_saya',compact('alamat_saya'));
+    }
 
 }

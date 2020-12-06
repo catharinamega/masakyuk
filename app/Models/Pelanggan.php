@@ -128,4 +128,19 @@ class Pelanggan extends Model
         return $update_akun;
     }
     
+
+    public function tampil_alamat($username_login){
+        // $akun = DB::table('pelanggan')->get(['nama_pelanggan', 'username', 'email_pelanggan', 'hp_pelanggan', 'password']);
+        // return $akun;
+        
+        $cmd = "CALL select_alamat(:username);";
+        
+        //buat binding, array assosiatifnya bisa ditaruh di Model bisa ditaruh di COntroller 
+        $data=['username'=> $username_login];
+        $alamat_saya = DB::select($cmd,$data);
+        // dd($alamat_saya);
+
+        return $alamat_saya;
+
+    }
 }

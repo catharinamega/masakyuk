@@ -55,3 +55,7 @@ Route::post('/updateakun', 'App\Http\Controllers\AwalController@update_akun');
 
 // DESKRIPSI RESEP
 Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');
+
+// ALAMAT
+Route::get('/aturalamat', 'App\Http\Controllers\AwalController@atur_alamat');
+Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');

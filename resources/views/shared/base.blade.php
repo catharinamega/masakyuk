@@ -27,9 +27,21 @@
         @csrf
         <!-- dropdown -->
         <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
-            <option value="" disabled selected hidden>Resep</option>
-            <option value='/katalogresep'>Resep</option>
-            <option value='/katalogbahan'>Bahan</option>
+            
+            <!-- <option value="/katalogresep" disabled selected hidden <?php $selected_value = 'resep'; ?>>
+                @if ($selected_value == 'resep')
+                    Resep
+                @elseif ($selected_value == 'bahan')
+                    Bahan
+                @endif
+            </option> -->
+            <option value='/katalogresep' >
+                Resep
+            <?php $selected_value = 'resep'; ?>
+            </option>
+            <option value='/katalogbahan'<?php $selected_value = 'bahan'; ?>>
+                Bahan
+            </option>
         </select>
         <input class="form-control mr-sm-2 col-md-5" type="text" name="@yield('input_search')" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
