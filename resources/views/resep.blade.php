@@ -54,8 +54,25 @@
 
             <div class="col-md-8" style="text-align: left;">
                 <h4>Cara Membuat:</h4>
-                <p>{{$detail_resep[0]->prosedur_resep}}</p>
+                <!-- <p>{{$detail_resep[0]->prosedur_resep}}</p> -->
+                @foreach($proc_resep as $proc)
+                <p>{{$proc}}</p>
+                @endforeach
             </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-12" style="text-align: left;">
+                <h4>Belanja Yuk</h4>
+            </div>
+            @foreach($bahan_resep as $rsp)
+                <div class="col-md-2" style="text-align: left;">a</div>
+                <div class="col-md-3" style="text-align: left;">{{$rsp->nama_bahan}}</div>
+                <div class="col-md-3" style="text-align: left;">Rp. {{$rsp->harga}}</div>
+                <div class="col-md-2" style="text-align: left;">a</div>
+                <div class="col-md-2" style="text-align: left;">a</div>
+            @endforeach
         </div>
     </div>
 
