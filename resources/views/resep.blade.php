@@ -62,10 +62,10 @@
         </div>
     </div>
     <!-- bagian shopping catalog -->
-    <div class="container" style="margin-top:20px;">
-        <div class="row">
+    <div class="container" style="margin-top:20px; margin-bottom:40px;">
+        <div class="row" style="margin-bottom:30px;">
             <div class="col-md-12" style="text-align: left;">
-                <h4>Belanja Yuk</h4>
+                <h3>Belanja Yuk</h3>
             </div>
             <div class="col-md-12 row mt-4">
                 <div class="col-md-1" style="text-align: left;"></div>
@@ -77,9 +77,10 @@
             <?php $index = 0; ?>
             @foreach($bahan_resep as $rsp)
             <div class="col-md-12 row mt-4">
-                <div class="col-md-1" style="text-align: left;">a</div>
+                <div class="col-md-1 form-check" style="margin: 0;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" style="width:20px; height:20px;"></div>
                 <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                <div class="col-md-2" style="text-align: left;">Rp. {{$rsp->harga}}</div>
+                <div class="col-md-2" style="text-align: left;">Rp {{$rsp->harga}}</div>
                 <div class="col-md-3" style="text-align: left;">
                     <div class="qty">
                         <span class="minus{{$index}} minus bg-dark ">-</span>
@@ -87,10 +88,16 @@
                         <span class="plus{{$index}} plus bg-dark ">+</span>
                         </div>
                     </div>
-                <div class="col-md-2" style="text-align: left;">a</div>
+                <div class="col-md-2" style="text-align: left;">
+                <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button>
+                </div>
                 <?php $index++; ?>
             </div>
             @endforeach
+        </div>
+        <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
+        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px;"><strong>Beli Sekarang</strong></button>
         </div>
     </div>
 
