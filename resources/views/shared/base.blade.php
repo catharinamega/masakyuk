@@ -30,7 +30,16 @@
             <option value="" disabled selected hidden>Resep</option>
             <option value='/katalogresep'>Resep</option>
             <option value='/katalogbahan'>Bahan</option>
+            
+        <?php 
+        // if($_POST['option_user'] === '/katalogresep'){ 
+        //     "<option value='/katalogresep' disabled selected hidden>Resep</option>";}
+        // elseif( $_POST['option_user'] === '/katalogbahan'){ 
+        //     "<option value='/katalogresep' disabled selected hidden>Bahan</option>";}
+       ?>
+
         </select>
+
        
         <input class="form-control mr-sm-2 col-md-5" type="text" name="@yield('input_search')" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
