@@ -61,39 +61,38 @@
             </div>
         </div>
     </div>
+    <!-- bagian shopping catalog -->
     <div class="container" style="margin-top:20px;">
         <div class="row">
             <div class="col-md-12" style="text-align: left;">
                 <h4>Belanja Yuk</h4>
             </div>
+            <div class="col-md-12 row mt-4">
+                <div class="col-md-1" style="text-align: left;"></div>
+                <div class="col-md-4" style="text-align: left;"><h5>Bahan</h5></div>
+                <div class="col-md-2" style="text-align: left;"><h5>Harga</h5></div>
+                <div class="col-md-3" style="text-align: center;"><h5>Jumlah</h5></div>
+                <div class="col-md-2" style="text-align: left;"></div>
+            </div>
+            <?php $index = 0; ?>
             @foreach($bahan_resep as $rsp)
+            <div class="col-md-12 row mt-4">
+                <div class="col-md-1" style="text-align: left;">a</div>
+                <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
+                <div class="col-md-2" style="text-align: left;">Rp. {{$rsp->harga}}</div>
+                <div class="col-md-3" style="text-align: left;">
+                    <div class="qty">
+                        <span class="minus{{$index}} minus bg-dark ">-</span>
+                        <input type="number" class="count{{$index}} count" name="qty" value="{{$rsp->rec_beli}}">
+                        <span class="plus{{$index}} plus bg-dark ">+</span>
+                        </div>
+                    </div>
                 <div class="col-md-2" style="text-align: left;">a</div>
-                <div class="col-md-3" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                <div class="col-md-3" style="text-align: left;">Rp. {{$rsp->harga}}</div>
-                <div class="col-md-2" style="text-align: left;">a</div>
-                <div class="col-md-2" style="text-align: left;">a</div>
+                <?php $index++; ?>
+            </div>
             @endforeach
         </div>
     </div>
 
-    <!-- bagian shopping catalog -->
-    <table class="table table-borderless">
-        <thead>
-
-            <tr>
-            <th scope="col">Bahan</th>
-            <th scope="col">Harga</th>
-            <th scope="col">Jumlah</th>
-            <th scope="col"> </th>
-            </tr>
-        </thead>
-        <!-- <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            </tr> 
-        </tbody> -->
-    </table>
+    
 @endsection
