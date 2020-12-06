@@ -26,7 +26,6 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{$bhn->nama_bahan}}</h5>
                                 <h6 class="card-title">{{$bhn->jumlah}}</h6>
-                                
                                 <h5 class="card-title">{{$bhn->harga}}</h5>
                                 <div class="qty mt-4">
                                     <span class="minus{{$index}} minus bg-dark ">-</span>
