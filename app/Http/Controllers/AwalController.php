@@ -205,4 +205,13 @@ class AwalController extends Controller
         return view('alamat_saya',compact('alamat_saya'));
     }
 
+
+
+    public function alamat_baru(){
+        
+        return view('alamatbaru');
+        
+    }
+
+
 }

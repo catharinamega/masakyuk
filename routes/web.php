@@ -59,3 +59,13 @@ Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');
 // ALAMAT
 Route::get('/aturalamat', 'App\Http\Controllers\AwalController@atur_alamat');
 Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');
+
+// BUAT ALAMAT BARU
+Route::get('/alamatbaru', 'App\Http\Controllers\AwalController@alamat_baru');
+Route::post('/alamatbaru', 'App\Http\Controllers\AwalController@buat_alamat');
+
+// FAQ, SK, INFO PEMBAYARAN, INFO PENGIRIMAN
+Route::get('/faq', 'App\Http\Controllers\FiturController@faq');
+Route::get('/sdank', 'App\Http\Controllers\FiturController@sdank');
+Route::get('/infopembayaran', 'App\Http\Controllers\FiturController@info_pembayaran');
+Route::get('/infopengiriman', 'App\Http\Controllers\FiturController@info_pengiriman');
