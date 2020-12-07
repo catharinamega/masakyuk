@@ -407,6 +407,5 @@ input:disabled {
 .pop-up .image-box {
     background: #ffffff;
     overflow: hidden;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
     border-radius: 5px;
 }
