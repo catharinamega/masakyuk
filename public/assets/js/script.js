@@ -1,11 +1,11 @@
 // SMOOTH SCROLLING
 // event pada saat link diklik
-$('.page-scroll').on('click', function(e){
+$('.page-scroll').on('click', function(e) {
     // ambil isi href
     var tujuan = $(this).attr('href');
     // tangkap elemen yang brsangkutan
     var elemenTujuan = $(tujuan);
-    
+
 
     // pindahkan scroll
     $('html,body').animate({
@@ -21,7 +21,7 @@ $(document).ready(function($index) {
     for (var i = 0; i < 13; i++) {
         plus = '.plus'.concat(i);
         minu = '.minus'.concat(i);
-        $('.count'.concat(i)).prop('disabled', true);
+        // $('.count'.concat(i)).prop('disabled', true);
 
 
         $(document).on('click', minu, function($index) {

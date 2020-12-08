@@ -10,7 +10,10 @@ use Illuminate\Pagination\Paginator;
 
 class CartController extends Controller
 {
-    public function add_cart(){
+    public function add_cart(Request $req){
+        // var_dump($req);
+        dd($req->input('bahan_beli'));
+        die();
         if(isset($_POST)){
             //1. INPUT
             echo "<pre>";
@@ -24,7 +27,7 @@ class CartController extends Controller
                     if(isset($p['id'])){
                         $temp=[
                             'id' => $p['id'],
-                            'qt'=> $p['qt'],
+                            'qty'=> $p['qty'],
                         ];
                         array_push($item,$temp);
                     }
