@@ -11,13 +11,13 @@
                     <div class="custom-control custom-radio">
                         <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
                         <label class="custom-control-label" for="defaultGroupExample1" >Telepon</label><br>
-                        <label style="margin-top:20px;">Alamat</label>
+                        <label style="margin-top:20px;">Alamat</label> 
                      </div>
                 </div>
 
                 <div class="col-md-4">
-                    <p style="text-align: left">{{$alsa->hp_pelanggan}}</p>
-                    <p style="text-align: left">{{$alsa->alamat}}</p> <br>
+                    <p style="text-align: left">{{$alsa->hp_pelanggan}}<a href="#"><i class="fas fa-trash-alt" style="margin-left:40px;"></a></i></p>
+                    <p style="text-align: left">{{$alsa->alamat}} </p>  <br>
                 </div>
 
 
