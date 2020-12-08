@@ -27,7 +27,7 @@ Route::get('/authenticate','App\Http\Controllers\AwalController@authentication')
 
 // coba blade
 Route::get('/', function () {
-    return view('home2');
+    return view('home');
 });
 
 //ini yg benar di bawah
