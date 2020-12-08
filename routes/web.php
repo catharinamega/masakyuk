@@ -59,3 +59,6 @@ Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');
 // ALAMAT
 Route::get('/aturalamat', 'App\Http\Controllers\AwalController@atur_alamat');
 Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');
+
+// CART
+Route::post('/addtocart', 'App\Http\Controllers\CartController@add_cart');
