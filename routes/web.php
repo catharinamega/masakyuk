@@ -69,3 +69,5 @@ Route::get('/faq', 'App\Http\Controllers\FiturController@faq');
 Route::get('/sdank', 'App\Http\Controllers\FiturController@sdank');
 Route::get('/infopembayaran', 'App\Http\Controllers\FiturController@info_pembayaran');
 Route::get('/infopengiriman', 'App\Http\Controllers\FiturController@info_pengiriman');
+// CART
+Route::post('/addtocart', 'App\Http\Controllers\CartController@add_cart');

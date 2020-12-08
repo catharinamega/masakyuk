@@ -23,4 +23,5 @@ class ResepController extends Controller
         return view('resep',compact('detail_resep', 'proc_resep', 'bahan_resep'));
         
     }
+
 }
