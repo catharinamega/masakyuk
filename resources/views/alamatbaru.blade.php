@@ -10,24 +10,30 @@
         <label for="inputprovinsi">Provinsi</label>
         <input type="provinsi" class="form-control" id="inputprovinsi" placeholder="Provinsi">
       </div>
-      <div class="form-group col-md-4" style="padding-left:20px;text-align:left;">
+      <div class="form-group col-md-3" style="padding-left:20px;text-align:left;">
         <label for="input_hp_pelanggan">Nomor Telepon</label>
-        <input type="text" class="form-control" id="inputhp_pelanggan" placeholder="Nomor Telepon">
+        <input type="number" class="form-control" id="inputhp_pelanggan" placeholder="Nomor Telepon">
       </div>
     </div>
-    <div class="form-group col-md-4" style="text-align:left">
+    <div class="form-row">
+    <div class="form-group col-md-5" style="text-align:left;">
       <label for="inputkota">Kota</label>
       <input type="text" class="form-control" id="inputkota" placeholder="Kota">
     </div>
+    </div>
     <div class="form-row">
-      <div class="form-group col-md-4" style="text-align:left">
+      <div class="form-group col-md-5" style="text-align:left">
         <label for="inputkecamatan">Kecamatan</label>
         <input type="text" class="form-control" id="inputkecamatan"placeholder="Kecamatan">
       </div>
       <div class="form-group col-md-2" style="padding-left:20px;text-align:left;">
         <label for="inputkodepos">Kode Pos</label>
-        <input type="text" class="form-control" id="inputkodepos" placeholder="Kode Pos">
+        <input type="number" class="form-control" id="inputkodepos" placeholder="Kode Pos">
       </div>
+    </div>
+    <div class="form-group col-md-8" style="text-align:left;padding-left:0px;">
+      <label for="inputalamat">Alamat</label>
+      <textarea class="form-control" rows="5" id="inputalamat" name="text" placeholder="Alamat"></textarea>
     </div>
     <div class="form-group">
       <div class="form-check" style="text-align: left">

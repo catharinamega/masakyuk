@@ -42,7 +42,6 @@
     <div class="container" style="text-align: left;">
         <p>{{$detail_resep[0]->penjelasan_resep}}</p>
     </div>
-
     <div class="container" style="margin-top:20px; margin-bottom:50px;">
         <div class="row">
             <div class="col-md-4" style="text-align: left;">
