@@ -78,7 +78,8 @@
             @foreach($bahan_resep as $rsp)
             <div class="col-md-12 row mt-4">
                 <div class="col-md-1 form-check" style="margin: 0;">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" style="width:20px; height:20px;"></div>
+                    <input type="checkbox" class="form-check-input" checked id="exampleCheck1" style="width:20px; height:20px;">
+                </div>
                 <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
                 <div class="col-md-2" style="text-align: left;">Rp {{$rsp->harga}}</div>
                 <div class="col-md-3" style="text-align: left;">
@@ -89,7 +90,7 @@
                         </div>
                     </div>
                 <div class="col-md-2" style="text-align: left;">
-                <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button>
+                    <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button>
                 </div>
                 <?php $index++; ?>
             </div>
