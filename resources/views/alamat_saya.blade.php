@@ -25,7 +25,7 @@
         @endforeach
         <div class="row">
             <div class="col-md-4">
-                <a class="btn btn-info" href="#" role="button" style="margin-bottom: 15px;margin-top: 40px;">Tambah Alamat Baru</a>     
+                <a class="btn btn-info" href="/alamatbaru" role="button" style="margin-bottom: 15px;margin-top: 40px;">Tambah Alamat Baru</a>     
             </div>
             
             <div class="col-md-4">
