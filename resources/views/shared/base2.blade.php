@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS, FONT DLL -->
-    <link href="../assets/css/google_fonts.css?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-    <script src="../assets/js/all.js"></script>
+    <link href="assets/css/google_fonts.css?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <script src="assets/js/all.js"></script>
 
     <title> @yield('judul') MasakYuk</title>
 </head>
@@ -18,7 +18,7 @@
         <!-- Navbar content -->
         <div class="col-md-3">
             <a href="/home"> 
-                <img class="navbar-brand" style="height: 60px;" src="../assets/img/masakyuk2.png"  alt="ini logo loh">
+                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
             </a>
         </div>
         <span class="col-md-6">
@@ -30,7 +30,17 @@
             <option value="" disabled selected hidden>Resep</option>
             <option value='/katalogresep'>Resep</option>
             <option value='/katalogbahan'>Bahan</option>
+            
+        <?php 
+        // if($_POST['option_user'] === '/katalogresep'){ 
+        //     "<option value='/katalogresep' disabled selected hidden>Resep</option>";}
+        // elseif( $_POST['option_user'] === '/katalogbahan'){ 
+        //     "<option value='/katalogresep' disabled selected hidden>Bahan</option>";}
+       ?>
+
         </select>
+
+       
         <input class="form-control mr-sm-2 col-md-5" type="text" name="@yield('input_search')" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
       </form>
@@ -68,16 +78,16 @@
                     <a class="nav-link" href="#">Hubungi Kami <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Info Pembayaran</a>
+                    <a class="nav-link" href="/infopembayaran">Info Pembayaran</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Info Pengiriman</a>
+                    <a class="nav-link" href="/infopengiriman">Info Pengiriman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pertanyaan Umum</a>
+                    <a class="nav-link" href="/faq">Pertanyaan Umum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Syarat dan Ketentuan</a>
+                    <a class="nav-link" href="/sdank">Syarat dan Ketentuan</a>
                 </li>
             </ul>
             <!-- Links -->
@@ -85,7 +95,7 @@
         </div>
         <!-- Collapsible content -->
     </nav>
-
+  
             @yield('isi_konten')
 
                     <!-- footer -->
@@ -133,14 +143,14 @@
                 </footer>
 
         <!-- BAWAAN BOOTSTRAP JQUERY -->
-        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-        <script src="../assets/js/jquery-3.5.1.js"></script>
-        <script src="../assets/js/popper.min.js"></script>
-        <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <script src="assets/js/jquery-3.5.1.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <!-- JS -->
-        <script src="../assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
         <!-- EASING JQUERY -->
-        <script src="../assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/js/jquery.easing.1.3.js"></script>
 
         <!-- <script>
             $( "#dropdown_katalog" ).on("change", function() {

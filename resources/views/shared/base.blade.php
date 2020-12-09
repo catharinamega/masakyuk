@@ -78,16 +78,16 @@
                     <a class="nav-link" href="#">Hubungi Kami <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Info Pembayaran</a>
+                    <a class="nav-link" href="/infopembayaran">Info Pembayaran</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Info Pengiriman</a>
+                    <a class="nav-link" href="/infopengiriman">Info Pengiriman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pertanyaan Umum</a>
+                    <a class="nav-link" href="/faq">Pertanyaan Umum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Syarat dan Ketentuan</a>
+                    <a class="nav-link" href="/sdank">Syarat dan Ketentuan</a>
                 </li>
             </ul>
             <!-- Links -->

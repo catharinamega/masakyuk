@@ -9,6 +9,13 @@ use Alert;
 
 class FiturController extends Controller
 {
+
+    public function hubungi_kami(){
+        return view('hubungikami');
+        
+    }
+
+
     public function faq(){
         return view('faq');
 
