@@ -94,22 +94,22 @@
             <div class="col-md-12" style="text-align: left;">
                 <h3>Belanja Yuk</h3>
             </div>
-            <div class="col-md-12 row mt-4">
+            <div class="col-md-12 row mt-4" style="margin-left:60px;">
                 <div class="col-md-1" style="text-align: left;"></div>
-                <div class="col-md-4" style="text-align: left;"><h5>Bahan</h5></div>
+                <div class="col-md-5" style="text-align: left;"><h5>Bahan</h5></div>
                 <div class="col-md-2" style="text-align: left;"><h5>Harga</h5></div>
                 <div class="col-md-3" style="text-align: center;"><h5>Jumlah</h5></div>
-                <div class="col-md-2" style="text-align: left;"></div>
+                <!-- <div class="col-md-2" style="text-align: left;"></div> -->
             </div>
             <?php $index = 0; ?>
             <form action="/addtocart" class="col-md-12 row mt-4" method="POST">
             @csrf
             @foreach($bahan_resep as $rsp)
-            <div class="col-md-12 row mt-4">
-                    <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
-                    <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                    <div class="col-md-2" style="text-align: left;">Rp {{$rsp->harga}}</div>
-                    <div class="col-md-3" style="text-align: left;">
+            <div class="col-md-12 row mt-4" style="margin-left:60px;">
+                    <input type="checkbox" class="col-md-1" style="margin-top:5px; width:20px; height:20px;" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
+                    <div class="col-md-5" style="text-align: left;">{{$rsp->nama_bahan}}</div>
+                    <div class="col-md-2" style="text-align: left; padding-left:30px;">Rp {{$rsp->harga}}</div>
+                    <div class="col-md-3" style="text-align: left; padding-left:60px;">
                         <div class="qty">
                             <span class="minus{{$index}} minus bg-dark ">-</span>
                             <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
@@ -123,9 +123,9 @@
             </div>
             @endforeach
         </div>
-        <div class="d-flex justify-content-end">
-        <button type="submit" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
-        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px;"><strong>Beli Sekarang</strong></button>
+        <div class="d-flex justify-content-end" style="margin-right:60px;">
+        <button type="submit" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
+        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Beli Sekarang</strong></button>
         </div>
         </form>
     </div>
