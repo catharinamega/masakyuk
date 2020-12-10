@@ -61,7 +61,10 @@
             <label for="alamat_utama" class="col-sm-2 col-form-label" style="text-align: right">Alamat Utama : </label>
             <div class="col-sm-7">
                 <p readonly style="padding:7px; text-align:left;">{{$akun->alamat}} </p>
-            </div>
+            </div>     
+        </div>
+        <div class="col-sm-5 mb-4">
+           <a href="#">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
         </div>
 <div style="margin-left:30px; text-align:left; margin-bottom:20px;">
         <button type="button" class="btn btn-primary active">
