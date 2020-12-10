@@ -12,8 +12,10 @@ class CartController extends Controller
 {
     public function add_cart(Request $req){
         // var_dump($req);
-        dd($req->input('bahan_beli'));
-        die();
+        $username_login = Session::get('login');
+
+        // dd($username_login);
+        // die();
         if(isset($_POST)){
             //1. INPUT
             echo "<pre>";
@@ -32,11 +34,12 @@ class CartController extends Controller
                         array_push($item,$temp);
                     }
                 }
+                dd($item);
+                die;
                 //3. OUTPUT
                 // echo "<pre>";
                 // print_r($item);
                 // echo "</pre>";
-                dd($item);
             }
         }
     }
