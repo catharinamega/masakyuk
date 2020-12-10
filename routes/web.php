@@ -75,3 +75,10 @@ Route::get('/infopengiriman', 'App\Http\Controllers\FiturController@info_pengiri
 
 // CART
 Route::post('/addtocart', 'App\Http\Controllers\CartController@add_cart');
+
+// CHECKOUT
+Route::get('/checkout', 'App\Http\Controllers\CheckoutController@tampil_checkout');
+
+
+// PEMBAYARAN
+Route::get('/pembayaran', 'App\Http\Controllers\CheckoutController@tampil_pembayaran');
