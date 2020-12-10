@@ -48,7 +48,7 @@
         <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label" style="text-align: right">Kata Sandi : </label>
             <div class="col-sm-3">
-               <p style="text-align: left">******** <a href="" style="margin-left:15px;"> Ubah </a></p>
+               <p style="text-align: left">******** <a href="/gantikatasandi" style="margin-left:15px;"> Ubah </a></p>
             </div>
         </div>
         <div class="form-group row">

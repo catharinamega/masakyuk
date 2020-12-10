@@ -213,5 +213,15 @@ class AwalController extends Controller
         
     }
 
+    public function ganti_sandi(){
+        
+        return view('gantikatasandi');
+        
+    }
 
+    public function lupa_sandi(){
+        
+        return view('lupakatasandi');
+        
+    }
 }

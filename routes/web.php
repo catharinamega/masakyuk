@@ -52,6 +52,9 @@ Route::get('/searchresep', 'App\Http\Controllers\KatalogController@search_resep'
 Route::get('/akun', 'App\Http\Controllers\AwalController@akun');
 Route::post('/updateakun', 'App\Http\Controllers\AwalController@update_akun');
 
+// GANTI KATA SANDI
+Route::get('/gantikatasandi', 'App\Http\Controllers\AwalController@ganti_sandi');
+Route::get('/lupakatasandi', 'App\Http\Controllers\AwalController@lupa_sandi');
 
 // DESKRIPSI RESEP
 Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');

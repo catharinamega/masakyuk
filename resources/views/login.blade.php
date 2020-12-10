@@ -65,7 +65,7 @@
                                     </button>
                                 </div>
                                 <div class="text-right">
-                                    <a href="#" class="forget-link">
+                                    <a href="/lupakatasandi" class="forget-link">
                                         Lupa Password?
                                     </a>
                                 </div>
