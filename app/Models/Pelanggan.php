@@ -143,4 +143,20 @@ class Pelanggan extends Model
         return $alamat_saya;
 
     }
+
+    public function update_password($data){
+        
+        $data_baru =['username'=> $data['username'],
+                     'password_baru'=> $data['password_baru']
+                    ];
+        // nunggu Eillen
+        $cmd="CALL update_password_pelanggan(:password_baru, :username);";
+        
+        $update_password = DB::update($cmd,$data_baru);
+        // dd($update_password);
+        // die;
+        return $update_password;
+    }
+
+
 }

@@ -54,6 +54,8 @@ Route::post('/updateakun', 'App\Http\Controllers\AwalController@update_akun');
 
 // GANTI KATA SANDI
 Route::get('/gantikatasandi', 'App\Http\Controllers\AwalController@ganti_sandi');
+Route::post('/gantikatasandi', 'App\Http\Controllers\AwalController@update_password');
+
 Route::get('/lupakatasandi', 'App\Http\Controllers\AwalController@lupa_sandi');
 
 // DESKRIPSI RESEP

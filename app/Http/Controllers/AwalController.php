@@ -30,7 +30,7 @@ class AwalController extends Controller
 
         $data = [
             'username' => $username,
-            'password' => $pass,
+            'password' => $pass
         ];
 
         //2. Check Username dan Password ke database
@@ -47,7 +47,12 @@ class AwalController extends Controller
         if ($flag_exist){
             //2.a. Jika KETEMU, maka session LOGIN dibuat
             Session::put('login', $username);
-
+            Session::put('pass', $pass);
+            
+            // $pass_lama = Session::get('pass');
+            // dd($pass_lama);
+            // die;
+            
             // $username_login = $data['username'];
             // $username_login->belongsToMany('App\Models\Pelanggan');
 
@@ -223,5 +228,33 @@ class AwalController extends Controller
         
         return view('lupakatasandi');
         
+    }
+
+    public function update_password(Request $req){
+        $usr = new Pelanggan();
+        $username_login = Session::get('login');
+        $pass_lama = Session::get('pass');
+        // dd($pass_lama);
+        // die;
+        $data = [
+            'pass_lama' => $pass_lama,
+            'password_lama' =>$req->input('password_lama'),
+            'username' => $username_login,
+            'password_baru'  => $req->input('password_baru'),
+            'password_baru2'  => $req->input('password_baru2')
+        ];
+        // dd($data);
+        // die;
+        if($data['pass_lama'] !== $data['password_lama']){
+            Session::flash('danger', 'Password Anda tidak sesuai');
+            return redirect('/gantikatasandi');
+        }else{
+            // dd($data);
+            // die;
+            $update_password = $usr->update_password($data);
+            Session::flash('success', 'Anda berhasil mengubah kata sandi!');
+            return redirect('/gantikatasandi');
+        }
+
     }
 }
