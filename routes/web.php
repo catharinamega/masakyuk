@@ -66,6 +66,8 @@ Route::post('/alamatbaru', 'App\Http\Controllers\AwalController@buat_alamat');
 
 // FAQ, SK, INFO PEMBAYARAN, INFO PENGIRIMAN
 Route::get('/hubungikami', 'App\Http\Controllers\FiturController@hubungi_kami');
+Route::post('/hubungikami/send', 'App\Http\Controllers\FiturController@send_email');
+
 Route::get('/faq', 'App\Http\Controllers\FiturController@faq');
 Route::get('/sdank', 'App\Http\Controllers\FiturController@sdank');
 Route::get('/infopembayaran', 'App\Http\Controllers\FiturController@info_pembayaran');
