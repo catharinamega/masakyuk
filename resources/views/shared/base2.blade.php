@@ -18,7 +18,7 @@
         <!-- Navbar content -->
         <div class="col-md-3">
             <a href="/home"> 
-                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
+                <img class="navbar-brand" style="height: 60px;" src="../assets/img/masakyuk2.png"  alt="ini logo loh">
             </a>
         </div>
         <span class="col-md-6">
