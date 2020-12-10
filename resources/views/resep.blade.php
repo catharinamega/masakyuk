@@ -63,30 +63,30 @@
     <!-- bagian shopping catalog -->
 
     <?php 
-        if(isset($_POST)){
-            //1. INPUT
-            echo "<pre>";
-            print_r($_POST);
-            echo "</pre>";
+        // if(isset($_POST)){
+        //     //1. INPUT
+        //     echo "<pre>";
+        //     print_r($_POST);
+        //     echo "</pre>";
 
-            //2. PROSES
-            if(isset($_POST['bahan_beli'])){
-                $item = array();
-                foreach($_POST['bahan_beli'] as $p){
-                    if(isset($p['id'])){
-                        $temp=[
-                            'id' => $p['id'],
-                            'qty'=> $p['qty'],
-                        ];
-                        array_push($item,$temp);
-                    }
-                }
-                //3. OUTPUT
-                echo "<pre>";
-                print_r($item);
-                echo "</pre>";
-            }
-        }
+        //     //2. PROSES
+        //     if(isset($_POST['bahan_beli'])){
+        //         $item = array();
+        //         foreach($_POST['bahan_beli'] as $p){
+        //             if(isset($p['id'])){
+        //                 $temp=[
+        //                     'id' => $p['id'],
+        //                     'qty'=> $p['qty'],
+        //                 ];
+        //                 array_push($item,$temp);
+        //             }
+        //         }
+        //         //3. OUTPUT
+        //         echo "<pre>";
+        //         print_r($item);
+        //         echo "</pre>";
+        //     }
+        // }
     ?>
 
     <div class="container" style="margin-top:20px; margin-bottom:40px;">
