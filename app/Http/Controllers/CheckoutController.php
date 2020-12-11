@@ -28,8 +28,13 @@ class CheckoutController extends Controller
         
     }
 
-    public function detail_pesanan(){
-        return view('detail');
+    public function detail_pesanan($id){
+        $usr = new Checkout;
+        $detail = $usr->get_detail($id);
+        $daftar_bahan = $usr->daftar_bahan($id);
+        // dd($daftar_bahan);
+        // die;
+        return view('detail',compact('detail','daftar_bahan'));
         
     }
 

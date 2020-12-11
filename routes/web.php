@@ -89,7 +89,7 @@ Route::get('/riwayattransaksi', 'App\Http\Controllers\CheckoutController@riwayat
 
 
 // DETAIL PESANAN
-Route::get('/detailpesanan', 'App\Http\Controllers\CheckoutController@detail_pesanan');
+Route::get('/detailpesanan/{id}', 'App\Http\Controllers\CheckoutController@detail_pesanan');
 
 // PEMBAYARAN
 Route::get('/pembayaran', 'App\Http\Controllers\CheckoutController@tampil_pembayaran');

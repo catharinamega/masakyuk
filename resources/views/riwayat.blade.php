@@ -39,7 +39,7 @@
                     </table>
                 </div>
                     <div class="d-flex justify-content-end" style="text-align:left; margin-top:5px;">
-                        <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Lihat Detail Pesanan</button>
+                        <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><a href="/detailpesanan/{{$row->id_transaksi}}">Lihat Detail Pesanan</a></button>
                     </div>
             </div>
             @endforeach
