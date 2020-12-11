@@ -5,25 +5,9 @@
 @section('isi_konten')
 
 <div class="container">
-    <div style="margin-left:-55px; text-align: left; padding-top:20px;">
-        <table class="table table-borderless" style="height:50px;">
-            <tbody>
-                <tr>
-                    <td style='width: 5%; padding-top:8px; padding-left:0px;'>
-                        <div>
-                            <a href="/" style="color:black;">
-                                <i class="fa fa-arrow-left" aria-hidden="true" style="width:40px; height:40px;"></i>
-                            </a>
-                        </div>
-                    </td>
-                    <td style="padding:0px;">
-                        <div class="container" style="text-align:left;">
-                            <h1>Pembayaran</h1>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
+        <h1>Pembayaran</h1>
+       
     </div>
 
     <div style="margin-top:10px;">
@@ -32,7 +16,7 @@
             <hr style="width:50%;text-align:left;margin-left:0; border-top: 1px solid black;">
             <p>Bank BCA</p>
             <p style="margin-bottom:0px;">Nomor Rekening:</p>
-            <input type="number" value="900012345" id="norek" style="width:150px;">
+            <input type="text" value="900012345" id="norek" style="width:150px;" readonly>
             <button class="btn btn-link" style="width:80px;" onclick="myFunction()">Salin</button>
 
             <hr style="text-align:left;margin-left:0;border-top: 2px solid black;">
@@ -218,7 +202,7 @@
             </div>
 
             <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:50px; margin-top:30px;">
-                <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Oke</strong></button>
+                <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Bayar</strong></button>
             </div>
         </div>
     </div>
