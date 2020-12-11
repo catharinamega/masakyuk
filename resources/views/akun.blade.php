@@ -64,13 +64,13 @@
             </div>     
         </div>
         <div class="col-sm-5 mb-4">
-           <a href="#">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
+           <a href="/logout">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
         </div>
 <div style="margin-left:30px; text-align:left; margin-bottom:20px;">
         <button type="button" class="btn btn-primary active">
             <a href="/aturalamat" style="color: white; text-decoration: none;">Atur Alamat</a></button>
         <button type="button" class="btn btn-primary active" style="margin-left:10px;">
-            <a href="/" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
+            <a href="/riwayattransaksi" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
         <button class="btn btn-primary" type="submit" style="margin-left:350px;">Simpan Perubahan</button>
 
 </div>
