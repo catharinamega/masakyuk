@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:20px;">
-                        <button type="submit" class="btn btn-light" style="background-color:#D9D6FF; width:150px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><a href="/hubungikami">Tanya Yuk</a></button>
+                        <button type="submit" class="btn btn-light" style="background-color:#D9D6FF; width:150px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><a href="/hubungikami" style="color:black; text-decoration:none;">Tanya Yuk</a></button>
                     </div>
                     <!-- <div class="d-flex justify-content-end" style="text-align:left;">
                         <button type="submit" class="btn btn-light" style="background-color:#D9D6FF; width:150px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Beli Lagi</button>
