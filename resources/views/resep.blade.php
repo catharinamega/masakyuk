@@ -108,7 +108,7 @@
             <div class="col-md-12 row mt-4">
                     <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
                     <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                    <div class="col-md-2" style="text-align: left;">Rp {{$rsp->harga}}</div>
+                    <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
                     <div class="col-md-3" style="text-align: left;">
                         <div class="qty">
                             <span class="minus{{$index}} minus bg-dark ">-</span>
