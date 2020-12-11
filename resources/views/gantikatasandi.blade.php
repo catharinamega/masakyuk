@@ -37,7 +37,7 @@
                                 <input type="password" name="password_baru2" id="konfirmasi_ks" class="form-control">
                             </div>
                             <div class="text-center mt-4 mb-3">
-                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                                <button type="button" class="btn btn-primary btn-lg" style="  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Simpan Perubahan</button>
                             </div>
                         </form>
                     </div>
