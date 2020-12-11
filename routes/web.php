@@ -87,6 +87,7 @@ Route::get('/checkout', 'App\Http\Controllers\CheckoutController@tampil_checkout
 // RIWAYAT TRANSAKSI
 Route::get('/riwayattransaksi', 'App\Http\Controllers\CheckoutController@riwayat_transaksi');
 
+
 // DETAIL PESANAN
 Route::get('/detailpesanan', 'App\Http\Controllers\CheckoutController@detail_pesanan');
 

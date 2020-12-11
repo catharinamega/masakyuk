@@ -21,7 +21,10 @@ class CheckoutController extends Controller
     }
 
     public function riwayat_transaksi(){
-        return view('riwayat');
+        $usr = new Checkout;
+        $username_login = Session::get('login');
+        $riwayat = $usr->get_all($username_login);
+        return view('riwayat',compact('riwayat'));
         
     }
 
