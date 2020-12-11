@@ -119,7 +119,7 @@
                         <tr>
                             <td style="width: 50%; padding:4px;">
                                 <div>
-                                    <p style="margin-bottom:8px; text-align:left;">Total Harga</p>
+                                    <p style="margin-bottom:8px; text-align:left;">Total Pembelian</p>
                                 </div>
                             </td>
                             <td style="padding:4px;">

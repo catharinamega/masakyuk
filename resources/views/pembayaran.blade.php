@@ -188,8 +188,9 @@
 
 <br><br>
 
+
 <!-- Petunjuk OVO -->
-<div id="accordionO">
+    <div id="accordionO">
                 <div style="text-align:left; width:800px;">
                     <div class="card-header" style="text-align:left; width:700px; background-color:#E9EAEB;">
                         <a class="card-link" data-toggle="collapse" href="#collapseOvo">
