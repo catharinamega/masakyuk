@@ -19,4 +19,16 @@ class CheckoutController extends Controller
         return view('pembayaran');
         
     }
+
+    public function riwayat_transaksi(){
+        return view('riwayat');
+        
+    }
+
+    public function detail_pesanan(){
+        return view('detail');
+        
+    }
+
+
 }
