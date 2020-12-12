@@ -30,22 +30,15 @@ class CartController extends Controller
                 }
             }
         }
-        return redirect('/checkout');
+        return redirect()->back();
     }
-    public function add_cart_bahan($id){
-        $username_login = Session::get('login');
-        $cart = new Cart();
-        $detail_cart = $cart->get_cart($username_login,$id,$p['qty'],$p['harga']);            
-        // dd($daftar_bahan);
-        // die;
-        return view('detail',compact('detail','daftar_bahan'));
-        
-    }
-
+  
 
     public function tampil_cart(){
-        return view('keranjang');
-        
+        $cart = new Cart();
+        $username_login = Session::get('login');
+        $detail_cart = $cart->select_cart($username_login);
+        return view('keranjang',compact('detail_cart'));
     }
 
 }

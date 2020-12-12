@@ -47,12 +47,12 @@
     </span>
         <div class='col-md-3 d-flex justify-content-end'>
             <!-- cart ini diambil dari dom fix -->
-            <button class="btn btn-primary" id="cart">
+            <a href="/cart" class="btn btn-primary" id="cart">
         <i class="fas fa-shopping-cart"></i>
         (<span id='counterCart'>
           0
         </span>)
-      </button>
+      </a>
             <!-- profile button -->
             <button class='btn btn-lg' style='background-color:transparent;'>
         <div style='text-align:center; position: relative; margin-left: 6px; margin-right: 6px; float: left;'>

@@ -19,22 +19,22 @@
             <div class="row" style="padding-left:50px; padding-right:50px;">
             <?php $index = 0; ?>
                 @foreach($bahan as $bhn)
-                
                     <form action="/addtocart" class="col-md-3" method="POST">
+                        @csrf
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="assets/img/bahan/{{$bhn->gambar_bahan}}" alt="Card image cap">
                             <div class="card-body">
-                                <input name='bahan_beli[{{$bhn->id_bahan}}][id]' value='{{$bhn->id_bahan}}'>
+                                <input type= "textbox" name='bahan_beli[{{$bhn->id_bahan}}][id]' value='{{$bhn->id_bahan}}'>
                                 <h5 class="card-title">{{$bhn->nama_bahan}}</h5>
                                 <h6 class="card-title">{{$bhn->jumlah}}</h6>
                                 <h5 class="card-title">{{$bhn->harga}}</h5>
-                                <input name='bahan_beli[{{$bhn->id_bahan}}][harga]' value='{{$bhn->harga}}'>
+                                <input type= "textbox" name='bahan_beli[{{$bhn->id_bahan}}][harga]' value='{{$bhn->hargasli}}'>
                                 <div class="qty mt-4">
                                     <span class="minu{{$index}} minus bg-dark">-</span>
                                     <input type="number" class="count{{$index}} count" name="bahan_beli[{{$bhn->id_bahan}}][qty]" value=1>
                                     <span class="plus{{$index}} plus bg-dark">+</span>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 15px;"onclick="tambahCounter()" id="addCart">Tambah ke Troli</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</button>
                             </div>
                         </div>
                     </form>
