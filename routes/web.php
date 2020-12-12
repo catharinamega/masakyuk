@@ -52,6 +52,11 @@ Route::get('/searchresep', 'App\Http\Controllers\KatalogController@search_resep'
 Route::get('/akun', 'App\Http\Controllers\AwalController@akun');
 Route::post('/updateakun', 'App\Http\Controllers\AwalController@update_akun');
 
+// GANTI KATA SANDI
+Route::get('/gantikatasandi', 'App\Http\Controllers\AwalController@ganti_sandi');
+Route::post('/gantikatasandi', 'App\Http\Controllers\AwalController@update_password');
+
+Route::get('/lupakatasandi', 'App\Http\Controllers\AwalController@lupa_sandi');
 
 // DESKRIPSI RESEP
 Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');
@@ -66,6 +71,8 @@ Route::post('/alamatbaru', 'App\Http\Controllers\AwalController@buat_alamat');
 
 // FAQ, SK, INFO PEMBAYARAN, INFO PENGIRIMAN
 Route::get('/hubungikami', 'App\Http\Controllers\FiturController@hubungi_kami');
+Route::post('/hubungikami/send', 'App\Http\Controllers\FiturController@send_email');
+
 Route::get('/faq', 'App\Http\Controllers\FiturController@faq');
 Route::get('/sdank', 'App\Http\Controllers\FiturController@sdank');
 Route::get('/infopembayaran', 'App\Http\Controllers\FiturController@info_pembayaran');
@@ -73,3 +80,16 @@ Route::get('/infopengiriman', 'App\Http\Controllers\FiturController@info_pengiri
 
 // CART
 Route::post('/addtocart', 'App\Http\Controllers\CartController@add_cart');
+
+// CHECKOUT
+Route::get('/checkout', 'App\Http\Controllers\CheckoutController@tampil_checkout');
+
+// RIWAYAT TRANSAKSI
+Route::get('/riwayattransaksi', 'App\Http\Controllers\CheckoutController@riwayat_transaksi');
+
+
+// DETAIL PESANAN
+Route::get('/detailpesanan/{id}', 'App\Http\Controllers\CheckoutController@detail_pesanan');
+
+// PEMBAYARAN
+Route::get('/pembayaran', 'App\Http\Controllers\CheckoutController@tampil_pembayaran');

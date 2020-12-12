@@ -18,7 +18,7 @@
         <!-- Navbar content -->
         <div class="col-md-3">
             <a href="/home"> 
-                <img class="navbar-brand" style="height: 60px;" src="assets/img/masakyuk2.png"  alt="ini logo loh">
+                <img class="navbar-brand" style="height: 60px;" src="../assets/img/masakyuk2.png"  alt="ini logo loh">
             </a>
         </div>
         <span class="col-md-6">
@@ -75,7 +75,7 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Hubungi Kami <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/hubungikami">Hubungi Kami <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/infopembayaran">Info Pembayaran</a>
@@ -110,18 +110,25 @@
                             <!-- DI SI -->
                             <div class="col text-left" style="padding-left: 90px;">
                                 <h5>Informasi</h5>
-                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Info Pembayaran</a>
+                                <a href="/infopembayaran" style="color: white; text-decoration: none;" class="text-left">> Info Pembayaran</a>
                                 <br>
-                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Info Pengiriman</a>
+                                <a href="/infopengiriman" style="color: white; text-decoration: none;" class="text-left">> Info Pengiriman</a>
                             </div>
 
                             <div class="col text-left" style="padding-top: 5px;">
                                 <br>
-                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Masuk</a>
+                                @if (!Session::has('login'))
+                                    <a href="/login" style="color: white; text-decoration: none;" class="text-left">> Masuk</a>
+                                   
+                                @else
+                                        <a href="/akun" style="color: white; text-decoration: none;" class="text-left">> Profil</a>
+                                    
+                                @endif
+                                <!-- <a href="" style="color: white; text-decoration: none;" class="text-left">> Masuk</a> -->
                                 <br>
-                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Pertanyaan Umum</a>
+                                <a href="/faq" style="color: white; text-decoration: none;" class="text-left">> Pertanyaan Umum</a>
                                 <br>
-                                <a href="" style="color: white; text-decoration: none;" class="text-left">> Syarat & Ketentuan</a>
+                                <a href="/sdank" style="color: white; text-decoration: none;" class="text-left">> Syarat & Ketentuan</a>
                             </div>
 
                             <div class="col text-center">

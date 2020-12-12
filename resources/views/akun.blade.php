@@ -48,7 +48,7 @@
         <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label" style="text-align: right">Kata Sandi : </label>
             <div class="col-sm-3">
-               <p style="text-align: left">******** <a href="" style="margin-left:15px;"> Ubah </a></p>
+               <p style="text-align: left">******** <a href="/gantikatasandi" style="margin-left:15px;"> Ubah </a></p>
             </div>
         </div>
         <div class="form-group row">
@@ -61,13 +61,16 @@
             <label for="alamat_utama" class="col-sm-2 col-form-label" style="text-align: right">Alamat Utama : </label>
             <div class="col-sm-7">
                 <p readonly style="padding:7px; text-align:left;">{{$akun->alamat}} </p>
-            </div>
+            </div>     
+        </div>
+        <div class="col-sm-5 mb-4">
+           <a href="/logout">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
         </div>
 <div style="margin-left:30px; text-align:left; margin-bottom:20px;">
         <button type="button" class="btn btn-primary active">
             <a href="/aturalamat" style="color: white; text-decoration: none;">Atur Alamat</a></button>
         <button type="button" class="btn btn-primary active" style="margin-left:10px;">
-            <a href="/" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
+            <a href="/riwayattransaksi" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
         <button class="btn btn-primary" type="submit" style="margin-left:350px;">Simpan Perubahan</button>
 
 </div>

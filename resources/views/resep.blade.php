@@ -63,30 +63,30 @@
     <!-- bagian shopping catalog -->
 
     <?php 
-        if(isset($_POST)){
-            //1. INPUT
-            echo "<pre>";
-            print_r($_POST);
-            echo "</pre>";
+        // if(isset($_POST)){
+        //     //1. INPUT
+        //     echo "<pre>";
+        //     print_r($_POST);
+        //     echo "</pre>";
 
-            //2. PROSES
-            if(isset($_POST['bahan_beli'])){
-                $item = array();
-                foreach($_POST['bahan_beli'] as $p){
-                    if(isset($p['id'])){
-                        $temp=[
-                            'id' => $p['id'],
-                            'qty'=> $p['qty'],
-                        ];
-                        array_push($item,$temp);
-                    }
-                }
-                //3. OUTPUT
-                echo "<pre>";
-                print_r($item);
-                echo "</pre>";
-            }
-        }
+        //     //2. PROSES
+        //     if(isset($_POST['bahan_beli'])){
+        //         $item = array();
+        //         foreach($_POST['bahan_beli'] as $p){
+        //             if(isset($p['id'])){
+        //                 $temp=[
+        //                     'id' => $p['id'],
+        //                     'qty'=> $p['qty'],
+        //                 ];
+        //                 array_push($item,$temp);
+        //             }
+        //         }
+        //         //3. OUTPUT
+        //         echo "<pre>";
+        //         print_r($item);
+        //         echo "</pre>";
+        //     }
+        // }
     ?>
 
     <div class="container" style="margin-top:20px; margin-bottom:40px;">
@@ -94,12 +94,12 @@
             <div class="col-md-12" style="text-align: left;">
                 <h3>Belanja Yuk</h3>
             </div>
-            <div class="col-md-12 row mt-4">
+            <div class="col-md-12 row mt-4" style="margin-left:60px;">
                 <div class="col-md-1" style="text-align: left;"></div>
-                <div class="col-md-4" style="text-align: left;"><h5>Bahan</h5></div>
+                <div class="col-md-5" style="text-align: left;"><h5>Bahan</h5></div>
                 <div class="col-md-2" style="text-align: left;"><h5>Harga</h5></div>
                 <div class="col-md-3" style="text-align: center;"><h5>Jumlah</h5></div>
-                <div class="col-md-2" style="text-align: left;"></div>
+                <!-- <div class="col-md-2" style="text-align: left;"></div> -->
             </div>
             <?php $index = 0; ?>
             <form action="/addtocart" class="col-md-12 row mt-4" method="POST">
@@ -115,17 +115,17 @@
                             <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
                             <span class="plus{{$index}} plus bg-dark ">+</span>
                         </div>
-                        </div>
-                    <div class="col-md-2" style="text-align: left;">
                     </div>
+                    <!-- <div class="col-md-2" style="text-align: left;">
+                    </div> -->
                     <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
                     <?php $index++; ?>
             </div>
             @endforeach
         </div>
-        <div class="d-flex justify-content-end">
-        <button type="submit" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
-        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px;"><strong>Beli Sekarang</strong></button>
+        <div class="d-flex justify-content-end" style="margin-right:60px;">
+        <button type="submit" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
+        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Beli Sekarang</strong></button>
         </div>
         </form>
     </div>

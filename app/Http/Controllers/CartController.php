@@ -17,6 +17,7 @@ class CartController extends Controller
         
         
         
+
         // dd($username_login);
         // die();
         if(isset($_POST)){
@@ -49,7 +50,6 @@ class CartController extends Controller
                 // echo "<pre>";
                 // print_r($item);
                 // echo "</pre>";
-                dd($item);
             }
         }
     }
