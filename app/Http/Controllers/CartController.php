@@ -43,4 +43,11 @@ class CartController extends Controller
             }
         }
     }
+
+
+    public function tampil_cart(){
+        return view('keranjang');
+        
+    }
+
 }
