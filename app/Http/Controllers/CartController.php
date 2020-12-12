@@ -41,4 +41,11 @@ class CartController extends Controller
         return view('detail',compact('detail','daftar_bahan'));
         
     }
+
+
+    public function tampil_cart(){
+        return view('keranjang');
+        
+    }
+
 }

@@ -124,8 +124,8 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-end" style="margin-right:60px;">
-        <button type="submit" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
-        <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Beli Sekarang</strong></button>
+            <button type="submit" class="btn btn-light" style="width: 200px; height: 65px; background-color: #A3CCF1; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Tambah Semua Pilihan ke Keranjang</strong></button>
+            <button type="button" class="btn btn-light" style="width: 200px; height: 65px; background-color: #76CBFC; margin-left:30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Beli Sekarang</strong></button>
         </div>
         </form>
     </div>

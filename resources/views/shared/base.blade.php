@@ -128,11 +128,11 @@
                             <div class="col text-left" style="padding-top: 5px;">
                                 <br>
                                 @if (!Session::has('login'))
-                                    <a href="/login" style="color: white; text-decoration: none;" class="text-left">Masuk</a>
-                                    </div>
+                                    <a href="/login" style="color: white; text-decoration: none;" class="text-left">> Masuk</a>
+                                   
                                 @else
-                                        <a href="/akun" style="color: white; text-decoration: none;" class="text-left">Profil</a>
-                                    </div>  
+                                        <a href="/akun" style="color: white; text-decoration: none;" class="text-left">> Profil</a>
+                                    
                                 @endif
                                 <!-- <a href="" style="color: white; text-decoration: none;" class="text-left">> Masuk</a> -->
                                 <br>
