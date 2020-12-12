@@ -111,7 +111,7 @@
                     <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
                     <div class="col-md-3" style="text-align: left;">
                         <div class="qty">
-                            <span class="minus{{$index}} minus bg-dark ">-</span>
+                            <span class="minu{{$index}} minus bg-dark ">-</span>
                             <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
                             <span class="plus{{$index}} plus bg-dark ">+</span>
                         </div>
