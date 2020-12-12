@@ -17,6 +17,10 @@ class AwalController extends Controller
         return view('home');
     }
 
+
+
+
+
     //login
     public function login(){
         return view('login');
@@ -217,6 +221,24 @@ class AwalController extends Controller
         return view('alamatbaru');
         
     }
+
+    public function tambah_alamat(Request $req){
+        $username_login = Session::get('login');
+        $usr = new Pelanggan();
+        $data_alamat = [
+            'provinsi'      => $req->input('provinsi'),
+            'kota'  => $req->input('kota'),
+            'kecamatan'     => $req->input('kecamatan'),
+            'kode_pos'     => $req->input('kode_pos'),
+            'alamat'    => $req->input('alamat')
+            
+        ];
+        
+        // dd($data_alamat);
+        $tambah_alamat = $usr->tambah_alamat($data_alamat);
+        $tambah_alamat_pelanggan = $usr->tambah_alamat_pelanggan($tambah_alamat,$username_login);
+    }
+
 
     public function ganti_sandi(){
         

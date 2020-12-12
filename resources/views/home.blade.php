@@ -197,6 +197,7 @@
                 <!-- end card -->
             </div>
         </div>
+    
 
         <!-- bagian resep pilihan -->
         <section id="resep_pilihan" class="portfolio bg-light pb-4">
@@ -206,65 +207,71 @@
                         <h2>Resep Pilihan</h2>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-3" style="text-align: center;">
+                <!-- template resep pilihan -->
+                <div class="row justify-content-center" style="margin-left: 55px;">
+                    @foreach($resep_pilihan as $rsp)
+                        <div class="col-md-4" style="text-align: center; ">
 
-                        <div class="card" style="width:250px;">
-                            <img class="card-img-top" src="assets/img/ayam-bakar.jpg" alt="ayam-bakar" style="width:100%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Ayam Bakar Madu</h5>
+                            <div class="card" style="width:250px;">
+                                <a href="/resep/{{$rsp->id_resep}}">
+                                    <img class="card-img-top" src="../assets/img/resep/{{$rsp->gambar_resep}}" style="width:100%;">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$rsp->judul_resep}}</h5>
+                                </div>
                             </div>
-                        </div>
-                        <br>
-                        <div class="card" style="width:250px;">
-                            <img class="card-img-top" src="assets/img/nasi_goreng.jpg" alt="ayam-bakar" style="width:100%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Goreng Original</h5>
-                            </div>
-                        </div>
+                            <br>
+                            <!-- <div class="card" style="width:250px;">
+                                <a href="">
+                                    <img class="card-img-top" src="assets/img/nasi_goreng.jpg" alt="ayam-bakar" style="width:100%;">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Goreng Original</h5>
+                                </div>
+                            </div> -->
 
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-
-                        <div class="card" style="width:250px;">
-                            <img class="card-img-top" src="assets/img/nasi_goreng_merah.jpg" alt="ayam-bakar" style="width:100%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Goreng Merah</h5>
-                            </div>
                         </div>
 
-                        <br>
-                        <div class="card" style="width:250px;">
-                            <img class="card-img-top" src="assets/img/nasi_mawut.jpg" alt="ayam-bakar" style="width:100%; ">
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Goreng Mawut</h5>
+                        <!-- <div class="col-md-3" style="text-align: center;">
+
+                            <div class="card" style="width:250px;">
+                                <img class="card-img-top" src="assets/img/nasi_goreng_merah.jpg" alt="ayam-bakar" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Goreng Merah</h5>
+                                </div>
                             </div>
+
+                            <br>
+                            <div class="card" style="width:250px;">
+                                <img class="card-img-top" src="assets/img/nasi_mawut.jpg" alt="ayam-bakar" style="width:100%; ">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Goreng Mawut</h5>
+                                </div>
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="col-md-3" style="text-align: center;">
 
-                    <div class="col-md-3" style="text-align: center;">
-
-                        <div class="card" style="width:250px;">
-                            <img class="card-img-top" src="assets/img/sop-ayam.jpg" alt="ayam-bakar" style="width:100%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Sop Ayam</h5>
+                            <div class="card" style="width:250px;">
+                                <img class="card-img-top" src="assets/img/sop-ayam.jpg" alt="ayam-bakar" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sop Ayam</h5>
+                                </div>
                             </div>
-                        </div>
-                        <br>
-                        <div class="card" style="width:250px;">
-                            <img class="card-img-top" src="assets/img/nasi_goreng_bali.jpg" alt="ayam-bakar" style="width:100%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Nasi Goreng Bali</h5>
+                            <br>
+                            <div class="card" style="width:250px;">
+                                <img class="card-img-top" src="assets/img/nasi_goreng_bali.jpg" alt="ayam-bakar" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nasi Goreng Bali</h5>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
-
+                        </div> -->
+                    @endforeach
                 </div>
 
             </div>
         </section>
-
+    </div>
 @endsection

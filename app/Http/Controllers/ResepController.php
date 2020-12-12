@@ -24,4 +24,11 @@ class ResepController extends Controller
         
     }
 
+        // resep pilihan
+        public function resep_pilihan(){
+            $rsp = new Resep;
+            $resep_pilihan = $rsp->resep_pilihan();
+            return view('home', compact('resep_pilihan'));
+        }
+
 }

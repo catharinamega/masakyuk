@@ -105,22 +105,22 @@
             <form action="/addtocart" class="col-md-12 row mt-4" method="POST">
             @csrf
             @foreach($bahan_resep as $rsp)
-            <div class="col-md-12 row mt-4" style="margin-left:60px;">
-                    <input type="checkbox" class="col-md-1" style="margin-top:5px; width:20px; height:20px;" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
-                    <div class="col-md-5" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                    <div class="col-md-2" style="text-align: left; padding-left:30px;">Rp {{$rsp->harga}}</div>
-                    <div class="col-md-3" style="text-align: left; padding-left:60px;">
-                        <div class="qty">
-                            <span class="minus{{$index}} minus bg-dark ">-</span>
-                            <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
-                            <span class="plus{{$index}} plus bg-dark ">+</span>
+                <div class="col-md-12 row mt-4" style="margin-left:60px;">
+                        <input type="checkbox" class="col-md-1" style="margin-top:5px; width:20px; height:20px;" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
+                        <div class="col-md-5" style="text-align: left;">{{$rsp->nama_bahan}}</div>
+                        <div class="col-md-2" style="text-align: left; padding-left:30px;">Rp {{$rsp->harga}}</div>
+                        <div class="col-md-3" style="text-align: left; padding-left:60px;">
+                            <div class="qty">
+                                <span class="minus{{$index}} minus bg-dark ">-</span>
+                                <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
+                                <span class="plus{{$index}} plus bg-dark ">+</span>
+                            </div>
                         </div>
-                    </div>
-                    <!-- <div class="col-md-2" style="text-align: left;">
-                    </div> -->
-                    <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
-                    <?php $index++; ?>
-            </div>
+                        <!-- <div class="col-md-2" style="text-align: left;">
+                        </div> -->
+                        <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
+                        <?php $index++; ?>
+                </div>
             @endforeach
         </div>
         <div class="d-flex justify-content-end" style="margin-right:60px;">

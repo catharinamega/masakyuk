@@ -159,4 +159,21 @@ class Pelanggan extends Model
     }
 
 
+    public function tambah_alamat($data_alamat){
+        
+        $data_baru =['provinsi'=> $data_alamat['provinsi'],
+                     'kota'=> $data_alamat['kota'],
+                     'kecamatan'=> $data_alamat['kecamatan'],
+                     'kode_pos'=> $data_alamat['kode_pos'],
+                     'alamat'=> $data_alamat['alamat']
+                    ];
+        // nunggu Eillen
+        $cmd = "CALL insert_alamat(:alamat, :provinsi, :kecamatan, :kota, :kode_pos);";
+        
+        $tambah_alamat = DB::select($cmd,$data_baru);
+        // dd($tambah_alamat);
+        // die;
+        return $tambah_alamat;
+    }
+
 }
