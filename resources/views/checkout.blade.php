@@ -45,42 +45,37 @@
         <div class="col-md-2" style="text-align: center;"><h5>Total</h5></div>
     </div>
 
-    <div class="col-md-12 row mt-4">
-        <div class="col-md-5" style="text-align: left;">Nama Bahan</div>
-        <div class="col-md-2 row" >
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right;">10.000</div>
+
+
+
+    <form id="pembayaran" action="/checkout" method="GET"></form>
+            @csrf
+            @foreach($item as $itx)
+            @foreach($itx as $crt)
+            <div class="col-md-12 row mt-4">
+                    <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
+                    <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
+                    <div class="col-md-2" style="align-content: center; display: flex; flex-wrap: wrap;"></div>
+                    <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
+                    <!-- <div class="col-md-2" style="text-align: left;">
+                    </div> -->
+                    <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
+                    
+            </div>
+            @endforeach
+            @endforeach
         </div>
-        <div class="col-md-2" style="text-align: center; padding-left:80px;">8</div>
-        <div class="col-md-2 row" style="margin-left:20px;">
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right; ">80.000</div>
+        
+        <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:50px; margin-top:30px;">
+            <button form="pembayaran" type="submit" class="btn btn-light" style="background-color:#ADF0E4; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Lanjut ke Pembayaran</strong></button>
         </div>
-    </div>
-    <div class="col-md-12 row mt-4">
-        <div class="col-md-5" style="text-align: left;">Nama Bahan</div>
-        <div class="col-md-2 row" >
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right;">10.000</div>
-        </div>
-        <div class="col-md-2" style="text-align: center; padding-left:80px;">8</div>
-        <div class="col-md-2 row" style="margin-left:20px;">
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right; ">80.000</div>
-        </div>
-    </div>
-    <div class="col-md-12 row mt-4" style="margin-bottom:60px;">
-        <div class="col-md-5" style="text-align: left;">Nama Bahan</div>
-        <div class="col-md-2 row" >
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right;">10.000</div>
-        </div>
-        <div class="col-md-2" style="text-align: center; padding-left:80px;">8</div>
-        <div class="col-md-2 row" style="margin-left:20px;">
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right; ">80.000</div>
-        </div>
-    </div>
+
+
+
+
+
+
+
 
     <div class="col-md-12 row" style="margin-left:0px;">
         <div><h6>Opsi Pengiriman:</h6></div>
