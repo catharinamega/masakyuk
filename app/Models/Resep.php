@@ -15,6 +15,17 @@ class Resep extends Model
     private $tabel_bahan = 'bahan';
     private $tabel_satuan = 'satuan';
 
+    public function resep_pilihan(){
+        $cmd = "CALL random_resep;";
+        
+        $resep_pilihan = DB::select($cmd);
+        // dd($resep_pilihan);
+        // die;
+        return $resep_pilihan;
+
+    }
+
+
     public function get_all($id_resep){
        
         $cmd = "SELECT gambar_resep, judul_resep, porsi, durasi, k.jenis_kategori, penjelasan_resep, CONCAT(rb.qty,' ',s.tipe_satuan,' ',b.nama_bahan) `bahan`, prosedur_resep ".
