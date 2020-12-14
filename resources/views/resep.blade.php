@@ -42,6 +42,7 @@
     <div class="container" style="text-align: left;">
         <p>{{$detail_resep[0]->penjelasan_resep}}</p>
     </div>
+
     <div class="container" style="margin-top:20px; margin-bottom:50px;">
         <div class="row">
             <div class="col-md-4" style="text-align: left;">
@@ -106,20 +107,21 @@
             @csrf
             @foreach($bahan_resep as $rsp)
             <div class="col-md-12 row mt-4">
-                    <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
-                    <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                    <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
-                    <div class="col-md-3" style="text-align: left;">
-                        <div class="qty">
-                            <span class="minu{{$index}} minus bg-dark ">-</span>
-                            <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
-                            <span class="plus{{$index}} plus bg-dark ">+</span>
-                        </div>
-                        <!-- <div class="col-md-2" style="text-align: left;">
-                        </div> -->
-                        <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
-                        <?php $index++; ?>
+                <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
+                <div class="col-md-6" style="text-align: left;">{{$rsp->nama_bahan}}</div>
+                <div class="col-md-2" style="text-align: center;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
+                <div class="col-md-3" style="text-align: center;">
+                    <div class="qty">
+                        <span class="minu{{$index}} minus bg-dark ">-</span>
+                        <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
+                        <span class="plus{{$index}} plus bg-dark ">+</span>
+                    </div>
+                    <!-- <div class="col-md-2" style="text-align: left;">
+                    </div> -->
+                    <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
+                    <?php $index++; ?>
                 </div>
+            </div>
             @endforeach
         </div>
         <div class="d-flex justify-content-end" style="margin-right:60px;">
