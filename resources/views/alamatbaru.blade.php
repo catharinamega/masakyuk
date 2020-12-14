@@ -39,14 +39,14 @@
             <label for="inputalamat">Alamat</label>
             <textarea class="form-control" rows="3" id="inputalamat" name="alamat" placeholder="Alamat"></textarea>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <div class="form-check" style="text-align: left">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck" style="margin-bottom: 15px">
                     Jadikan Sebagai Alamat Utama
                 </label>
             </div>
-        </div>
+        </div> -->
         <div style="margin-left:40px;">
 
             <button type="button" class="btn btn-secondary"><a href="/aturalamat" style="text-decoration: none; color: white;">Nanti Saja</a></button>

@@ -235,8 +235,24 @@ class AwalController extends Controller
         ];
         
         // dd($data_alamat);
+        // INSERT ALAMAT
         $tambah_alamat = $usr->tambah_alamat($data_alamat);
-        $tambah_alamat_pelanggan = $usr->tambah_alamat_pelanggan($tambah_alamat,$username_login);
+        // AMBIL ID ALAMAT
+        $alamat = $data_alamat['alamat'];
+        $id_alamat = $usr->pilih_id_alamat($alamat);
+        // var_dump($id_alamat);
+        // die;
+        $id_alamat_pelanggan =  (array) $id_alamat;
+        // dd($id_alamat_pelanggan);
+        // INSERT ALAMAT_PELANGGAN
+        $data_alamat = [
+            'id_alamat'    => $id_alamat_pelanggan,
+            'username'      => $username_login
+        ];
+        // dd($data_alamat);
+        // die;
+        $tambah_alamat_pelanggan = $usr->tambah_alamat_pelanggan($data_alamat);
+        return redirect('/aturalamat');
     }
 
 
@@ -278,5 +294,20 @@ class AwalController extends Controller
             return redirect('/gantikatasandi');
         }
 
+    }
+
+    public function pilih_alamat(Request $req){
+        $usr = new Pelanggan();
+        $username_login = Session::get('login');
+        $alamat = $_POST['alamat'];
+        $data =[
+            'username' => $username_login,
+            'id_alamat'  => $alamat
+        ];
+        // dd($data);
+        // die;
+        $alamat = $usr->update_alamat_utama($data);
+        return redirect('/akun');
+        
     }
 }

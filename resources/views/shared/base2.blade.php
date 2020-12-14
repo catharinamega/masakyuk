@@ -45,13 +45,13 @@
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </span>
-        <div class='col-md-3 d-flex justify-content-end'>
+        <div class='col-md-3 d-flex justify-content-end' >
             <!-- cart ini diambil dari dom fix -->
             <a href="/cart" class="btn btn-primary" id="cart">
-        <i class="fas fa-shopping-cart"></i>
-        (<span id='counterCart'>
+        <i class="fas fa-shopping-cart" style="width:50px;"></i>
+        <!-- (<span id='counterCart'>
           0
-        </span>)
+        </span>) -->
       </a>
             <!-- profile button -->
             <button class='btn btn-lg' style='background-color:transparent;'>
@@ -170,7 +170,7 @@
                       width: 50px;
                       border: none;
                       outline: none;
-                      background-image:url(assets/img/topp.svg);
+                      background-image:url(../assets/img/topp.svg);
                       cursor: pointer;
                       padding: 15px;
                       border-radius: 4px;
