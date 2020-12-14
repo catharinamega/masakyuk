@@ -69,6 +69,7 @@ Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');
 // ALAMAT
 Route::get('/aturalamat', 'App\Http\Controllers\AwalController@atur_alamat');
 Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');
+Route::post('/pilihalamat', 'App\Http\Controllers\AwalController@pilih_alamat');
 
 // BUAT ALAMAT BARU
 Route::get('/alamatbaru', 'App\Http\Controllers\AwalController@alamat_baru');

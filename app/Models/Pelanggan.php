@@ -176,4 +176,19 @@ class Pelanggan extends Model
         return $tambah_alamat;
     }
 
+    public function update_alamat_utama($data){
+        
+        $data_baru =['username'=> $data['username'],
+                     'id_alamat'=> $data['id_alamat']
+                    ];
+        
+        $cmd = "CALL update_alamat_utama(:id_alamat, :username);";
+        
+        $update_alamat_utama = DB::update($cmd,$data_baru);
+        // dd($update_alamat_utama);
+        // die;
+        return $update_alamat_utama;
+    }
+
+
 }
