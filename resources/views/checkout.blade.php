@@ -176,6 +176,22 @@
 
 
 
+        
+    
+
+
+    <div class="col-md-12 row" style="margin-left:0px; margin-top:50px;">
+        <div><h6>Opsi Pengiriman:</h6></div>
+        <div class="btn-group" style="margin-left: 38px;">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pilih Opsi Pengiriman
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Gosend</a>
+                <a class="dropdown-item" href="#">GrabExpress</a>
+            </div>
+        </div>
+    </div>
 
 </div>
 @endsection

@@ -25,15 +25,17 @@
             <div class="col-md-12 row mt-4">
                     <input type="checkbox" class="col-md-1" name='bahan_chk[{{$crt->id_bahan}}][id]' form="pembayaran" value='{{$crt->id_bahan}}'>
                     <div class="col-md-4" style="text-align: left;">{{$crt->nama_bahan}}</div>
-                    <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
+                    <div class="col-md-2" style="text-align: left; padding-left:40px;">Rp
+                        <input type="number" class="col-md-9" style="padding:0px; text-align: right;" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly>
+                    </div>
                     <div class="col-md-3" style="align-content: center; display: flex; flex-wrap: wrap;">
-                        <div class="qty row">
+                        <div class="qty row" style="margin-left:90px;">
                             <form action="/minucart" method="GET">
                                 @csrf
                                 <input type="hidden" name='bahan_beli[id]' value='{{$crt->id_bahan}}'>
                                 <button type="submit" class="minu{{$index}} minus bg-dark ">-</button>
                             </form>
-                            <input type="number" class="count{{$index}} count" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}">
+                            <input type="number" class="count{{$index}} count" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}" readonly>
                             <form action="/pluscart" method="GET">
                                 @csrf
                                 <input type="hidden" name='bahan_beli[id]' value='{{$crt->id_bahan}}'>
@@ -41,7 +43,11 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
+                    <div class="col-md-2 row" style="text-align: left; ">
+                        <div class=col-md-4 style="padding-left:35px;">Rp</div>
+                        <div class=col-md-8 style="text-align:right; padding:0px;">{{$crt->subtotal}}</div>
+                        <!-- <h5>Rp {{$crt->subtotal}}</h5> -->
+                    </div>
                     <!-- <div class="col-md-2" style="text-align: left;">
                     </div> -->
                     <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
