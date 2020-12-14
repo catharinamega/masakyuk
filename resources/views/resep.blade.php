@@ -29,11 +29,9 @@
                     <!-- <br> -->
                     <p>Kategori</p>
                 </div>
-            </div>
-
-        
+            </div>    
             <div class="text-center" style="margin-top: 30px;">
-                <button type="button" class="btn btn-primary" style="width: 200px;">Beli Bahan</button>
+                <a href="#top"><button type="button" class="btn btn-primary" style="width: 200px;">Beli Bahan</button></a>
             </div>
 
         </div>
@@ -92,7 +90,7 @@
 
     <div class="container" style="margin-top:20px; margin-bottom:40px;">
         <div class="row" style="margin-bottom:30px;">
-            <div class="col-md-12" style="text-align: left;">
+            <div class="col-md-12" id="top" style="text-align: left;">
                 <h3>Belanja Yuk</h3>
             </div>
             <div class="col-md-12 row mt-4" style="margin-left:60px;">
@@ -131,5 +129,31 @@
         </form>
     </div>
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 @endsection
