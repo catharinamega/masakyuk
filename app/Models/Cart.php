@@ -50,8 +50,7 @@ class Cart extends Model
             ];
         $cart = DB::update($cmd,$data);
         return $cart;
-        // dd($resep);
-        // die;
+       
 
     }
 
@@ -66,9 +65,7 @@ class Cart extends Model
             ];
         $cart = DB::update($cmd,$data);
         return $cart;
-        // dd($resep);
-        // die;
-
+        
     }
 
     // public function add_cart($data_pelanggan){
