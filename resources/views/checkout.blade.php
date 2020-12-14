@@ -11,7 +11,7 @@
                 <tr>
                     <td style='width: 5%; padding-top:8px; padding-left:0px;'>
                         <div>
-                            <a href="/" style="color:black;">
+                            <a href="/cart" style="color:black;">
                                 <i class="fa fa-arrow-left" aria-hidden="true" style="width:40px; height:40px;"></i>
                             </a>
                         </div>
@@ -47,8 +47,8 @@
 
 
 
-    <?php  $subt = 0;  ?>
-    <form id="pembayaran" action="/pembayaran" method="GET"></form>
+
+    <form id="pembayaran" action="/pembayaran" method="POST">
             @csrf
             @foreach($item as $itx)
             @foreach($itx as $crt)
@@ -150,7 +150,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;">90.000</p>
+                                    <p style="margin-bottom:8px;">10000</p>
                                 </div>
                             </td>
                         </tr>
@@ -179,5 +179,6 @@
             <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Buat Pesanan</strong></button>
         </div>
     </div>
+    </form>
 </div>
 @endsection
