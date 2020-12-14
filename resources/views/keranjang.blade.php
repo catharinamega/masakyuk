@@ -30,12 +30,13 @@
                     </div>
                     <div class="col-md-3" style="align-content: center; display: flex; flex-wrap: wrap;">
                         <div class="qty row" style="margin-left:90px;">
-                            <form action="/minucart" method="GET">
+                            <form id="minus" action="/minucart" method="GET">
                                 @csrf
                                 <input type="hidden" name='bahan_beli[id]' value='{{$crt->id_bahan}}'>
+                                <input type="hidden" name='bahan_beli[qty]' value='{{$crt->item_qty}}'>
                                 <button type="submit" class="minu{{$index}} minus bg-dark ">-</button>
                             </form>
-                            <input type="number" class="count{{$index}} count" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}" readonly>
+                                <input type="number" class="count{{$index}} count" name="bahan_beli[qty]" value="{{$crt->item_qty}}" readonly>
                             <form action="/pluscart" method="GET">
                                 @csrf
                                 <input type="hidden" name='bahan_beli[id]' value='{{$crt->id_bahan}}'>

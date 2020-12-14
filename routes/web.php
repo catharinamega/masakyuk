@@ -87,6 +87,7 @@ Route::get('/infopengiriman', 'App\Http\Controllers\FiturController@info_pengiri
 Route::post('/addtocart', 'App\Http\Controllers\CartController@add_cart');
 Route::get('/cart', 'App\Http\Controllers\CartController@tampil_cart');
 Route::get('/pluscart', 'App\Http\Controllers\CartController@plus_cart');
+Route::get('/minucart', 'App\Http\Controllers\CartController@minu_cart');
 
 // CHECKOUT
 Route::get('/checkout', 'App\Http\Controllers\CheckoutController@tampil_checkout');
