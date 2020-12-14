@@ -117,8 +117,8 @@ class Checkout extends Model
     
     public function min_cart($user, $id){
         $bahan = "DELETE FROM `cart` WHERE username = :user AND id_bahan = :id;";
-        dd($user);
-        die;
+        // dd($user);
+        // die;
         $data2=[
             'user'=>$user,
             'id'=> $id
