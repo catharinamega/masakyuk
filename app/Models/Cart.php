@@ -21,14 +21,13 @@ class Cart extends Model
             ];
         $cart = DB::select($cmd,$data);
         return $cart;
-        // dd($resep);
-        // die;
+        
 
     }
 
     public function select_cart($user){
        
-        $cmd = "SELECT username, b.id_bahan, nama_bahan, b.harga, item_qty, subtotal, c.stat_del FROM bahan b, cart c WHERE b.id_bahan = c.id_bahan AND username = :user";
+        $cmd = "SELECT username, b.id_bahan, nama_bahan, b.harga, item_qty, subtotal, c.stat_del FROM bahan b, cart c WHERE b.id_bahan = c.id_bahan AND username = :user;";
         
         //buat binding, array assosiatifnya bisa ditaruh di Model bisa ditaruh di COntroller 
         $data=[
@@ -36,11 +35,39 @@ class Cart extends Model
             ];
         $cart = DB::select($cmd,$data);
         return $cart;
-        // dd($resep);
-        // die;
+       
 
     }
     
+    public function plus_cart($user, $id){
+       
+        $cmd = "UPDATE `cart` SET `item_qty`=`item_qty` + 1, `subtotal` = `item_qty`*`harga_bahan` WHERE username = :user AND id_bahan = :id;";
+        
+        //buat binding, array assosiatifnya bisa ditaruh di Model bisa ditaruh di COntroller 
+        $data=[
+            'user' => $user,
+            'id' => $id
+            ];
+        $cart = DB::update($cmd,$data);
+        return $cart;
+       
+
+    }
+
+    public function minu_cart($user, $id){
+       
+        $cmd = "UPDATE `cart` SET `item_qty`=`item_qty` - 1, `subtotal` = `item_qty`*`harga_bahan` WHERE username = :user AND id_bahan = :id;";
+        
+        //buat binding, array assosiatifnya bisa ditaruh di Model bisa ditaruh di COntroller 
+        $data=[
+            'user' => $user,
+            'id' => $id
+            ];
+        $cart = DB::update($cmd,$data);
+        return $cart;
+        
+    }
+
     // public function add_cart($data_pelanggan){
         
       

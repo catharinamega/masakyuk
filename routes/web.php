@@ -16,19 +16,24 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// HOME
 Route::get('/home', 'App\Http\Controllers\AwalController@home');
+Route::get('/home', 'App\Http\Controllers\ResepController@resep_pilihan');
+Route::get('/', 'App\Http\Controllers\AwalController@home');
+Route::get('/', 'App\Http\Controllers\ResepController@resep_pilihan');
+
 
 //LOGIN-LOGOUT
 Route::get('/login', 'App\Http\Controllers\AwalController@login');
 
 //coba"
-Route::get('/authenticate','App\Http\Controllers\AwalController@authentication');
+// Route::get('/authenticate','App\Http\Controllers\AwalController@authentication');
 
 
 // coba blade
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 //ini yg benar di bawah
 Route::post('/authenticate','App\Http\Controllers\AwalController@authentication');
@@ -67,7 +72,7 @@ Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');
 
 // BUAT ALAMAT BARU
 Route::get('/alamatbaru', 'App\Http\Controllers\AwalController@alamat_baru');
-Route::post('/alamatbaru', 'App\Http\Controllers\AwalController@buat_alamat');
+Route::post('/tambahalamat', 'App\Http\Controllers\AwalController@tambah_alamat');
 
 // FAQ, SK, INFO PEMBAYARAN, INFO PENGIRIMAN
 Route::get('/hubungikami', 'App\Http\Controllers\FiturController@hubungi_kami');
@@ -81,6 +86,8 @@ Route::get('/infopengiriman', 'App\Http\Controllers\FiturController@info_pengiri
 // CART
 Route::post('/addtocart', 'App\Http\Controllers\CartController@add_cart');
 Route::get('/cart', 'App\Http\Controllers\CartController@tampil_cart');
+Route::get('/pluscart', 'App\Http\Controllers\CartController@plus_cart');
+Route::get('/minucart', 'App\Http\Controllers\CartController@minu_cart');
 
 // CHECKOUT
 Route::get('/checkout', 'App\Http\Controllers\CheckoutController@tampil_checkout');

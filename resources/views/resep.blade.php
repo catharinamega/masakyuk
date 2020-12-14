@@ -29,11 +29,9 @@
                     <!-- <br> -->
                     <p>Kategori</p>
                 </div>
-            </div>
-
-        
+            </div>    
             <div class="text-center" style="margin-top: 30px;">
-                <button type="button" class="btn btn-primary" style="width: 200px;">Beli Bahan</button>
+                <a href="#top"><button type="button" class="btn btn-primary" style="width: 200px;">Beli Bahan</button></a>
             </div>
 
         </div>
@@ -42,6 +40,7 @@
     <div class="container" style="text-align: left;">
         <p>{{$detail_resep[0]->penjelasan_resep}}</p>
     </div>
+
     <div class="container" style="margin-top:20px; margin-bottom:50px;">
         <div class="row">
             <div class="col-md-4" style="text-align: left;">
@@ -91,7 +90,7 @@
 
     <div class="container" style="margin-top:20px; margin-bottom:40px;">
         <div class="row" style="margin-bottom:30px;">
-            <div class="col-md-12" style="text-align: left;">
+            <div class="col-md-12" id="top" style="text-align: left;">
                 <h3>Belanja Yuk</h3>
             </div>
             <div class="col-md-12 row mt-4" style="margin-left:60px;">
@@ -106,20 +105,20 @@
             @csrf
             @foreach($bahan_resep as $rsp)
             <div class="col-md-12 row mt-4">
-                    <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
-                    <div class="col-md-4" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                    <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
-                    <div class="col-md-3" style="text-align: left;">
-                        <div class="qty">
-                            <span class="minu{{$index}} minus bg-dark ">-</span>
-                            <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
-                            <span class="plus{{$index}} plus bg-dark ">+</span>
-                        </div>
+                <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
+                <div class="col-md-6" style="text-align: left;">{{$rsp->nama_bahan}}</div>
+                <div class="col-md-2" style="text-align: center;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
+                <div class="col-md-3" style="text-align: center;">
+                    <div class="qty">
+                        <span class="minu{{$index}} minus bg-dark ">-</span>
+                        <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
+                        <span class="plus{{$index}} plus bg-dark ">+</span>
                     </div>
                     <!-- <div class="col-md-2" style="text-align: left;">
                     </div> -->
                     <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
                     <?php $index++; ?>
+                </div>
             </div>
             @endforeach
         </div>
@@ -130,5 +129,31 @@
         </form>
     </div>
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 @endsection

@@ -41,4 +41,21 @@ class CartController extends Controller
         return view('keranjang',compact('detail_cart'));
     }
 
+    public function plus_cart(){
+        $cart = new Cart();
+        $username_login = Session::get('login');
+        $id = $_GET['bahan_beli']['id'];
+        $detail_cart = $cart->plus_cart($username_login, $id);
+        return redirect()->back();
+    }
+    public function minu_cart(){
+        $cart = new Cart();
+        $username_login = Session::get('login');
+        $id = $_GET['bahan_beli']['id'];
+        $qty = $_GET['bahan_beli']['qty'];
+        if($qty > 0){
+            $detail_cart = $cart->minu_cart($username_login, $id);
+        }
+        return redirect()->back();
+    }
 }

@@ -45,72 +45,76 @@
         <div class="col-md-2" style="text-align: center;"><h5>Total</h5></div>
     </div>
 
-    <div class="col-md-12 row mt-4">
-        <div class="col-md-5" style="text-align: left;">Nama Bahan</div>
-        <div class="col-md-2 row" >
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right;">10.000</div>
-        </div>
-        <div class="col-md-2" style="text-align: center; padding-left:80px;">8</div>
-        <div class="col-md-2 row" style="margin-left:20px;">
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right; ">80.000</div>
-        </div>
-    </div>
-    <div class="col-md-12 row mt-4">
-        <div class="col-md-5" style="text-align: left;">Nama Bahan</div>
-        <div class="col-md-2 row" >
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right;">10.000</div>
-        </div>
-        <div class="col-md-2" style="text-align: center; padding-left:80px;">8</div>
-        <div class="col-md-2 row" style="margin-left:20px;">
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right; ">80.000</div>
-        </div>
-    </div>
-    <div class="col-md-12 row mt-4" style="margin-bottom:60px;">
-        <div class="col-md-5" style="text-align: left;">Nama Bahan</div>
-        <div class="col-md-2 row" >
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right;">10.000</div>
-        </div>
-        <div class="col-md-2" style="text-align: center; padding-left:80px;">8</div>
-        <div class="col-md-2 row" style="margin-left:20px;">
-            <div class=col-md-3>Rp</div>
-            <div class=col-md-9 style="text-align:right; ">80.000</div>
-        </div>
-    </div>
 
-    <div class="col-md-12 row" style="margin-left:0px;">
+
+    <?php  $subt = 0;  ?>
+    <form id="pembayaran" action="/pembayaran" method="GET"></form>
+            @csrf
+            @foreach($item as $itx)
+            @foreach($itx as $crt)
+            <div class="col-md-12 row mt-4">
+                <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
+                <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
+                <div class="col-md-2" style="text-align: center;"><h5>{{$crt->item_qty}}</h5></div>
+                <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
+                <?php $subt = $subt + $crt->subtotal; ?>
+                <!-- <div class="col-md-2" style="text-align: left;">
+                </div> -->
+                <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
+                
+            </div>
+            @endforeach
+            @endforeach
+            
+
+
+    <div class="col-md-12 row" style="margin-left:0px; margin-top:40px; margin-bottom:30px;">
         <div><h6>Opsi Pengiriman:</h6></div>
-        <div class="btn-group" style="margin-left: 38px;">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pilih Opsi Pengiriman
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Gosend</a>
-                <a class="dropdown-item" href="#">GrabExpress</a>
-            </div>
+        <div class="form-check" style="text-align:left; margin-left:40px;">
+            <input class="form-check-input" type="radio" name="pengiriman" value="0" checked style="width:20px; height:20px;">
+            <label class="form-check-label" for="opsipengiriman1" style="margin-left:10px;">
+                Gosend
+            </label>
+        </div>
+        <div class="form-check" style="text-align:left; margin-left:20px;">
+            <input class="form-check-input" type="radio" name="pengiriman" value="1" style="width:20px; height:20px;">
+            <label class="form-check-label" for="opsipengiriman2" style="margin-left:10px;">
+                GrabExpress
+            </label>
         </div>
     </div>
+            
 
-    <div class="col-md-12 row" style="margin-left:0px; margin-top:30px; margin-bottom:30px;">
+
+    <div class="col-md-12 row" style="margin-left:0px; margin-top:20px; margin-bottom:30px;">
         <div><h6>Opsi Pembayaran:</h6></div>
-        <div class="btn-group" style="margin-left: 30px;">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pilih Opsi Pembayaran
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">BCA</a>
-                <a class="dropdown-item" href="#">Mandiri</a>
-                <a class="dropdown-item" href="#">OVO</a>
-                <a class="dropdown-item" href="#">Gopay</a>
-            </div>
+        <div class="form-check" style="text-align:left; margin-left:33px;">
+            <input class="form-check-input" type="radio" name="pembayaran" value="1" checked style="width:20px; height:20px;">
+            <label class="form-check-label" for="opsipembayaran1" style="margin-left:10px;">
+                Gopay
+            </label>
+        </div>
+        <div class="form-check" style="text-align:left; margin-left:20px;">
+            <input class="form-check-input" type="radio" name="pembayaran" value="2" style="width:20px; height:20px;">
+            <label class="form-check-label" for="opsipembayaran2" style="margin-left:10px;">
+                OVO
+            </label>
+        </div>
+        <div class="form-check" style="text-align:left; margin-left:20px;">
+            <input class="form-check-input" type="radio" name="pembayaran" value="3" style="width:20px; height:20px;">
+            <label class="form-check-label" for="opsipembayaran3" style="margin-left:10px;">
+                BCA
+            </label>
+        </div>
+        <div class="form-check" style="text-align:left; margin-left:20px;">
+            <input class="form-check-input" type="radio" name="pembayaran" value="4" style="width:20px; height:20px;">
+            <label class="form-check-label" for="opsipembayaran4" style="margin-left:10px;">
+                Mandiri
+            </label>
         </div>
     </div>
 
-
+    
     <div style="margin-top:10px;">
         <div class="d-flex justify-content-end" style="margin-left:20px; text-align: center;">
             <div style="text-align:left; width: 400px; border: 2px solid #000000; padding: 15px; margin-bottom:15px;">
@@ -129,7 +133,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;">90.000</p>
+                                    <p style="margin-bottom:8px;">{{$subt}}</p>
                                 </div>
                             </td>
                         </tr>

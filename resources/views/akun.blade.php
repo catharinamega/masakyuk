@@ -9,7 +9,7 @@
 
 ?>
 <div class="container">
-    <div style="margin-left:20px; text-align: left;">
+    <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
 
         <h1 style="margin-bottom:20px;">Akun Saya</h1>
         <h4><u>Profil Saya</u></h4>
