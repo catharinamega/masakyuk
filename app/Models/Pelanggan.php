@@ -91,7 +91,7 @@ class Pelanggan extends Model
         // $akun = DB::table('pelanggan')->get(['nama_pelanggan', 'username', 'email_pelanggan', 'hp_pelanggan', 'password']);
         // return $akun;
         
-        $cmd = "SELECT nama_pelanggan, p.username, email_pelanggan, hp_pelanggan,IF(p.alamat_utama IS NULL, 'Belum ada alamat yang tersimpan', a.alamat) `alamat`
+        $cmd = "SELECT nama_pelanggan, p.username, email_pelanggan, hp_pelanggan,IF(p.alamat_utama IS NULL, 'Belum ada alamat utama yang dipilih', CONCAT(a.alamat, ', ', a.kecamatan, ', ', a.kota, ', ', a.kodepos, ', ', a.provinsi)) `alamat`
         FROM pelanggan p LEFT JOIN alamat_pelanggan ap ON p.alamat_utama = ap.id_alamat_pelanggan LEFT JOIN alamat a ON a.id_alamat = ap.id_alamat
         WHERE p.username =:username;";
         

@@ -55,8 +55,9 @@
             <div class="col-md-12 row mt-4">
                 <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
                 <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
-                <div class="col-md-2" style="align-content: center; display: flex; flex-wrap: wrap;"></div>
+                <div class="col-md-2" style="text-align: center;"><h5>{{$crt->item_qty}}</h5></div>
                 <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
+                <?php $subt = $subt + $crt->subtotal; ?>
                 <!-- <div class="col-md-2" style="text-align: left;">
                 </div> -->
                 <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
@@ -132,7 +133,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;">90.000</p>
+                                    <p style="margin-bottom:8px;">{{$subt}}</p>
                                 </div>
                             </td>
                         </tr>
