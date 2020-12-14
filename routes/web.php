@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-// HOME
 Route::get('/home', 'App\Http\Controllers\AwalController@home');
-Route::get('/home', 'App\Http\Controllers\ResepController@resep_pilihan');
 
 //LOGIN-LOGOUT
 Route::get('/login', 'App\Http\Controllers\AwalController@login');
@@ -69,7 +67,7 @@ Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');
 
 // BUAT ALAMAT BARU
 Route::get('/alamatbaru', 'App\Http\Controllers\AwalController@alamat_baru');
-Route::post('/tambahalamat', 'App\Http\Controllers\AwalController@tambah_alamat');
+Route::post('/alamatbaru', 'App\Http\Controllers\AwalController@buat_alamat');
 
 // FAQ, SK, INFO PEMBAYARAN, INFO PENGIRIMAN
 Route::get('/hubungikami', 'App\Http\Controllers\FiturController@hubungi_kami');

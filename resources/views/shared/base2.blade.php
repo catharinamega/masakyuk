@@ -134,12 +134,8 @@
                             <div class="col text-center">
                                 <h5>Ikuti Kami</h5>
                                 <div class="sosmed">
-                                    <a href="https://www.instagram.com/" style="color: white; text-decoration: none;">
-                                        <i class="fab fa-instagram fa-3x" style="margin-right: 15px;"></i>
-                                    </a>
-                                    <a href="https://www.facebook.com/" style="color: white; text-decoration: none;">    
-                                        <i class="fab fa-facebook-square fa-3x"></i>
-                                    </a>
+                                    <i class="fab fa-instagram fa-3x" style="margin-right: 15px;"></i>
+                                    <i class="fab fa-facebook-square fa-3x"></i>
 
                                 </div>
                             </div>

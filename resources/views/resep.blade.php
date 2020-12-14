@@ -115,11 +115,12 @@
                             <input type="number" class="count{{$index}} count" name="bahan_beli[{{$rsp->id_bahan}}][qty]" value="{{$rsp->rec_beli}}">
                             <span class="plus{{$index}} plus bg-dark ">+</span>
                         </div>
-                        <!-- <div class="col-md-2" style="text-align: left;">
-                        </div> -->
-                        <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
-                        <?php $index++; ?>
-                </div>
+                    </div>
+                    <!-- <div class="col-md-2" style="text-align: left;">
+                    </div> -->
+                    <!-- <button type="button" class="btn btn-light" style="width: 180px; background-color: #B0FFF1">Tambah ke Keranjang</button> -->
+                    <?php $index++; ?>
+            </div>
             @endforeach
         </div>
         <div class="d-flex justify-content-end" style="margin-right:60px;">
