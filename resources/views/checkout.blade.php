@@ -47,7 +47,7 @@
 
 
 
-
+    <?php $subt = 0; ?>
     <form id="pembayaran" action="/pembayaran" method="POST">
             @csrf
             @foreach($item as $itx)
@@ -167,7 +167,8 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;"><strong>90.000</strong></p>
+                                    <?php $totl = $subt + 10000; ?>
+                                    <p style="margin-bottom:8px;"><strong>{{$totl}}</strong></p>
                                 </div>
                             </td>
                         </tr>
