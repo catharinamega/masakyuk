@@ -14,9 +14,29 @@
         <div style="margin-left:20px; text-align: left;">
             <h5>Total Pembayaran: Rp 90.000</h5>
             <hr style="width:50%;text-align:left;margin-left:0; border-top: 1px solid black;">
-            <p>Bank BCA</p>
+            @if($data['tipe_pembayaran'] == 'bca')    
+            <p>Metode Pembayaran: Bank BCA</p>
             <p style="margin-bottom:0px;">Nomor Rekening:</p>
-            <input type="text" value="900012345" id="norek" style="width:150px;" readonly>
+            <input type="text" value="041234567" id="norek" style="width:150px;" readonly>
+            @endif
+
+            @if($data['tipe_pembayaran'] == 'mandiri')    
+            <p>Metode Pembayaran: Bank Mandiri</p>
+            <p style="margin-bottom:0px;">Nomor Rekening:</p>
+            <input type="text" value="145536457" id="norek" style="width:150px;" readonly>
+            @endif
+
+            @if($data['tipe_pembayaran'] == 'gopay')    
+            <p>Metode Pembayaran: Gopay</p>
+            <p style="margin-bottom:0px;">Nomor Hp:</p>
+            <input type="text" value="085692414563" id="norek" style="width:150px;" readonly>
+            @endif
+
+            @if($data['tipe_pembayaran'] == 'ovo')    
+            <p>Metode Pembayaran: OVO</p>
+            <p style="margin-bottom:0px;">Nomor Hp:</p>
+            <input type="text" value="085692414563" id="norek" style="width:150px;" readonly>
+            @endif
             <button class="btn btn-link" style="width:80px;" onclick="myFunction()">Salin</button>
 
             <hr style="text-align:left;margin-left:0;border-top: 2px solid black;">
@@ -206,16 +226,16 @@
                     </div>
                 </div>
             </div>
+@endif
 
             <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:50px; margin-top:30px;">
                 <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Bayar</strong></button>
             </div>
         </div>
     </div>
-@endif
 </div>
 
-</div>
+
 
 <script>
 function myFunction() {

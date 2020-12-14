@@ -46,8 +46,8 @@ class CheckoutController extends Controller
         // die;
         if ($data == 1){
             $data= ['tipe_pembayaran'=>'gopay'];
-            dd($data);
-            die;
+            // dd($data);
+            // die;
         }elseif($data == 2){
             $data= ['tipe_pembayaran'=>'ovo'];
         }elseif($data == 3){
