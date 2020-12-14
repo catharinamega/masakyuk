@@ -96,7 +96,7 @@
             <div class="col-md-12 row mt-4" style="margin-left:60px;">
                 <div class="col-md-1" style="text-align: left;"></div>
                 <div class="col-md-5" style="text-align: left;"><h5>Bahan</h5></div>
-                <div class="col-md-2" style="text-align: left;"><h5>Harga</h5></div>
+                <div class="col-md-2" style="text-align: center;"><h5>Harga</h5></div>
                 <div class="col-md-3" style="text-align: center;"><h5>Jumlah</h5></div>
                 <!-- <div class="col-md-2" style="text-align: left;"></div> -->
             </div>
@@ -105,9 +105,9 @@
             @csrf
             @foreach($bahan_resep as $rsp)
             <div class="col-md-12 row mt-4">
-                <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}'>
+                <input type="checkbox" class="col-md-1" name='bahan_beli[{{$rsp->id_bahan}}][id]' value='{{$rsp->id_bahan}}' checked>
                 <div class="col-md-6" style="text-align: left;">{{$rsp->nama_bahan}}</div>
-                <div class="col-md-2" style="text-align: center;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
+                <div class="col-md-2" style="text-align: center;">Rp <input type="number" class="col-md-10" style="padding:0px; text-align:right;" name="bahan_beli[{{$rsp->id_bahan}}][harga]" value="{{$rsp->harga}}" readonly></div>
                 <div class="col-md-3" style="text-align: center;">
                     <div class="qty">
                         <span class="minu{{$index}} minus bg-dark ">-</span>

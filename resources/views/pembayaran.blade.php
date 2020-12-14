@@ -229,7 +229,7 @@
 @endif
 
             <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:50px; margin-top:30px;">
-                <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Bayar</strong></button>
+                <a href="/riwayattransaksi" type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Bayar</strong></a>
             </div>
         </div>
     </div>

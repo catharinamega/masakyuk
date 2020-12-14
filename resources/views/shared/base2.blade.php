@@ -170,7 +170,7 @@
                       width: 50px;
                       border: none;
                       outline: none;
-                      background-image:url(assets/img/topp.svg);
+                      background-image:url(../assets/img/topp.svg);
                       cursor: pointer;
                       padding: 15px;
                       border-radius: 4px;
