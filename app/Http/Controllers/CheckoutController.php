@@ -93,11 +93,13 @@ class CheckoutController extends Controller
         
         $daftar_bahan = $_POST['bahan_chk'];
         foreach($daftar_bahan as $bhn){
-        $detail = $usr->add_detail_transaksi($id, $bhn['id'], $bhn['qty'], $bhn['harga']);
-        }
+            $detail = $usr->add_detail_transaksi($id, $bhn['id'], $bhn['qty'], $bhn['harga']);
+            $delete = $usr->min_cart($user, $bhn['id']);
+        
+    }
         // dd($user);
         // die;
-        // return view('pembayaran');
+        return view('pembayaran');
     }
 
 }

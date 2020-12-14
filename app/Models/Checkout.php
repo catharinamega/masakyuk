@@ -114,4 +114,21 @@ class Checkout extends Model
 
     }    
 
+    
+    public function min_cart($user, $id){
+        $bahan = "DELETE FROM `cart` WHERE username = :user AND id_bahan = :id;";
+        dd($user);
+        die;
+        $data2=[
+            'user'=>$user,
+            'id'=> $id
+            ];
+
+        $daftar_bahan = DB::delete($bahan,$data2);
+        // dd($detail_pesanan);
+        return $daftar_bahan;
+
+
+    }   
+
 }
