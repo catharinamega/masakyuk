@@ -10,8 +10,15 @@
 ?>
 <div class="container">
     <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
+        <div class="col-md-12 row" style="margin-right:0;">
+            <div class="col-md-7" style="text-align:left; padding:0;">
+                <h1 style="margin-bottom:20px;">Akun Saya</h1>
+            </div>
+                <div class="col-md-5" style="text-align:right; padding-top:20px;">
+                <a href="/logout">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
+            </div>
+        </div>
 
-        <h1 style="margin-bottom:20px;">Akun Saya</h1>
         <h4><u>Profil Saya</u></h4>
         <h5>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</h5>
         @if (Session::has('success'))
@@ -63,9 +70,7 @@
                 <p readonly style="padding:7px; text-align:left;">{{$akun->alamat}} </p>
             </div>     
         </div>
-        <div class="col-sm-5 mb-4">
-           <a href="/logout">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
-        </div>
+        
 <div style="margin-left:30px; text-align:left; margin-bottom:20px;">
         <button type="button" class="btn btn-primary active">
             <a href="/aturalamat" style="color: white; text-decoration: none;">Atur Alamat</a></button>
