@@ -113,6 +113,8 @@
                                 <a href="/infopembayaran" style="color: white; text-decoration: none;" class="text-left">> Info Pembayaran</a>
                                 <br>
                                 <a href="/infopengiriman" style="color: white; text-decoration: none;" class="text-left">> Info Pengiriman</a>
+                                <br>
+                                <a href="/hubungikami" style="color: white; text-decoration: none;" class="text-left">> Hubungi Kami</a>
                             </div>
 
                             <div class="col text-left" style="padding-top: 5px;">

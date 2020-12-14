@@ -11,7 +11,7 @@
                 <tr>
                     <td style='width: 5%; padding-top:8px; padding-left:0px;'>
                         <div>
-                            <a href="/" style="color:black;">
+                            <a href="/cart" style="color:black;">
                                 <i class="fa fa-arrow-left" aria-hidden="true" style="width:40px; height:40px;"></i>
                             </a>
                         </div>
@@ -150,7 +150,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;">90.000</p>
+                                    <p style="margin-bottom:8px;">10000</p>
                                 </div>
                             </td>
                         </tr>
