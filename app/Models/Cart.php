@@ -21,8 +21,7 @@ class Cart extends Model
             ];
         $cart = DB::select($cmd,$data);
         return $cart;
-        // dd($resep);
-        // die;
+        
 
     }
 
@@ -36,8 +35,7 @@ class Cart extends Model
             ];
         $cart = DB::select($cmd,$data);
         return $cart;
-        // dd($resep);
-        // die;
+       
 
     }
     
