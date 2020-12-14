@@ -176,6 +176,32 @@ class Pelanggan extends Model
         return $tambah_alamat;
     }
 
+    public function pilih_id_alamat($alamat){
+        $data_baru =[
+                     'alamat'=> $alamat
+                    ];
+        $cmd = "CALL select_idalamat(:alamat);";
+        $id_alamat = DB::select($cmd,$data_baru);
+        return $id_alamat[0];
+    }
+
+    public function tambah_alamat_pelanggan($data_alamat){
+        $data_baru =[
+                     'data_alamat'=> $data_alamat['id_alamat']['id_alamat'],
+                     'username' => $data_alamat['username']
+                    ];
+        // dd($data_baru);
+        // die;
+        $cmd = "CALL insert_alamat_pelanggan(:data_alamat, :username);";
+        $alamat_pelanggan = DB::select($cmd,$data_baru);
+        // dd($alamat_pelanggan);
+        // die;
+        return $alamat_pelanggan;
+        // return $id_alamat;
+    }
+
+
+
     public function update_alamat_utama($data){
         
         $data_baru =['username'=> $data['username'],
