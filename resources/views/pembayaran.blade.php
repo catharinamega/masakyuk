@@ -20,8 +20,8 @@
             <button class="btn btn-link" style="width:80px;" onclick="myFunction()">Salin</button>
 
             <hr style="text-align:left;margin-left:0;border-top: 2px solid black;">
-
-
+    
+@if($data['tipe_pembayaran'] == 'bca')
 <!-- Petunjuk BCA -->
             <div id="accordion">
                 <div style="text-align:left; width:800px;">
@@ -79,8 +79,10 @@
                 </div>
             </div>
 <br><br>
+@endif
 
 
+@if($data['tipe_pembayaran'] == 'mandiri')
 <!-- Petunjuk Mandiri -->
             <div id="accordionM">
                 <div style="text-align:left; width:800px;">
@@ -143,7 +145,9 @@
             </div>
 
 <br><br>
+@endif
 
+@if($data['tipe_pembayaran'] == 'gopay')
 <!-- Petunjuk Gopay -->
             <div id="accordionG">
                 <div style="text-align:left; width:800px;">
@@ -171,8 +175,10 @@
             </div>
 
 <br><br>
+@endif
 
 
+@if($data['tipe_pembayaran'] == 'ovo')
 <!-- Petunjuk OVO -->
     <div id="accordionO">
                 <div style="text-align:left; width:800px;">
@@ -206,7 +212,8 @@
             </div>
         </div>
     </div>
-
+@endif
+</div>
 
 </div>
 

@@ -48,7 +48,7 @@
 
 
 
-    <form id="pembayaran" action="/pembayaran" method="GET"></form>
+    <form id="pembayaran" action="/pembayaran" method="POST">
             @csrf
             @foreach($item as $itx)
             @foreach($itx as $crt)
@@ -178,5 +178,6 @@
             <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Buat Pesanan</strong></button>
         </div>
     </div>
+    </form>
 </div>
 @endsection
