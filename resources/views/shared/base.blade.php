@@ -45,14 +45,14 @@
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </span>
-        <div class='col-md-3 d-flex justify-content-end'>
+    <div class='col-md-3 d-flex justify-content-end' >
             <!-- cart ini diambil dari dom fix -->
             <a href="/cart" class="btn btn-primary" id="cart">
-        <i class="fas fa-shopping-cart"></i>
-        (<span id='counterCart'>
+        <i class="fas fa-shopping-cart" style="width:50px;"></i>
+        <!-- (<span id='counterCart'>
           0
-        </span>)
-        </a>
+        </span>) -->
+      </a>
             <!-- profile button -->
             <button class='btn btn-lg' style='background-color:transparent;'>
         <div style='text-align:center; position: relative; margin-left: 6px; margin-right: 6px; float: left;'>
