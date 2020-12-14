@@ -48,7 +48,7 @@
 
 
 
-    <form id="pembayaran" action="/checkout" method="GET"></form>
+    <form id="pembayaran" action="/pembayaran" method="GET"></form>
             @csrf
             @foreach($item as $itx)
             @foreach($itx as $crt)
