@@ -29,9 +29,9 @@
         <div style="margin-left:20px; text-align: left;">
             <h5>Alamat Pengiriman</h5>
             <div style="text-align:left; background-color: #E9F3F5; width: 600px; border: 2px solid #C5E0EF; padding: 10px; margin-bottom:15px;">
-                <p style="margin-bottom:5px;">Nina</p>
-                <p style="margin-bottom:5px;">Waterfront WP 2 No. 69, Citraland, Sambikerep, Jawa Timur, 60219</p>
-                <p style="margin-bottom:5px;">082516371835</p>
+                <p style="margin-bottom:5px;">{{$alamat[0]->username}}</p>
+                <p style="margin-bottom:5px;">{{$alamat[0]->alamat}}</p>
+                <p style="margin-bottom:5px;">{{$alamat[0]->hp_pelanggan}}</p>
             </div>
             <div style="text-align:left; margin-bottom:50px;">
                 <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Pilih Alamat Lain</button>

@@ -12,6 +12,7 @@ class CheckoutController extends Controller
     public function tampil_checkout(){
         $chk = new Checkout;
         $username_login = Session::get('login');
+        $alamat = $chk->get_alamat($username_login);
         if(isset($_GET['bahan_chk'])){
             $item = array();
             foreach($_GET['bahan_chk'] as $p){
@@ -27,7 +28,9 @@ class CheckoutController extends Controller
                 }
             }
         }
-        return view('checkout',compact('item'));
+        // dd($alamat);
+        // die;
+        return view('checkout',compact('item'),compact('alamat'));
     }
 
     // public function tampil_pembayaran(){

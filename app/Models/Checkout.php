@@ -55,4 +55,17 @@ class Checkout extends Model
 
     }
 
+    public function get_alamat($username_login){
+        $cmd = "SELECT p.nama_pelanggan `username`, hp_pelanggan, alamat FROM `alamat` a, `pelanggan` p, `alamat_pelanggan` ap WHERE a.id_alamat = ap.id_alamat AND p.alamat_utama = ap.id_alamat_pelanggan AND p.username = :user;";
+
+        $data=[
+            'user'=> $username_login
+            ];
+        $get_alamat = DB::select($cmd,$data);
+        // dd($riwayat_transaksi);
+        return $get_alamat;
+        
+
+    }
+
 }
