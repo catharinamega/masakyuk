@@ -64,20 +64,11 @@
             </div>
             @endforeach
             @endforeach
-        </div>
         
-        <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:50px; margin-top:30px;">
-            <button form="pembayaran" type="submit" class="btn btn-light" style="background-color:#ADF0E4; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Lanjut ke Pembayaran</strong></button>
-        </div>
+    
 
 
-
-
-
-
-
-
-    <div class="col-md-12 row" style="margin-left:0px;">
+    <div class="col-md-12 row" style="margin-left:0px; margin-top:50px;">
         <div><h6>Opsi Pengiriman:</h6></div>
         <div class="btn-group" style="margin-left: 38px;">
             <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
