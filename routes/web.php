@@ -19,12 +19,15 @@ use Illuminate\Support\Facades\Route;
 // HOME
 Route::get('/home', 'App\Http\Controllers\AwalController@home');
 Route::get('/home', 'App\Http\Controllers\ResepController@resep_pilihan');
+Route::get('/', 'App\Http\Controllers\AwalController@home');
+Route::get('/', 'App\Http\Controllers\ResepController@resep_pilihan');
+
 
 //LOGIN-LOGOUT
 Route::get('/login', 'App\Http\Controllers\AwalController@login');
 
 //coba"
-Route::get('/authenticate','App\Http\Controllers\AwalController@authentication');
+// Route::get('/authenticate','App\Http\Controllers\AwalController@authentication');
 
 
 // coba blade
