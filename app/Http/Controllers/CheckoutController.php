@@ -30,8 +30,34 @@ class CheckoutController extends Controller
         return view('checkout',compact('item'));
     }
 
-    public function tampil_pembayaran(){
-        return view('pembayaran');
+    // public function tampil_pembayaran(){
+    //     return view('pembayaran');
+    // }
+
+    public function tipe_pembayaran(Request $request){
+        // $data = array(
+        //     'ovo'      => $request->input('ovo'),
+        //     'gopay'  => $request->input('gopay'),
+        //     'bca'     => $request->input('bca'),
+        //     'mandiri'    => $request->input('mandiri')
+        //   );
+        $data=$_POST['pembayaran'];
+        // dd($data);
+        // die;
+        if ($data == 1){
+            $data= ['tipe_pembayaran'=>'gopay'];
+            dd($data);
+            die;
+        }elseif($data == 2){
+            $data= ['tipe_pembayaran'=>'ovo'];
+        }elseif($data == 3){
+            $data= ['tipe_pembayaran'=>'bca'];
+        }elseif($data == 4){
+            $data= ['tipe_pembayaran'=>'mandiri'];
+        }
+        // dd($data);
+        // die;
+        return view('pembayaran',compact('data'));
     }
 
     public function riwayat_transaksi(){
