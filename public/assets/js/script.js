@@ -18,7 +18,7 @@ $('.page-scroll').on('click', function(e) {
 $(document).ready(function($index) {
     var plus;
     var minu;
-    for (var i = 0; i < 26; i++) {
+    for (var i = 0; i < 999; i++) {
         plus = '.plus'.concat(i);
         minu = '.minu'.concat(i);
         // $('.count'.concat(i)).prop('disabled', true);

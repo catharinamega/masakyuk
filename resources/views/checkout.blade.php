@@ -29,9 +29,9 @@
         <div style="margin-left:20px; text-align: left;">
             <h5>Alamat Pengiriman</h5>
             <div style="text-align:left; background-color: #E9F3F5; width: 600px; border: 2px solid #C5E0EF; padding: 10px; margin-bottom:15px;">
-                <p style="margin-bottom:5px;">Nina</p>
-                <p style="margin-bottom:5px;">Waterfront WP 2 No. 69, Citraland, Sambikerep, Jawa Timur, 60219</p>
-                <p style="margin-bottom:5px;">082516371835</p>
+                <p style="margin-bottom:5px;">{{$alamat[0]->username}}</p>
+                <p style="margin-bottom:5px;">{{$alamat[0]->alamat}}</p>
+                <p style="margin-bottom:5px;">{{$alamat[0]->hp_pelanggan}}</p>
             </div>
             <div style="text-align:left; margin-bottom:50px;">
                 <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Pilih Alamat Lain</button>
@@ -47,13 +47,16 @@
 
 
 
-
+    <?php $subt = 0; ?>
     <form id="pembayaran" action="/pembayaran" method="POST">
             @csrf
+            <input type="hidden" name="alamat" value="{{$alamat[0]->alamat_utama}}">
             @foreach($item as $itx)
             @foreach($itx as $crt)
             <div class="col-md-12 row mt-4">
                 <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
+                <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][id]" value="{{$crt->id_bahan}}" readonly>
+                <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}" readonly>
                 <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
                 <div class="col-md-2" style="text-align: center;"><h5>{{$crt->item_qty}}</h5></div>
                 <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
@@ -133,6 +136,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
+                                    <input type="hidden" name="total" value="{{$subt}}">
                                     <p style="margin-bottom:8px;">{{$subt}}</p>
                                 </div>
                             </td>
@@ -167,7 +171,8 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;"><strong>90.000</strong></p>
+                                    <?php $totl = $subt + 10000; ?>
+                                    <p style="margin-bottom:8px;"><strong>{{$totl}}</strong></p>
                                 </div>
                             </td>
                         </tr>
