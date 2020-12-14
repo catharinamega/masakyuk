@@ -101,4 +101,5 @@ Route::get('/detailpesanan/{id}', 'App\Http\Controllers\CheckoutController@detai
 
 // PEMBAYARAN
 // Route::get('/pembayaran', 'App\Http\Controllers\CheckoutController@tampil_pembayaran');
+Route::post('/pembayaran', 'App\Http\Controllers\CheckoutController@add_transaksi');
 Route::post('/pembayaran', 'App\Http\Controllers\CheckoutController@tipe_pembayaran');

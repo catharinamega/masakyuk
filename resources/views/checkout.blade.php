@@ -50,10 +50,13 @@
     <?php $subt = 0; ?>
     <form id="pembayaran" action="/pembayaran" method="POST">
             @csrf
+            <input type="hidden" name="alamat" value="{{$alamat[0]->alamat_utama}}">
             @foreach($item as $itx)
             @foreach($itx as $crt)
             <div class="col-md-12 row mt-4">
                 <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
+                <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][id]" value="{{$crt->id_bahan}}" readonly>
+                <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}" readonly>
                 <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
                 <div class="col-md-2" style="text-align: center;"><h5>{{$crt->item_qty}}</h5></div>
                 <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
@@ -133,6 +136,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
+                                    <input type="hidden" name="total" value="{{$subt}}">
                                     <p style="margin-bottom:8px;">{{$subt}}</p>
                                 </div>
                             </td>

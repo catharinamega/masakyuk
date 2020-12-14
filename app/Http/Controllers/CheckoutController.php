@@ -49,8 +49,8 @@ class CheckoutController extends Controller
         // die;
         if ($data == 1){
             $data= ['tipe_pembayaran'=>'gopay'];
-            dd($data);
-            die;
+            // dd($data);
+            // die;
         }elseif($data == 2){
             $data= ['tipe_pembayaran'=>'ovo'];
         }elseif($data == 3){
@@ -69,7 +69,7 @@ class CheckoutController extends Controller
         $riwayat = $usr->get_all($username_login);
         return view('riwayat',compact('riwayat'));
     }
-
+    
     public function detail_pesanan($id){
         $usr = new Checkout;
         $detail = $usr->get_detail($id);
@@ -77,5 +77,27 @@ class CheckoutController extends Controller
         return view('detail',compact('detail','daftar_bahan'));
     }
 
+    public function add_transaksi(){
+        $usr = new Checkout;
+        $user = Session::get('login');
+        $alamat = $_POST['alamat'];
+        $pembayaran = $_POST['pembayaran'];
+        $pengiriman = $_POST['pengiriman'];
+        $harga = $_POST['total'];
+        $trans = $usr->add_transaksi($user, $alamat, $pembayaran, $pengiriman, $harga, 10000);
+        $id_trans = $usr->get_id_transaksi();
+        foreach ($id_trans as $idt){
+            $idt = get_object_vars($idt);
+            $id = $idt['id_transaksi'];
+        }
+        
+        $daftar_bahan = $_POST['bahan_chk'];
+        foreach($daftar_bahan as $bhn){
+        $detail = $usr->add_detail_transaksi($id, $bhn['id'], $bhn['qty'], $bhn['harga']);
+        }
+        // dd($user);
+        // die;
+        // return view('pembayaran');
+    }
 
 }
