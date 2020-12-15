@@ -55,7 +55,7 @@
                         <div class="card-body" style="text-align:left; width:700px;">
                             <ol>
                                 <li>Pilih m-Transfer > rekening BCA </li>
-                                <li>Masukkan nomor rekening 124 6786 5674 4321 dan pilih Send. </li>
+                                <li>Masukkan nomor rekening 041234567 dan pilih Send. </li>
                                 <li>Periksa informasi yang tertera di layar. Pastikan nama penerima adalah Denisa dan total tagihan sudah benar. Jika benar pilih Ya. </li>
                                 <li>Masukkan PIN m-BCA Anda dan pilih OK </li>
                             </ol>
@@ -73,7 +73,7 @@
                         <div class="card-body" style="text-align:left; width:700px;">
                             <ol>
                                 <li>Pilih Transfer Dana > rekening BCA</li>
-                                <li>Masukkan nomor rekening 124 6786 5674 4321 dan pilih Lanjutkan</li>
+                                <li>Masukkan nomor rekening 041234567 dan pilih Lanjutkan</li>
                                 <li>Periksa informasi yang tertera di layar. Pastikan nama penerima adalah Denisa dan total tagihan sudah benar. Jika benar pilih Ya.</li>
                                 <li>Masukkan respon KeyBCA Anda dan klik Kirim</li>
                             </ol>
@@ -91,7 +91,7 @@
                         <div class="card-body" style="text-align:left; width:700px;">
                             <ol>
                                 <li>Pilih Transaksi Lainnya > Transfer > Ke Rek BCA </li>
-                                <li>Masukkan nomor rekening 124 6786 5674 4321 dan pilih Benar.</li>
+                                <li>Masukkan nomor rekening 041234567 dan pilih Benar.</li>
                                 <li>Periksa informasi yang tertera di layar. Pastikan nama yang tertera adalah Denisa dan total tagihan sudah benar. Jika benar pilih Ya</li>
                             </ol>
                         </div>
@@ -136,7 +136,7 @@
                         <div class="card-body" style="text-align:left; width:700px;">
                             <ol>
                                 <li>Pilih Transfer Dana > rekening Mandiri</li>
-                                <li>Masukkan nomor rekening 124 6786 5674 4321 dan pilih Lanjutkan.</li>
+                                <li>Masukkan nomor rekening 145536457 dan pilih Lanjutkan.</li>
                                 <li>Periksa informasi yang tertera di layar. Pastikan nama penerima adalah Denisa dan
                                     total tagihan sudah benar. Jika benar pilih Ya.</li>
                                 <li>Masukkan pin token anda dan klik Kirim</li>
@@ -155,7 +155,7 @@
                         <div class="card-body" style="text-align:left; width:700px;">
                             <ol>
                                 <li>Pilih Transaksi Lainnya > Transfer > Ke Rek Mandiri </li>
-                                <li>Masukkan nomor rekening 124 6786 5674 4321 dan pilih Benar.</li>
+                                <li>Masukkan nomor rekening 145536457 dan pilih Benar.</li>
                                 <li>Periksa informasi yang tertera di layar. Pastikan nama yang tertera adalah Denisa
                                     dan total tagihan sudah benar. Jika benar pilih Ya</li>
                             </ol>
@@ -183,7 +183,7 @@
                                 <li>Bukalah aplikasi Gojek</li>
                                 <li>Pada menu utama silahkan tekan Bayar. Akan muncul tampilan menu Transfer</li>
                                 <li>Pada pojok kiri bawah pilih Nomor HP. Akan muncul menu Bayar lewat nomor HP</li>
-                                <li>Silahkan masukkan nomor 0856924145563 atas nama Mega</li>
+                                <li>Silahkan masukkan nomor 085692414563 atas nama Mega</li>
                                 <li>Masukkan nominal yang akan anda transfer dan tekan konfirmasi</li>
                                 <li>Tekan Bayar</li>
                                 <li>Masukkan Pin Gopay</li>

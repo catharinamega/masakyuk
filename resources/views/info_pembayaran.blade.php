@@ -24,7 +24,7 @@
                             <td>
                                 <div class="container" style="text-align:left; padding-top:20px;">
                                     <h5>OVO</h5>
-                                    <p style="margin-bottom:0px;">a/n Denisa Flo</p>
+                                    <p style="margin-bottom:0px;">a/n Mega</p>
                                     <p>0856-9241-4563</p>
                                 </div>
                             </td>
@@ -38,7 +38,7 @@
                             <td>
                                 <div class="container" style="text-align:left; padding-top:20px;">
                                     <h5>Gopay</h5>
-                                    <p style="margin-bottom:0px;">a/n Denisa Flo</p>
+                                    <p style="margin-bottom:0px;">a/n Mega</p>
                                     <p>0856-9241-4563</p> 
                                 </div>
                             </td>
@@ -52,7 +52,7 @@
                             <td>
                                 <div class="container" style="text-align:left; padding-top:20px;">
                                     <h5>Mandiri</h5>
-                                    <p style="margin-bottom:0px;">a/n Denisa Flo</p>
+                                    <p style="margin-bottom:0px;">a/n Denisa</p>
                                     <p>145536457</p> 
                                 </div>
                             </td>
@@ -66,7 +66,7 @@
                             <td>
                                 <div class="container" style="text-align:left; padding-top:20px;">
                                     <h5>BCA</h5>
-                                    <p style="margin-bottom:0px;">a/n Denisa Flo</p>
+                                    <p style="margin-bottom:0px;">a/n Denisa</p>
                                     <p>041234567</p> 
                                 </div>
                             </td>
