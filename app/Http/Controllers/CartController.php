@@ -20,7 +20,7 @@ class CartController extends Controller
                 foreach($_POST['bahan_beli'] as $p){
                 // print_r($p);
                 if(isset($p['id'])){
-                    $cart->get_cart($username_login,$p['id'],$p['qty'],$p['harga']);
+                    $detail_cart = $cart->get_cart($username_login,$p['id'],$p['qty'],$p['harga']);
                     // $temp=[ 
                     //     'id' => $p['id'],
                     //     'qty'=> $p['qty'],
