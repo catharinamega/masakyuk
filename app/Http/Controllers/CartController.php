@@ -15,9 +15,9 @@ class CartController extends Controller
             $username_login = Session::get('login');
             $cart = new Cart();
             //2. PROSES
-            if(isset($_POST['bahan_beli'])){
+            if(isset($req['bahan_beli'])){
                 $item = array();
-                foreach($_POST['bahan_beli'] as $p){
+                foreach($req['bahan_beli'] as $p){
                 // print_r($p);
                 if(isset($p['id'])){
                     $detail_cart = $cart->get_cart($username_login,$p['id'],$p['qty'],$p['harga']);

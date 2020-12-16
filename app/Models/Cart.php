@@ -19,7 +19,7 @@ class Cart extends Model
             'qty' => $qty,
             'harga' => $harga
             ];
-        $cart = DB::select($cmd,$data);
+        $cart = DB::insert($cmd,$data);
         return $cart;
         
 
