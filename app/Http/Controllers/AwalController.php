@@ -299,7 +299,7 @@ class AwalController extends Controller
     public function pilih_alamat(Request $req){
         $usr = new Pelanggan();
         $username_login = Session::get('login');
-        $alamat = $_POST['alamat'];
+        $alamat = $_REQUEST['alamat'];
         $data =[
             'username' => $username_login,
             'id_alamat'  => $alamat
