@@ -56,7 +56,7 @@ return [
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            'strict' => true,
+            // 'strict' => true,
             'engine' => null,
             'options'   => array(
                 'sort_buffer_size' => '100M',)
