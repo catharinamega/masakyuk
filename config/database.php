@@ -56,13 +56,12 @@ return [
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            // 'strict' => true,
+            'strict' => true,
             'engine' => null,
-            'options'   => array(
-                'sort_buffer_size' => '100M',)
-            // 'options' => extension_loaded('pdo_mysql') ? array_filter([
-            //     PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),]
-            // ]) : [],
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => env('MYSQL_ATTR_SSL_CA'),
+                // PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
         ],
 
         'pgsql' => [
