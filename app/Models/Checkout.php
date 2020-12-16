@@ -81,7 +81,7 @@ class Checkout extends Model
             'stat'=> 0
             ];
 
-        $daftar_bahan = DB::select($bahan,$data2);
+        $daftar_bahan = DB::insert($bahan,$data2);
         // dd($detail_pesanan);
         return $daftar_bahan;
 
@@ -107,7 +107,7 @@ class Checkout extends Model
             'hrg'=> $hrg
             ];
 
-        $daftar_bahan = DB::select($bahan,$data2);
+        $daftar_bahan = DB::insert($bahan,$data2);
         // dd($detail_pesanan);
         return $daftar_bahan;
 

@@ -170,7 +170,7 @@ class Pelanggan extends Model
         // nunggu Eillen
         $cmd = "CALL insert_alamat(:alamat, :provinsi, :kecamatan, :kota, :kode_pos);";
         
-        $tambah_alamat = DB::select($cmd,$data_baru);
+        $tambah_alamat = DB::insert($cmd,$data_baru);
         // dd($tambah_alamat);
         // die;
         return $tambah_alamat;
@@ -193,7 +193,7 @@ class Pelanggan extends Model
         // dd($data_baru);
         // die;
         $cmd = "CALL insert_alamat_pelanggan(:data_alamat, :username);";
-        $alamat_pelanggan = DB::select($cmd,$data_baru);
+        $alamat_pelanggan = DB::insert($cmd,$data_baru);
         // dd($alamat_pelanggan);
         // die;
         return $alamat_pelanggan;
