@@ -29,12 +29,22 @@
         <div style="margin-left:20px; text-align: left;">
             <h5>Alamat Pengiriman</h5>
             <div style="text-align:left; background-color: #E9F3F5; width: 600px; border: 2px solid #C5E0EF; padding: 10px; margin-bottom:15px;">
+            @if($alamat != null)
                 <p style="margin-bottom:5px;">{{$alamat[0]->username}}</p>
                 <p style="margin-bottom:5px;">{{$alamat[0]->alamat}}</p>
                 <p style="margin-bottom:5px;">{{$alamat[0]->hp_pelanggan}}</p>
+            @else
+                <p style="margin-bottom:5px;">Belum ada alamat</p>
+            @endif
             </div>
+            <form action="/aturalamat">
             <div style="text-align:left; margin-bottom:50px;">
+            @if($alamat != null)    
                 <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Pilih Alamat Lain</button>
+            @else
+                <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Tambah Alamat</button>
+            @endif
+            </form>
             </div>
         </div>
     </div>
@@ -51,7 +61,9 @@
 
     <form id="pembayaran" action="/pembayaran" method="POST">
             @csrf
+            @if($alamat != null)
             <input type="hidden" name="alamat" value="{{$alamat[0]->alamat_utama}}">
+            @endif
             @foreach($item as $itx)
             @foreach($itx as $crt)
             <div class="col-md-12 row mt-4">
@@ -182,7 +194,11 @@
             </div>
         </div>
         <div class="d-flex justify-content-end" style="text-align:left; margin-bottom:50px; margin-top:30px;">
+        @if($alamat != null)
             <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Buat Pesanan</strong></button>
+        @else
+            <a href="/aturalamat" class="btn btn-light" style="background-color:#B2DEF0; width:200px; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Buat Pesanan</strong></a>
+        @endif
         </div>
     </div>
     </form>
