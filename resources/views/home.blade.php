@@ -2,6 +2,9 @@
 
 @section('judul','Home')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
 @section('background_jumbotron')
     background-image: url('assets/img/julian-dik--czl8QNCVKY-unsplash.jpg');
 @endsection

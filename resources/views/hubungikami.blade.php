@@ -2,6 +2,9 @@
 
 @section('judul','Hubungi Kami')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
 @section('isi_konten')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 

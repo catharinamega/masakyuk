@@ -2,6 +2,9 @@
 
 @section('judul','Lupa Kata Sandi')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
 @section('isi_konten')
 <div class="form-gap"></div>
 <div class="container">

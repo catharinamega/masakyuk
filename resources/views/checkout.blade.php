@@ -2,6 +2,10 @@
 
 @section('judul','Checkout')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
+
 @section('isi_konten')
 
 <div class="container">

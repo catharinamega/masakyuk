@@ -2,6 +2,9 @@
 
 @section('judul','Akun Saya')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
 @section('isi_konten')
 <?php 
     // dd($akun);

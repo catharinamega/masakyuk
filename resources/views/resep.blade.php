@@ -2,6 +2,9 @@
 
 @section('judul','Resep')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
 @section('isi_konten')
     <div class="row" style="margin-top:15px;">
         <div class="col-md-6" style="padding: 10px; height:300px;">

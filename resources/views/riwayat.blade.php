@@ -2,6 +2,10 @@
 
 @section('judul','Riwayat Transaksi')
 
+@section('searching','/searchresep')
+@section('input_search','search_resep')
+
+
 @section('isi_konten')
 <div class="container">
         <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
