@@ -38,7 +38,10 @@ class CartController extends Controller
         $cart = new Cart();
         $username_login = Session::get('login');
         $detail_cart = $cart->select_cart($username_login);
-        return view('keranjang',compact('detail_cart'));
+        $jumlah = count($detail_cart);
+        // dd($jumlah);
+        // die;
+        return view('keranjang',compact('detail_cart'),compact('jumlah'));
     }
 
     public function plus_cart(){

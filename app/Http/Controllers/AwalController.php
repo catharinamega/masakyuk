@@ -211,7 +211,10 @@ class AwalController extends Controller
         $username_login = Session::get('login');
         // dd($username_login);
         $alamat_saya = $usr->tampil_alamat($username_login);
-        return view('alamat_saya',compact('alamat_saya'));
+        $jumlah = count($alamat_saya);
+        // dd($jumlah);
+        // die;
+        return view('alamat_saya',compact('alamat_saya'),compact('jumlah'));
     }
 
 

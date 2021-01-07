@@ -89,7 +89,10 @@ class CheckoutController extends Controller
         $usr = new Checkout;
         $username_login = Session::get('login');
         $riwayat = $usr->get_all($username_login);
-        return view('riwayat',compact('riwayat'));
+        $jumlah = count($riwayat);
+        // dd($jumlah);
+
+        return view('riwayat',compact('riwayat'),compact('jumlah'));
     }
     
     public function detail_pesanan($id){
