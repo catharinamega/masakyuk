@@ -5,14 +5,6 @@
 @section('searching','/searchresep')
 @section('input_search','search_resep')
 
-@section('dropdown')
-    <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
-            <option value="" class="agan" disabled selected hidden>Resep</option>
-            <option value='/katalogresep' class="agan">Resep</option>
-            <option value='/katalogbahan' class="agan">Bahan</option>
-    </select>
-@endsection
-
 @section('isi_konten')
 <div class="container">
     <div style="margin-left:20px; text-align: left; padding-top:20px;">
