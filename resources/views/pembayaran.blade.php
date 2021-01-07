@@ -15,7 +15,7 @@
 
     <div style="margin-top:10px;">
         <div style="margin-left:20px; text-align: left;">
-            <h5>Total Pembayaran: Rp 90.000</h5>
+            <h5>Total Pembayaran: {{$data['total_pembayaran']}}</h5>
             <hr style="width:50%;text-align:left;margin-left:0; border-top: 1px solid black;">
             @if($data['tipe_pembayaran'] == 'bca')    
             <p>Metode Pembayaran: Bank BCA</p>

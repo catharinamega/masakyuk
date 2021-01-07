@@ -43,7 +43,8 @@
                                     <input type="number" class="count{{$index}} count" name="bahan_beli[{{$bhn->id_bahan}}][qty]" value=1>
                                     <span class="plus{{$index}} plus bg-dark">+</span>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Tambah ke Troli</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 15px;" onclick="berita()">Tambah ke Troli</button>
+                                
                             </div>
                         </div>
                     </form>
@@ -62,5 +63,9 @@
             currentCounter += 1
             document.getElementById('counterCart').innerHTML = currentCounter
             // alert(currentCounter);
+    }
+
+    function berita() {
+        alert("Bahan telah berhasil dimasukkan");
     }
 </script>
