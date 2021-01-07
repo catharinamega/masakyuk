@@ -2,6 +2,13 @@
 
 @section('judul','Home')
 
+@section('dropdown')
+    <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" class="agan" disabled selected hidden>Resep</option>
+            <option value='/katalogresep' class="agan">Resep</option>
+            <option value='/katalogbahan' class="agan">Bahan</option>
+    </select>
+@endsection
 
 @section('judul_jumbotron','MasakYuk')
 @section('tagline')

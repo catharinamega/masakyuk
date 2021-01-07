@@ -5,6 +5,15 @@
 @section('searching','/searchbahan')
 @section('input_search','search_bahan')
 
+@section('dropdown')
+    <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" class="agan" disabled selected hidden>Bahan</option>
+            <option value='/katalogresep' class="agan">Resep</option>
+            <option value='/katalogbahan' class="agan">Bahan</option>
+    </select>
+@endsection
+
+
 @section('background_jumbotron')
     background-image: url('assets/img/pisang.png');
 @endsection
