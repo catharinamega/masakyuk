@@ -26,11 +26,14 @@
       <form class="form-inline" method="GET" action="@yield('searching')">
         @csrf
         <!-- dropdown -->
-        <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
-            <option value="" disabled selected hidden>Resep</option>
-            <option value='/katalogresep'>Resep</option>
-            <option value='/katalogbahan'>Bahan</option>
+        <!-- <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" class="agan" disabled selected hidden>Resep</option>
+            <option value='/katalogresep' class="agan">Resep</option>
+            <option value='/katalogbahan' class="agan">Bahan</option>
+        </select> -->
             
+        @yield('dropdown')
+
         <?php 
         // if($_POST['option_user'] === '/katalogresep'){ 
         //     "<option value='/katalogresep' disabled selected hidden>Resep</option>";}
@@ -38,7 +41,11 @@
         //     "<option value='/katalogresep' disabled selected hidden>Bahan</option>";}
        ?>
 
-        </select>
+        <!-- Percobaan dulu -->
+       
+
+
+
 
        
         <input class="form-control mr-sm-2 col-md-5" type="text" name="@yield('input_search')" placeholder="Search">
@@ -224,21 +231,40 @@
         <!-- EASING JQUERY -->
         <script src="assets/js/jquery.easing.1.3.js"></script>
 
-        <!-- <script>
-            $( "#dropdown_katalog" ).on("change", function() {
-                // alert( "Handler for .change() called." );
-                var selected_value = $('#dropdown_katalog').val();
-                // alert(selected_value);
-                var url = "/katalogresep";    
-                if(selected_value == 'bahan'){
-                    url = "/katalogbahan";
-                }    
-                //  else {
-                //     // $(location).attr('href', url);
-                // }
-                $(location).attr('href', url);    
-            });
-        </script> -->
+        <script>
+
+        // var header = document.getElementById("dropdown_katalog");
+        // var gans = header.getElementsByClassName("agan");
+
+
+        // for (var i = 0; i < gans.length; i++) {
+        //         gans[i].addEventListener("change", function() {
+        //         var current = document.getElementsByClassName("selected");
+        //         current[0].className = current[0].className.replace(" selected", "");
+        //         this.className += " selected";
+        //     });
+        // }
+
+            // $( "#dropdown_katalog" ).on("change", function() {
+            //     // alert( "Handler for .change() called." );
+            //     var selected_value = $('#dropdown_katalog').val();
+            //     // alert(selected_value);
+            //     var url = "/katalogresep";    
+            //     if(selected_value == 'bahan'){
+            //         url = "/katalogbahan";
+            //     }    
+            //     //  else {
+            //     //     // $(location).attr('href', url);
+            //     // }
+            //     $(location).attr('href', url);    
+            // });
+        </script>
+
+
+
+
+
+
     </body>
 
 </html>
