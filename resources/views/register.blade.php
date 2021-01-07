@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="form-inputRegister">
                                     <span><i class="fas fa-user-plus"></i></span>
-                                    <input type="text" name="nama_pelanggan" placeholder="Nama Pengguna" 
+                                    <input type="text" name="nama_pelanggan" placeholder="Nama Lengkap" 
                                     tabindex="10" required>
                                 </div>
                                 <div class="form-inputRegister">
@@ -89,8 +89,8 @@
                                      <input type="checkbox" class="custom-control-input"id ="cb-1"
                                      name="">
                                      <label class="custom-control-label" for="cb-1">
-                                         dengan klik daftar, maka anda telah menyetujui syarat dan ketentuan
-                                         yang berlaku.
+                                         dengan klik daftar, maka anda telah menyetujui 
+                                         <a href="/sdank">syarat dan ketentuan</a>
                                      </label>
                                     </div>
                                 </div>
