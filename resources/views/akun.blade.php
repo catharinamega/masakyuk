@@ -5,6 +5,14 @@
 @section('searching','/searchresep')
 @section('input_search','search_resep')
 
+@section('dropdown')
+    <select style='margin-right: 10px;' name='option_user' class='form-control' id="dropdown_katalog" onchange="location = this.value;">
+            <option value="" class="agan" disabled selected hidden>Resep</option>
+            <option value='/katalogresep' class="agan">Resep</option>
+            <option value='/katalogbahan' class="agan">Bahan</option>
+    </select>
+@endsection
+
 @section('isi_konten')
 <?php 
     // dd($akun);
@@ -17,7 +25,11 @@
             <div class="col-md-7" style="text-align:left; padding:0;">
                 <h1 style="margin-bottom:20px;">Akun Saya</h1>
             </div>
-                <div class="col-md-5" style="text-align:right; padding-top:20px;">
+            <div class="col-md-2" style="padding:20px 0px 0px 0px;">
+                <button type="button" class="btn btn-primary active" style="margin-left:10px;">
+                <a href="/riwayattransaksi" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
+            </div>
+                <div class="col-md-1" style="text-align:center; padding:25px 0px 0px 0px;">
                 <a href="/logout">Keluar <i class="fas fa-sign-out-alt text-center"></a></i>
             </div>
         </div>
@@ -77,9 +89,9 @@
 <div style="margin-left:30px; text-align:left; margin-bottom:20px;">
         <button type="button" class="btn btn-primary active">
             <a href="/aturalamat" style="color: white; text-decoration: none;">Atur Alamat</a></button>
-        <button type="button" class="btn btn-primary active" style="margin-left:10px;">
-            <a href="/riwayattransaksi" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button>
-        <button class="btn btn-primary" type="submit" style="margin-left:350px;">Simpan Perubahan</button>
+        <!-- <button type="button" class="btn btn-primary active" style="margin-left:10px;">
+            <a href="/riwayattransaksi" style="color: white; text-decoration: none;">Riwayat Transaksi</a></button> -->
+        <button class="btn btn-primary" type="submit" style="margin-left:500px;">Simpan Perubahan</button>
 
 </div>
     </form>
