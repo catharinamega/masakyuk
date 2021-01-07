@@ -12,18 +12,22 @@ class Checkout extends Model
     public function get_all($username_login){
         $cmd = "CALL select_riwayat(:username);";
         $data=['username'=> $username_login];
-        $riwayat_transaksi = DB::select($cmd,$data);
+        
 
-        // dd($riwayat_transaksi);
+        $riwayat_transaksi = DB::select($cmd,$data);
+        
+        // dd(count($riwayat_transaksi));
         return $riwayat_transaksi;
     }
 
     public function get_detail($id){
         $cmd = "CALL select_detail(:id_transaksi);";
         $data=['id_transaksi'=> $id];
-       
+        
         $detail_pesanan = DB::select($cmd,$data);
-        // dd($detail_pesanan);
+        // dd($detail_pesanan[0]);
+        // die;
+
         return $detail_pesanan[0];
 
 
