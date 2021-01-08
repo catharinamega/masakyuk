@@ -9,7 +9,7 @@
 
 <div class="container">
     <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
-        <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Keranjang</h1>
+        <h1>Keranjang</h1>
     </div>
 
     @if(!$jumlah == 0)
@@ -73,8 +73,7 @@
     <div class="empty">
         <i class="fas fa-8x fa-dolly-flatbed mt-3 mb-4"></i><br>
         <h3 class="text-danger">Keranjang Belanja Masih Kosong</h3>
-        <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 
-        'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sepertinya Belum Ada Produk Yang Anda Tambahkan</h4>
+        <h4 >Sepertinya Belum Ada Produk Yang Anda Tambahkan</h4>
         <a href="/katalogresep" class="btn btn-primary btn-lg active mb-4 mt-3" role="button" aria-pressed="true" style="box-shadow: 0 8px 12px 
         0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> ke Daftar Resep</a>
     </div>
