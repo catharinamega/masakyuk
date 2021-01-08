@@ -279,8 +279,12 @@ class AwalController extends Controller
         $berhasil= 0;
         $data = array(
                 'email'  => $request->input('email')
-        );
-              
+            );
+
+        $usr = new Pelanggan();
+        $sandi_email = $usr->lupa_email($data);
+
+        
         try{
                 Mail::send('email_sandi',$data, function($data) use($request){
                     $data->to($request->email,'Verifikasi')->subject('Verifikasi Sandi');
@@ -291,6 +295,8 @@ class AwalController extends Controller
         }catch (Exception $e){
                 return response (['status' => false,'errors' => $e->getMessage()]);
         }
+
+
         return redirect('/login');
         
         
