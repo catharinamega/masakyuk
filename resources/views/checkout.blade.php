@@ -73,9 +73,9 @@
                 <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
                 <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][id]" value="{{$crt->id_bahan}}" readonly>
                 <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}" readonly>
-                <div class="col-md-2" style="text-align: left;">Rp @currency($crt->harga) <input type="hidden" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
+                <div class="col-md-2" style="text-align: center;">Rp @currency($crt->harga) <input type="hidden" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
                 <div class="col-md-2" style="text-align: center;"><h5>{{$crt->item_qty}}</h5></div>
-                <div class="col-md-2" style="text-align: left;"><h5>Rp @currency($crt->subtotal)</h5></div>
+                <div class="col-md-2" style="text-align: center;"><h5>Rp @currency($crt->subtotal)</h5></div>
                 <?php $subt = $subt + $crt->subtotal; ?>
                 <!-- <div class="col-md-2" style="text-align: left;">
                 </div> -->

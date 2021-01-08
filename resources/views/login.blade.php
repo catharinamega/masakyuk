@@ -39,10 +39,10 @@
                 <strong>{{ Session::get('error') }}</strong>
             </div>
         @endif
-        @if (Session::has('warning'))
+        @if (Session::has('keluar'))
             <div class="alert alert-warning alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button> 
-                <strong>{{ Session::get('warning') }}</strong>
+                <strong>{{ Session::get('keluar') }}</strong>
             </div>
         @endif
                             <!-- FORM LOGIN -->
