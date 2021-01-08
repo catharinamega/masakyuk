@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Pelanggan;
 use Session;
 use Alert;
+use Mail;
 
 class AwalController extends Controller
 {
@@ -268,6 +269,31 @@ class AwalController extends Controller
     public function lupa_sandi(){
         
         return view('lupakatasandi');
+        
+    }
+
+    public function kirim_email(Request $request){
+        $this->validate($request, [
+            'email'  =>  'required|email'
+           ]);
+        $berhasil= 0;
+        $data = array(
+                'email'  => $request->input('email')
+        );
+              
+        try{
+                Mail::send('email_sandi',$data, function($data) use($request){
+                    $data->to($request->email,'Verifikasi')->subject('Verifikasi Sandi');
+                    $data->from(env('MAIL_USERNAME','masakyukgan@gmail.com'),'Verifikasi Sandi anda');
+                    
+                    // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
+                });
+        }catch (Exception $e){
+                return response (['status' => false,'errors' => $e->getMessage()]);
+        }
+        return redirect('/login');
+        
+        
         
     }
 

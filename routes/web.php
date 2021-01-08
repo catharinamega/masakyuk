@@ -62,6 +62,7 @@ Route::get('/gantikatasandi', 'App\Http\Controllers\AwalController@ganti_sandi')
 Route::post('/gantikatasandi', 'App\Http\Controllers\AwalController@update_password');
 
 Route::get('/lupakatasandi', 'App\Http\Controllers\AwalController@lupa_sandi');
+Route::post('/kirimemail', 'App\Http\Controllers\AwalController@kirim_email');
 
 // DESKRIPSI RESEP
 Route::get('/resep/{id}', 'App\Http\Controllers\ResepController@detail_resep');
