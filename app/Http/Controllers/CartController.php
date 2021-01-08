@@ -12,25 +12,30 @@ class CartController extends Controller
 {
     public function add_cart(Request $req){
         // var_dump($req);
-            $username_login = Session::get('login');
-            $cart = new Cart();
-            //2. PROSES
-            if(isset($req['bahan_beli'])){
-                $item = array();
-                foreach($req['bahan_beli'] as $p){
-                // print_r($p);
-                if(isset($p['id'])){
-                    $detail_cart = $cart->get_cart($username_login,$p['id'],$p['qty'],$p['harga']);
-                    // $temp=[ 
-                    //     'id' => $p['id'],
-                    //     'qty'=> $p['qty'],
-                    //     'price'=> $p['harga'],
-                    // ];
-                    // array_push($item,$temp);
+        if(Session::has('login')){
+                $username_login = Session::get('login');
+                $cart = new Cart();
+                //2. PROSES
+                if(isset($req['bahan_beli'])){
+                    $item = array();
+                    foreach($req['bahan_beli'] as $p){
+                    // print_r($p);
+                    if(isset($p['id'])){
+                        $detail_cart = $cart->get_cart($username_login,$p['id'],$p['qty'],$p['harga']);
+                        // $temp=[ 
+                        //     'id' => $p['id'],
+                        //     'qty'=> $p['qty'],
+                        //     'price'=> $p['harga'],
+                        // ];
+                        // array_push($item,$temp);
+                    }
                 }
             }
+            return redirect()->back();
         }
-        return redirect()->back();
+        else{
+            return redirect('/login');
+        }
     }
   
 
