@@ -7,15 +7,16 @@
 
 @section('isi_konten')
 
+
 <div class="container">
     <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
         <h1>Pembayaran</h1>
        
     </div>
-
+    <?php $harga = $harga + 10000?>
     <div style="margin-top:10px;">
         <div style="margin-left:20px; text-align: left;">
-            <h5>Total Pembayaran: {{$data['total_pembayaran']}}</h5>
+            <h5>Total Pembayaran: Rp @currency($harga)</h5>
             <hr style="width:50%;text-align:left;margin-left:0; border-top: 1px solid black;">
             @if($data['tipe_pembayaran'] == 'bca')    
             <p>Metode Pembayaran: Bank BCA</p>

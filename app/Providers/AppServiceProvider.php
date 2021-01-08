@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 // buat pagination
 use Illuminate\Pagination\Paginator;
 
@@ -25,7 +26,12 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    {   
+        
+            Blade::directive('currency', function ($expression) {
+                return "<?php echo number_format($expression, 0, ',', '.'); ?>";
+            });
+        
         //buat pagination
         Paginator::useBootstrap();
     }

@@ -30,7 +30,9 @@
                         <input type="checkbox" class="col-md-1" name='bahan_chk[{{$crt->id_bahan}}][id]' form="pembayaran" value='{{$crt->id_bahan}}' checked>
                         <div class="col-md-4" style="text-align: left;">{{$crt->nama_bahan}}</div>
                         <div class="col-md-2" style="text-align: left; padding-left:40px;">Rp
-                            <input type="number" class="col-md-9" style="padding:0px; text-align: right;" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly>
+                            <div class="col-md-9" style="padding:0px; text-align: right;" name="bahan_chk[{{$crt->id_bahan}}][harga]">
+                                {{$crt->harga}}
+                            </div>
                         </div>
                         <div class="col-md-3" style="align-content: center; display: flex; flex-wrap: wrap;">
                             <div class="qty row" style="margin-left:90px;">

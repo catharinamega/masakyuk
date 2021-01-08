@@ -69,6 +69,7 @@ class CheckoutController extends Controller
         $pengiriman = $_POST['pengiriman'];
         $harga = $_POST['total'];
         $trans = $usr->add_transaksi($user, $alamat, $pembayaran, $pengiriman, $harga, 10000);
+        
         $id_trans = $usr->get_id_transaksi();
         foreach ($id_trans as $idt){
             $idt = get_object_vars($idt);
@@ -82,7 +83,7 @@ class CheckoutController extends Controller
         }
 
 
-        return view('pembayaran',compact('data'));
+        return view('pembayaran',compact('data'),compact('harga'));
     }
 
     public function riwayat_transaksi(){

@@ -27,7 +27,8 @@ class Cart extends Model
 
     public function select_cart($user){
        
-        $cmd = "SELECT username, b.id_bahan, nama_bahan, b.harga, item_qty, subtotal, c.stat_del FROM bahan b, cart c WHERE b.id_bahan = c.id_bahan AND username = :user;";
+        $cmd = "SELECT username, b.id_bahan, nama_bahan, FORMAT(b.harga, 0, 'de_DE') `harga`, item_qty, FORMAT(subtotal, 0, 'de_DE') `subtotal`, c.stat_del FROM bahan b, cart c WHERE b.id_bahan = c.id_bahan AND username = :user;
+        ";
         
         //buat binding, array assosiatifnya bisa ditaruh di Model bisa ditaruh di COntroller 
         $data=[
