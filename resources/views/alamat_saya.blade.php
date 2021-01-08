@@ -8,7 +8,7 @@
 @section('isi_konten')
 <div class="container">
     <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
-        <h1>Alamat Saya</h1>
+        <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Alamat Saya</h1>
     </div>
 </div>
     @if(!$jumlah == 0)
@@ -49,7 +49,14 @@
         </form>
 
     @else
-        <h2>BELUM ADA ALAMAT</h2>
+    <div class="empty">
+        <i class="fas fa-8x fa-map-marked-alt mt-3 mb-4"></i><br>
+        <h3 class="text-danger">Belum Ada Alamat</h3>
+        <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+        'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sepertinya Belum Ada Alamat Yang Anda Tambahkan</h4>
+        <a href="/alamatbaru" class="btn btn-primary btn-lg active mb-4 mt-3" role="button" aria-pressed="true" style="box-shadow: 0 8px 12px 
+        0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Tambah Alamat Baru</a>
+    </div>
     @endif
 
 @endsection

@@ -8,7 +8,7 @@
 @section('isi_konten')
 <div class="container">
         <div style="margin-left:20px; text-align: left; padding-top:20px; margin-bottom:30px;">
-            <h1>Riwayat Transaksi</h1>
+            <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Riwayat Transaksi</h1>
         </div>
     @if(!$jumlah == 0)
     
@@ -50,7 +50,12 @@
             @endforeach
         </div>
     @else
-        <h2>BELUM ADA TRANSAKSI</h2>
+    <div class="empty">
+        <i class="fas  fa-8x fa-history mt-3 mb-4"></i><br>
+        <h3 class="text-danger">Belum Ada Transaksi</h3>
+        <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+        'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sepertinya Belum Ada Transaksi Yang Anda Tambahkan</h4>
+    </div>
     @endif
         <!-- <div style="margin-bottom:30px;">
             <div class="mt-3" style="margin-left:20px; text-align: left; outline; border: 1px solid #44628F; margin: auto; padding: 25px 50px; border-radius: 12px; width: 1000px;">
