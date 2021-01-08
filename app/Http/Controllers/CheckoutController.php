@@ -110,18 +110,18 @@ class CheckoutController extends Controller
         $pembayaran = $_POST['pembayaran'];
         $pengiriman = $_POST['pengiriman'];
         $harga = $_POST['total'];
-        $trans = $usr->add_transaksi($user, $alamat, $pembayaran, $pengiriman, $harga, 10000);
-        $id_trans = $usr->get_id_transaksi();
-        foreach ($id_trans as $idt){
-            $idt = get_object_vars($idt);
-            $id = $idt['id_transaksi'];
-        }
+        // $trans = $usr->add_transaksi($user, $alamat, $pembayaran, $pengiriman, $harga, 10000);
+        // $id_trans = $usr->get_id_transaksi();
+        // foreach ($id_trans as $idt){
+        //     $idt = get_object_vars($idt);
+        //     $id = $idt['id_transaksi'];
+        // }
         
-        $daftar_bahan = $_POST['bahan_chk'];
-        foreach($daftar_bahan as $bhn){
-            $usr->add_detail_transaksi($id, $bhn['id'], $bhn['qty'], $bhn['harga']);
-            $usr->min_cart($user, $bhn['id']);
-        }
+        // $daftar_bahan = $_POST['bahan_chk'];
+        // foreach($daftar_bahan as $bhn){
+        //     $usr->add_detail_transaksi($id, $bhn['id'], $bhn['qty'], $bhn['harga']);
+        //     $usr->min_cart($user, $bhn['id']);
+        // }
         // dd($user);
         // die;
         return redirect('/pembayaran');
