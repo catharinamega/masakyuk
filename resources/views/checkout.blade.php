@@ -73,9 +73,9 @@
                 <div class="col-md-5" style="text-align: left;">{{$crt->nama_bahan}}</div>
                 <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][id]" value="{{$crt->id_bahan}}" readonly>
                 <input type="hidden" name="bahan_chk[{{$crt->id_bahan}}][qty]" value="{{$crt->item_qty}}" readonly>
-                <div class="col-md-2" style="text-align: left;">Rp <input type="number" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
+                <div class="col-md-2" style="text-align: left;">Rp @currency($crt->harga) <input type="hidden" class="col-md-10" style="padding:0px" name="bahan_chk[{{$crt->id_bahan}}][harga]" value="{{$crt->harga}}" readonly></div>
                 <div class="col-md-2" style="text-align: center;"><h5>{{$crt->item_qty}}</h5></div>
-                <div class="col-md-2" style="text-align: left;"><h5>Rp {{$crt->subtotal}}</h5></div>
+                <div class="col-md-2" style="text-align: left;"><h5>Rp @currency($crt->subtotal)</h5></div>
                 <?php $subt = $subt + $crt->subtotal; ?>
                 <!-- <div class="col-md-2" style="text-align: left;">
                 </div> -->
@@ -153,7 +153,7 @@
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
                                     <input type="hidden" name="total" value="{{$subt}}">
-                                    <p style="margin-bottom:8px;">{{$subt}}</p>
+                                    <p style="margin-bottom:8px;">@currency($subt)</p>
                                 </div>
                             </td>
                         </tr>
@@ -170,7 +170,7 @@
                             </td>
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
-                                    <p style="margin-bottom:8px;">10000</p>
+                                    <p style="margin-bottom:8px;">10.000</p>
                                 </div>
                             </td>
                         </tr>
@@ -188,7 +188,7 @@
                             <td style="padding:4px;">
                                 <div class="container" style="text-align:right;">
                                     <?php $totl = $subt + 10000; ?>
-                                    <p style="margin-bottom:8px;"><strong>{{$totl}}</strong></p>
+                                    <p style="margin-bottom:8px;"><strong>@currency($totl)</strong></p>
                                 </div>
                             </td>
                         </tr>
