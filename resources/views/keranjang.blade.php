@@ -29,13 +29,13 @@
                 <div class="col-md-12 row mt-4">
                         <input type="checkbox" class="col-md-1" name='bahan_chk[{{$crt->id_bahan}}][id]' form="pembayaran" value='{{$crt->id_bahan}}' checked>
                         <div class="col-md-4" style="text-align: left;">{{$crt->nama_bahan}}</div>
-                        <div class="col-md-2" style="text-align: left; padding-left:40px;">Rp
+                        <div class="col-md-2 row" style="text-align: left; padding-left:40px;">Rp
                             <div class="col-md-9" style="padding:0px; text-align: right;" name="bahan_chk[{{$crt->id_bahan}}][harga]">
                                 {{$crt->harga}}
                             </div>
                         </div>
                         <div class="col-md-3" style="align-content: center; display: flex; flex-wrap: wrap;">
-                            <div class="qty row" style="margin-left:90px;">
+                            <div class="qty row" style="margin-left:120px;">
                                 <form id="minus" action="/minucart" method="GET">
                                     @csrf
                                     <input type="hidden" name='bahan_beli[id]' value='{{$crt->id_bahan}}'>
@@ -50,7 +50,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-md-2 row" style="text-align: left; ">
+                        <div class="col-md-2 row" style="text-align: left; margin-left:20px;">
                             <div class=col-md-4 style="padding-left:35px;">Rp</div>
                             <div class=col-md-8 style="text-align:right; padding:0px;">{{$crt->subtotal}}</div>
                             <!-- <h5>Rp {{$crt->subtotal}}</h5> -->
