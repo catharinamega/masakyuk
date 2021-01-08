@@ -217,4 +217,16 @@ class Pelanggan extends Model
     }
 
 
+    public function lupa_email($data){
+        
+        $data_baru =['email'=> $data['email']
+                    ];
+     
+        $cmd = "CALL lupa_email(:email);";
+        
+        $tambah_alamat = DB::update($cmd,$data_baru);
+        
+        return $tambah_alamat;
+    }
+
 }

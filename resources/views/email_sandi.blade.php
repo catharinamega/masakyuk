@@ -9,7 +9,7 @@
 <body>
 <!-- <form action="/hubungikami"></form> -->
 
-    <h3>Dasar Pikun</h3>
+    <h3>Password Anda telah diperbaharui. Password: 1234</h3>
     
 
 </body>
