@@ -342,7 +342,18 @@ class AwalController extends Controller
         // dd($data);
         // die;
         $alamat = $usr->update_alamat_utama($data);
-        return redirect('/akun');
-        
+        if(!Session::has('sudah_checkout')){
+            // ini yang awal
+            return redirect('/akun');
+        }else{
+            $url = Session::get('sudah_checkout');
+            Session::forget('sudah_checkout');
+            // dd($url);
+            return redirect($url);
+        }
     }
+
+ 
+
+
 }

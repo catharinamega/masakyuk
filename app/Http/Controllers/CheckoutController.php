@@ -12,6 +12,8 @@ class CheckoutController extends Controller
     public function tampil_checkout(){
         $chk = new Checkout;
         $username_login = Session::get('login');
+        Session::put('sudah_checkout',url()->full());
+        
         $alamat = $chk->get_alamat($username_login);
         if(isset($_GET['bahan_chk'])){
             $item = array();

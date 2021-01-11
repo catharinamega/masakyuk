@@ -12,7 +12,8 @@
     </div>
 </div>
     @if(!$jumlah == 0)
-        <form action="/pilihalamat" method="POST">
+       
+        <form action="/pilihalamat" method="POST">  
           @csrf
             <div class="col-md-12">
             <?php $index = 0; ?>
@@ -41,7 +42,7 @@
                     </div>
                     
                     <div class="col-md-4" style="text-align:right;">
-                        <button class="btn btn-primary" type="submit" role="button" style="margin-bottom: 15px;margin-top: 40px;">Pilih Alamat</button>     
+                        <button class="btn btn-primary" type="submit" role="button" style="margin-bottom: 15px;margin-top: 40px;">Pilih Alamat</button>
                     </div>
 
                 </div>

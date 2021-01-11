@@ -40,7 +40,7 @@
                 <p style="margin-bottom:5px;">Belum ada alamat</p>
             @endif
             </div>
-            <form action="/aturalamat">
+            <form action="/aturalamat" method ="GET">
             <div style="text-align:left; margin-bottom:50px;">
             @if($alamat != null)    
                 <button type="submit" class="btn btn-light" style="background-color:#B2DEF0; border: 2px solid #C5E0EF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Pilih Alamat Lain</button>

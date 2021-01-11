@@ -72,6 +72,7 @@ Route::get('/aturalamat', 'App\Http\Controllers\AwalController@atur_alamat');
 Route::post('/aturalamat', 'App\Http\Controllers\AwalController@update_alamat');
 Route::post('/pilihalamat', 'App\Http\Controllers\AwalController@pilih_alamat');
 
+
 // BUAT ALAMAT BARU
 Route::get('/alamatbaru', 'App\Http\Controllers\AwalController@alamat_baru');
 Route::post('/tambahalamat', 'App\Http\Controllers\AwalController@tambah_alamat');
@@ -93,6 +94,7 @@ Route::get('/minucart', 'App\Http\Controllers\CartController@minu_cart');
 
 // CHECKOUT
 Route::get('/checkout', 'App\Http\Controllers\CheckoutController@tampil_checkout');
+
 
 // RIWAYAT TRANSAKSI
 Route::get('/riwayattransaksi', 'App\Http\Controllers\CheckoutController@riwayat_transaksi');
